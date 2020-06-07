@@ -7,9 +7,13 @@
   font-size: calc(0.4em + 2vmin);
 }
 
+h2 {
+  margin-top: 2em;
+}
+
 a {
   text-decoration: none;
-  color: rgba(185, 50, 50, 1);
+  color: #cc6666;
 }
 
 p {

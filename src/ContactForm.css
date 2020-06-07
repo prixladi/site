@@ -1,0 +1,59 @@
+form {
+  max-width: 30em;
+  margin: 2.5em auto;
+}
+
+form .feedback-input {
+  font-size: 0.85em;
+  border-radius: 0.9rem;
+  line-height: 1em;
+  background-color: transparent;
+  border: 0.2rem solid #cc6666;
+  transition: all 0.3s;
+  padding: 1rem;
+  margin-bottom: 0.6em;
+  width: 100%;
+  box-sizing: border-box;
+  outline: 0;
+  color: var(--font-color);
+  font-weight: 750;
+}
+
+form .feedback-input:focus {
+  border: 0.2em solid #cc4949;
+  color: var(---font-color);
+}
+
+form textarea {
+  height: 11em;
+  line-height: 150%;
+  resize: vertical;
+  color: var(--font-color);
+}
+
+form input[type='submit'] {
+  width: 100%;
+  background: #cc6666;
+  border-radius: 0.2em;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.4em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  transition: all 0.3s;
+  margin-top: -4px;
+  font-weight: 700;
+  color: white;
+}
+
+form input[type='submit']:hover {
+  background: #cc4949;
+}
+
+:root {
+  --font-color: black;
+}
+
+[data-theme='dark'] {
+  --font-color: white;
+}

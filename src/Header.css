@@ -24,6 +24,11 @@ header a.button:hover {
   text-decoration: none;
 }
 
+.grid {
+    display: grid;
+  grid-template-columns: 67% 33%;  
+}
+
 :root {
   --button-bg-color: #eee;
   --button-font-color: black;
@@ -32,21 +37,6 @@ header a.button:hover {
 [data-theme='dark'] {
   --button-bg-color: white;
   --button-font-color: black;
-}
-
-header h1 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-header p {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-header {
-  display: grid;
-  grid-template-columns: 67% 33%;
 }
 
 @media screen and (max-width: 500px) {

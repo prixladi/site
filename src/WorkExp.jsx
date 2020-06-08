@@ -9,9 +9,11 @@ const WorkExp = () => (
 
     <ul>
       <li id='work-qest' key='qest'>
-        <a href='https://qest.cz'>Qest automation s.r.o.</a>{' '}
-        <i>May 2017-present</i> <br />
-        Backend developement. Azure, Microservices, Agile, Scrum ...
+        <p>
+          <a href='https://qest.cz'>Qest automation s.r.o.</a>{' '}
+          <i>May 2017-present</i> <br />
+          Backend developement. Azure, Microservices, Agile, Scrum ...
+        </p>
       </li>
     </ul>
   </>

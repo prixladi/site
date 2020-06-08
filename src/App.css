@@ -1,41 +1,49 @@
 .App {
-  min-height: 100vh;
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
   padding: 1rem;
   padding-top: 4rem;
-  font-size: calc(0.4em + 2vmin);
+  font-size: calc(0.2em + 2vmin);
 }
 
-h2 {
-  margin-top: 2em;
+.App p  {
+  font-size: calc(0.18em + 2vmin);
+  line-height: 1.8em;
+  word-spacing: 0.15em;
+  text-align: justify;
 }
 
-a {
+.App h2 {
+  font-size: calc(0.8em + 2vmin);
+  margin-top: 1.5em;
+}
+
+.App a {
   text-decoration: none;
   color: #cc6666;
 }
 
-p {
-  text-align: justify;
-}
-
-a:hover {
+.App a:hover {
   text-decoration: underline;
-}
-
-ul li {
-  padding-bottom: 0.3em;
-}
-
-@media screen and (min-width: 900px) {
-  h1 {
-    font-size: calc(2.2em + 2vmin);
-  }
 }
 
 @media screen and (max-width: 800px) {
   .App {
     padding-top: 1rem;
+    font-size: calc(0.65em + 2vmin);
+  }
+  
+  .App p {
+    font-size: calc(0.65em + 2vmin);
+    line-height: 1.7em;
+    word-spacing: 0.07em;
+  }
+
+  .App h1 {
+    font-size: calc(1.8em + 2vmin);
+  }
+
+  .App h2 {
+    margin-top: 0.5em;
   }
 }

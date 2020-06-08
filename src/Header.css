@@ -3,10 +3,10 @@ header a.button {
   -webkit-text-fill-color: unset;
   color: unset;
   background: var(--button-bg-color);
-  border-radius: 0.5em;
+  border-radius: 0.7em;
   padding: 0 1em;
   line-height: 2.5rem;
-  font-weight: 780;
+  font-weight: 650;
   font-size: 0.85em;
   background-clip: none;
   -webkit-background-clip: none;
@@ -17,7 +17,7 @@ header a.button {
 }
 
 header a.button:hover {
-  background: #3a4883;
+  background: #cc6666;
   color: white;
   text-decoration: none;
   -webkit-text-fill-color: white;
@@ -25,12 +25,12 @@ header a.button:hover {
 }
 
 .grid {
-    display: grid;
-  grid-template-columns: 67% 33%;  
+  display: grid;
+  grid-template-columns: 67% 33%;
 }
 
 :root {
-  --button-bg-color: #eee;
+  --button-bg-color: #f0e6e7;
   --button-font-color: black;
 }
 

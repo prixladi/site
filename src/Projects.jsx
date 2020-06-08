@@ -30,8 +30,8 @@ const Projects = () => (
           It downloads data about woody plants from Czech National Open Data
           Catalog, displays them in map and allows filtration in them.
           <br />
-          <strong>Technologies</strong>: C#, ASP.NET, Core, SignalR, JavaScript,
-          TypeScript, React, Leaflet, MongoDB
+          <b>Technologies</b>: C#, ASP.NET, Core, SignalR, JavaScript,
+          TypeScript, React, Leaflet, MongoDB, Docker
         </p>
       </li>
 
@@ -48,8 +48,9 @@ const Projects = () => (
           Home automation system based on microservice architecture that I have
           been working on in <a href='#work-qest'>Qest</a>.
           <br />
-          <strong>Technologies</strong>: C#, ASP.NET Core, SignalR, MongoDB,
-          RabbitMQ, IdentityServer 4, Entity Framework Core
+          <b>Technologies</b>: C#, ASP.NET Core, SignalR, MongoDB,
+          RabbitMQ, IdentityServer 4, Entity Framework Core, Docker, Azure,
+          Kubernetes
         </p>
       </li>
 
@@ -66,8 +67,8 @@ const Projects = () => (
           customers that I have been working on in <a href='#work-qest'>Qest</a>
           .
           <br />
-          <strong>Technologies</strong>: C#, ASP.NET Core, SQL Server, T-SQL,
-          Entity Framework Core
+          <b>Technologies</b>: C#, ASP.NET Core, SQL Server, T-SQL,
+          Entity Framework Core, Docker
         </p>
       </li>
 
@@ -84,7 +85,7 @@ const Projects = () => (
           Personal website built with React, overkill i know but i have bigger
           plans with this.
           <br />
-          <strong>Technologies</strong>: CSS, JavaScript, React Core
+          <b>Technologies</b>: CSS, JavaScript, React Core
         </p>
       </li>
     </ul>

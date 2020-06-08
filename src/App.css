@@ -2,7 +2,7 @@
   max-width: 800px;
   margin: auto;
   padding: 1rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-size: calc(0.2em + 2vmin);
 }
 
@@ -27,9 +27,15 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 800px) {
+
+@media screen and (max-width: 1100px) {
   .App {
     padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .App {
     font-size: calc(0.65em + 2vmin);
   }
   
@@ -37,6 +43,12 @@
     font-size: calc(0.65em + 2vmin);
     line-height: 1.7em;
     word-spacing: 0.07em;
+  }
+
+  .App ul {
+    list-style-type: none;
+    margin-left: 0em;
+    padding-left: 0em;
   }
 
   .App h1 {

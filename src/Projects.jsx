@@ -85,7 +85,7 @@ const Projects = () => (
           Personal website built with React, overkill i know but i have bigger
           plans with this.
           <br />
-          <b>Technologies</b>: CSS, JavaScript, React Core
+          <b>Technologies</b>: CSS, JavaScript, React
         </p>
       </li>
     </ul>

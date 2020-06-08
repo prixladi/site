@@ -10,7 +10,9 @@ const WorkExp = () => (
     <ul>
       <li id='work-qest' key='qest'>
         <p>
-          <a href='https://qest.cz'>Qest automation s.r.o.</a>{' '}
+          <a href='https://qest.cz' target='_blank' rel='noopener noreferrer'>
+            Qest automation s.r.o.
+          </a>{' '}
           <i>May 2017-present</i> <br />
           Backend developement. Azure, Microservices, Agile, Scrum ...
         </p>

@@ -6,7 +6,7 @@ const Studies = () => (
     <ul>
       <li key='fit'>
         <p>
-          <a href='https://gympt.cz'>
+          <a href='https://gympt.cz' target='_blank' rel='noopener noreferrer'>
             Faculty of Information Technology, Czech Technical University in
             Prague
           </a>
@@ -18,7 +18,7 @@ const Studies = () => (
 
       <li key='gympt'>
         <p>
-          <a href='https://gympt.cz'>
+          <a href='https://gympt.cz' target='_blank' rel='noopener noreferrer'>
             Secondary Grammar School Prachatice, Zlatá Stezka 137
           </a>
           <br />

@@ -12,7 +12,7 @@ const submitFormAsync = async (event) => {
   });
 
   if (i > 0) {
-    await fetch('http://www.server.ladislavprix.cz/mail.php', {
+    await fetch('http://server.ladislavprix.cz/mail.php', {
       method: 'POST',
       body: data,
     });

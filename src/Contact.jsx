@@ -14,10 +14,23 @@ const Contact = () => (
       </span>{' '}
       <a href='mailto:contact@ladislavprix.cz'>contact@ladislavprix.cz</a>.{' '}
       <br />
-      You can find me on <a href='https://linked.in/ladislavprix'>
+      You can find me on{' '}
+      <a
+        href='https://linked.in/ladislavprix'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         Linkedin
       </a>{' '}
-      or <a href='https://github.com/prixladi'>GitHub</a>.
+      or{' '}
+      <a
+        href='https://github.com/prixladi'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        GitHub
+      </a>
+      .
       <br />
       Or you can use <a href='#contact-form'> Contact form bellow</a>.
     </p>

@@ -10,11 +10,21 @@ const Projects = () => (
     <ul>
       <li key='treeloc'>
         <p>
-          <a href='https://github.com/prixladi/treeloc'>TreeLoc</a>{' '}
+          <a
+            href='https://github.com/prixladi/treeloc'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            TreeLoc
+          </a>{' '}
           <i>2019-2020</i> <br />
           My bachelor thesis assignment. It is web aplication for Ministry of
           Interior that shows open data provider advantages of using{' '}
-          <a href='https://www.zakonyprolidi.cz/cs/1999-106#p3-9'>
+          <a
+            href='https://www.zakonyprolidi.cz/cs/1999-106#p3-9'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Open formal norm (czech).
           </a>{' '}
           It downloads data about woody plants from Czech National Open Data
@@ -27,7 +37,13 @@ const Projects = () => (
 
       <li key='haidy'>
         <p>
-          <a href='https://qest.cz/casestudies/haidy/'>Haidy</a>{' '}
+          <a
+            href='https://qest.cz/casestudies/haidy/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Haidy
+          </a>{' '}
           <i>2017-present</i> <br />
           Home automation system based on microservice architecture that I have
           been working on in <a href='#work-qest'>Qest</a>.
@@ -39,7 +55,13 @@ const Projects = () => (
 
       <li key='shipvio'>
         <p>
-          <a href='https://qest.cz/casestudies/shipvio/'>Shipvio</a>{' '}
+          <a
+            href='https://qest.cz/casestudies/shipvio/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Shipvio
+          </a>{' '}
           <i>2017-2019</i> <br />A logistic platform connecting carriers and
           customers that I have been working on in <a href='#work-qest'>Qest</a>
           .
@@ -51,14 +73,18 @@ const Projects = () => (
 
       <li key='this'>
         <p>
-          <a href='https://github.com/prixladi/ladislavprix'>
+          <a
+            href='https://github.com/prixladi/ladislavprix'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             This Website ¯\_(ツ)_/¯
           </a>{' '}
           <i>2020</i> <br />
           Personal website built with React, overkill i know but i have bigger
           plans with this.
           <br />
-          <strong>Technologies</strong>: CSS, JavasScript, React Core
+          <strong>Technologies</strong>: CSS, JavaScript, React Core
         </p>
       </li>
     </ul>

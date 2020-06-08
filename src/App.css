@@ -7,7 +7,7 @@
 }
 
 .App p  {
-  font-size: calc(0.18em + 2vmin);
+  font-size: calc(0.181em + 2vmin);
   line-height: 1.8em;
   word-spacing: 0.15em;
   text-align: justify;

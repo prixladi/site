@@ -8,7 +8,7 @@ const Header = () => (
   <header className='App-header'>
     <div className='grid'>
       <ThemeSwitch />
-      <a href='/cv.pdf' className='button'>
+      <a download href='/resume_ladislavprix.pdf' className='button'>
         Download CV.
       </a>
     </div>

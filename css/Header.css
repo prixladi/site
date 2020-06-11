@@ -1,4 +1,4 @@
-header a.button {
+.App header a.button {
   display: inline-block;
   -webkit-text-fill-color: unset;
   color: unset;
@@ -16,7 +16,7 @@ header a.button {
   color: var(--button-font-color);
 }
 
-header a.button:hover {
+.App header a.button:hover {
   background: #cc6666;
   color: white;
   text-decoration: none;
@@ -24,7 +24,7 @@ header a.button:hover {
   text-decoration: none;
 }
 
-.grid {
+.App header .grid {
   display: grid;
   grid-template-columns: 67% 33%;
 }
@@ -40,23 +40,23 @@ header a.button:hover {
 }
 
 @media screen and (max-width: 500px) {
-  header {
+  .App header {
     display: grid;
     grid-template-columns: 100%;
   }
 
-  header a.button {
+  .App header a.button {
     grid-column-start: 1;
     grid-column-end: 1;
     margin-top: 1em;
   }
 
-  header h1 {
+  .App header h1 {
     grid-column-start: 1;
     grid-column-end: 1;
   }
 
-  header p {
+  .App header p {
     grid-column-start: 1;
     grid-column-end: 1;
   }

@@ -1,9 +1,9 @@
-form {
+.App #contact-form form {
   max-width: 30em;
   margin: 2.5em auto;
 }
 
-form .feedback-input {
+.App #contact-form form .feedback-input {
   font-size: 0.85em;
   border-radius: 0.9rem;
   line-height: 1em;
@@ -19,19 +19,19 @@ form .feedback-input {
   font-weight: 750;
 }
 
-form .feedback-input:focus {
+.App #contact-form form .feedback-input:focus {
   border: 0.2em solid #cc4949;
   color: var(---font-color);
 }
 
-form textarea {
+.App #contact-form form textarea {
   height: 11em;
   line-height: 150%;
   resize: vertical;
   color: var(--font-color);
 }
 
-form input[type='submit'] {
+.App #contact-form form input[type='submit'] {
   width: 100%;
   background: #cc6666;
   border-radius: 0.2em;
@@ -46,7 +46,7 @@ form input[type='submit'] {
   color: white;
 }
 
-form input[type='submit']:hover {
+.App #contact-form form input[type='submit']:hover {
   background: #cc4949;
 }
 

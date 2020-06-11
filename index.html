@@ -1,69 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Ladislav Prix is developer focused on web backend and cloud developement and this is his personal Website."
-    />
-    <meta name="keywords" content="Ladislav Prix, .NET, C#" />
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://www.ladislavprix.cz">
-    <meta property="og:title" content="Ladislav Prix">
-    <meta property="og:description" content="Ladislav Prix is developer focused on web backend and cloud developement and this is his personal Website.">
-    <meta property="og:image" content="http://www.ladislavprix.cz/static/site.png">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Ladislav Prix is developer focused on web backend and cloud developement and this is his personal Website." />
+  <meta name="keywords" content="Ladislav Prix, .NET, C#" />
 
-    <title>Hi, my name is Láďa and here you can get to know me.</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.ladislavprix.cz" />
+  <meta property="og:title" content="Ladislav Prix" />
+  <meta property="og:description"
+    content="Ladislav Prix is developer focused on web backend and cloud developement and this is his personal Website." />
+  <meta property="og:image" content="http://www.ladislavprix.cz/static/site.png" />
 
-    <link rel="icon" href="./static/favicon.ico" />
-    <link rel="apple-touch-icon" href="./static/apple-touch-icon.png" />
-    <link rel="manifest" href="./static/manifest.json" />
+  <title>Ladislav Prix</title>
 
-    <link href="./css/App.css" rel="stylesheet" />
-    <link href="./css/ContactForm.css" rel="stylesheet" />
-    <link href="./css/Header.css" rel="stylesheet" />
-    <link href="./css/Common.css" rel="stylesheet" />
-    <link href="./css/ThemeSwitch.css" rel="stylesheet" />
-    
-    <script src="./js/index.js"></script>
-    <script src="./js/Theme.js"></script>
-    <script src="./js/ContactForm.js"></script>
-  </head>
+  <link rel="icon" href="./static/favicon.ico" />
+  <link rel="apple-touch-icon" href="./static/apple-touch-icon.png" />
+  <link rel="manifest" href="./static/manifest.json" />
 
-  <body class="App">
-    <!--HEADER-->
-    <header class="App-header">
-      <div class="grid">
-        <div class="theme-switch-wrapper">
-          <label class="theme-switch" htmlFor="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider round"></div>
-          </label>
-          <em>Dark Mode.</em>
-        </div>
+  <link href="./css/App.css" rel="stylesheet" />
+  <link href="./css/ContactForm.css" rel="stylesheet" />
+  <link href="./css/Header.css" rel="stylesheet" />
+  <link href="./css/Common.css" rel="stylesheet" />
+  <link href="./css/ThemeSwitch.css" rel="stylesheet" />
 
-        <a download href="./static/resume_ladislavprix.pdf" class="button">
-          Download CV.
-        </a>
+  <script src="./js/index.js"></script>
+  <script src="./js/Theme.js"></script>
+  <script src="./js/ContactForm.js"></script>
+</head>
+
+<body class="App">
+  <header class="App-header">
+    <div class="grid print-hide">
+      <div class="theme-switch-wrapper">
+        <label class="theme-switch" htmlFor="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <div class="slider round"></div>
+        </label>
+        <em>Dark Mode.</em>
       </div>
 
-      <h1>
-        Hi, my name is Láďa <br />
-        and here you can get to know me.
-      </h1>
+      <a download href="./static/resume_ladislavprix.pdf" class="button">
+        Download CV.
+      </a>
+    </div>
 
-      <p>
-        I’m a 23 years old developer mostly interested in web developement,
-        especially backend. I'm mainly focused on Microsoft platform (.NET Core,
-        C# ...) and cloud developement (Azure, AWS ...) but im not restricted to
-        that area.
-      </p>
-    </header>
+    <h1 print-content="Ladislav Prix">
+      Hi, my name is Láďa <br />
+      and here you can get to know me.
+    </h1>
 
-    <!--CONTACTS-->
-    <h2>How you can contact me.</h2>
+    <p>
+      I’m a 23 years old developer mostly interested in web developement,
+      especially backend. I'm mainly focused on Microsoft platform (.NET Core,
+      C# ...) and cloud developement (Azure, AWS ...) but im not restricted to
+      that area.
+    </p>
+  </header>
+
+  <section id="contacts">
+    <h2 print-content="Contact">How you can contact me.</h2>
     <p>
       My full name is <strong>Ladislav Prix</strong> and I’m based in
       <strong>Prague, Czech Republic</strong>.
@@ -74,49 +73,34 @@
       <a href="mailto:contact@ladislavprix.cz">contact@ladislavprix.cz</a>.
       <br />
       You can find me on
-      <a
-        href="https://linked.in/ladislavprix"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Linkedin
+      <a href="https://linked.in/ladislavprix" target="_blank" rel="noopener noreferrer">
+        <span class="print-hide">Linkedin</span><span class="print-display">https://linked.in/ladislavprix</span>
       </a>
       or
-      <a
-        href="https://github.com/prixladi"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
+      <a href="https://github.com/prixladi" target="_blank" rel="noopener noreferrer">
+        <span class="print-hide">GitHub.</span><span class="print-display">https://github.com/prixladi.</span>
       </a>
-      .
       <br />
-      Or you can use <a href="#contact-form"> Contact form bellow</a>.
+      <span class="print-hide">Or you can use <a href="#contact-form"> Contact form bellow.</a><span>
     </p>
+  </section>
 
-    <!--PROJECTS-->
-    <h2>Projects i have worked / been working on.</h2>
+  <section id="projects">
+    <h2 print-content="Projects">Projects i have worked / been working on.</h2>
     <p>
-      I started working in the developement field in the first year of college.
+      I started working in the developement field in the first year of
+      college.
     </p>
     <ul>
       <li key="treeloc">
         <p>
-          <a
-            href="https://github.com/prixladi/treeloc"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            TreeLoc
+          <a href="https://github.com/prixladi/treeloc/" target="_blank" rel="noopener noreferrer">
+            TreeLoc <span class="print-display"> - https://github.com/prixladi/treeloc/ </span>
           </a>
           <i>2019-2020</i> <br />
           My bachelor thesis assignment. It is web aplication for Ministry of
           Interior that shows open data provider advantages of using
-          <a
-            href="https://www.zakonyprolidi.cz/cs/1999-106#p3-9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.zakonyprolidi.cz/cs/1999-106#p3-9" target="_blank" rel="noopener noreferrer">
             Open formal norm (czech).
           </a>
           It downloads data about woody plants from Czech National Open Data
@@ -129,16 +113,12 @@
 
       <li key="haidy">
         <p>
-          <a
-            href="https://qest.cz/casestudies/haidy/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Haidy
+          <a href="https://qest.cz/casestudies/haidy/" target="_blank" rel="noopener noreferrer">
+            Haidy <span class="print-display"> - https://qest.cz/casestudies/haidy/ </span>
           </a>
           <i>2017-present</i> <br />
-          Home automation system based on microservice architecture that I have
-          been working on in <a href="#work-qest">Qest</a>.
+          Home automation system based on microservice architecture that I
+          have been working on in <a href="#work-qest">Qest</a>.
           <br />
           <b>Technologies</b>: C#, ASP.NET Core, SignalR, MongoDB, RabbitMQ,
           IdentityServer 4, Entity Framework Core, Docker, Azure, Kubernetes
@@ -147,12 +127,8 @@
 
       <li key="shipvio">
         <p>
-          <a
-            href="https://qest.cz/casestudies/shipvio/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Shipvio
+          <a href="https://qest.cz/casestudies/shipvio/" target="_blank" rel="noopener noreferrer">
+            Shipvio <span class="print-display"> - https://qest.cz/casestudies/shipvio/ </span>
           </a>
           <i>2017-2019</i> <br />A logistic platform connecting carriers and
           customers that I have been working on in
@@ -166,12 +142,9 @@
 
       <li key="this">
         <p>
-          <a
-            href="https://github.com/prixladi/ladislavprix"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            This Website ¯\_(ツ)_/¯
+          <a href="https://github.com/prixladi/ladislavprix" target="_blank" rel="noopener noreferrer">
+            <span class="print-hide">This Website ¯\_(ツ)_/¯</span> <span class="print-display">My personal website -
+              https://github.com/prixladi/ladislavprix </span>
           </a>
           <i>2020</i> <br />
           Personal website.
@@ -180,26 +153,29 @@
         </p>
       </li>
     </ul>
+  </section>
 
-    <!--WORK-->
-    <h2>My work experience.</h2>
+  <section id="work">
+    <h2 print-content="Work experience">My work experience.</h2>
     <p>
-      I started working in the developement field in the first year of college.
+      I started working in the developement field in the first year of
+      college.
     </p>
     <ul>
       <li id="work-qest" key="qest">
         <p>
           <a href="https://qest.cz" target="_blank" rel="noopener noreferrer">
-            Qest automation s.r.o.
+            Qest automation s.r.o. <span class="print-display"> - https://qest.cz/ </span>
           </a>
           <i>May 2017-present</i> <br />
           Backend developement. Azure, Microservices, Agile, Scrum ...
         </p>
       </li>
     </ul>
+  </section>
 
-    <!--EDUCATION-->
-    <h2>Where and what I studied.</h2>
+  <section id="education">
+    <h2 print-content="Education">Where and what I studied.</h2>
     <ul>
       <li key="fit">
         <p>
@@ -223,33 +199,20 @@
         </p>
       </li>
     </ul>
+  </section>
 
-
-    <!--CONTACT_FORM-->
+  <section class="print-hide" id="contact-form">
     <h2>You can contact me using this form.</h2>
-    <p>
-      You can send me a message using form below. You should specify your email
-      so I can contact you back.
-    </p>
-    <form id="contact-form" action="#" onSubmit="{submitFormAsync}">
-      <input
-        name="name"
-        type="text"
-        class="feedback-input header"
-        placeholder="Name"
-      />
-      <input
-        name="email"
-        type="text"
-        class="feedback-input header"
-        placeholder="Email"
-      />
-      <textarea
-        name="message"
-        class="feedback-input"
-        placeholder="Message"
-      ></textarea>
+
+    <p>You can send me a message using form below. You should specify your email so I can contact you back.</p>
+
+    <form action="#" onSubmit="{submitFormAsync}">
+      <input name="name" type="text" class="feedback-input header" placeholder="Name" />
+      <input name="email" type="text" class="feedback-input header" placeholder="Email" />
+      <textarea name="message" class="feedback-input" placeholder="Message"></textarea>
       <input type="submit" value="Send Message" />
     </form>
-  </body>
+  </section>
+</body>
+
 </html>

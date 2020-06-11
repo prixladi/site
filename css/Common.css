@@ -7,11 +7,56 @@ body {
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: block;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.print-display {
+  display: none;
+}
+
+@media print {
+  body {
+    font-family: georgia, times, serif;
+    background-color: white;
+    color: black;
+  }
+
+  span[role='img'] {
+    display: none !important;
+  }
+
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-display {
+    display: unset !important;
+  }
+
+  h1[print-content],
+  h2[print-content],
+  h3[print-content],
+  span[print-content] {
+    visibility: hidden;
+    text-indent: -9999px;
+    line-height: 0;
+  }
+
+  h1[print-content]:after,
+  h2[print-content]:after,
+  h3[print-content]:after,
+  span[print-content]:after {
+    content: attr(print-content);
+    visibility: visible;
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
 }
 
 :root {

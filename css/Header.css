@@ -29,16 +29,6 @@
   grid-template-columns: 67% 33%;
 }
 
-:root {
-  --button-bg-color: #f0e6e7;
-  --button-font-color: black;
-}
-
-[data-theme='dark'] {
-  --button-bg-color: white;
-  --button-font-color: black;
-}
-
 @media screen and (max-width: 500px) {
   .App header {
     display: grid;
@@ -60,4 +50,14 @@
     grid-column-start: 1;
     grid-column-end: 1;
   }
+}
+
+:root {
+  --button-bg-color: #f0e6e7;
+  --button-font-color: black;
+}
+
+[data-theme='dark'] {
+  --button-bg-color: white;
+  --button-font-color: black;
 }

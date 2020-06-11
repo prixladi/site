@@ -13,11 +13,11 @@ const submitFormAsync = async (event) => {
       body: data,
     });
   }
-  document.getElementById('contact-form').reset();
+  document.getElementById('form').reset();
   return i > 0;
 };
 
 var setupForm = () => {
-  const form = document.getElementById('contact-form');
+  const form = document.getElementById('form');
   form.addEventListener('submit', submitFormAsync, false);
 };

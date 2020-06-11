@@ -3,5 +3,4 @@
 .git-ftp-include
 README.md
 
-print/*
 .github/*

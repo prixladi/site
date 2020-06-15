@@ -17,18 +17,18 @@ span[role='img'] {
   display: unset !important;
 }
 
-h1[print-content],
-h2[print-content],
-h3[print-content] {
+h1[data-print],
+h2[data-print],
+h3[data-print] {
   visibility: hidden;
   text-indent: -9999px;
   line-height: 0;
 }
 
-h1[print-content]:after,
-h2[print-content]:after,
-h3[print-content]:after{
-  content: attr(print-content);
+h1[data-print]:after,
+h2[data-print]:after,
+h3[data-print]:after{
+  content: attr(data-print);
   visibility: visible;
   text-indent: 0;
   display: block;

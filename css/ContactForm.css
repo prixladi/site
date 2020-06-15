@@ -24,10 +24,10 @@
   color: var(---font-color);
 }
 
-.App #contact-form form textarea {
+.App #contact-form form textarea.feedback-input {
   height: 13rem;
   color: var(--font-color);
-  font-size: 5rem;
+  font-size: 1.4rem;
 }
 
 .App #contact-form form input[type='submit'] {

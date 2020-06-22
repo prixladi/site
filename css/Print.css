@@ -2,7 +2,7 @@ body {
   font-family: georgia, times, serif;
   background-color: white;
   color: black;
-  padding: 0em;
+  padding-top: 0px;
 }
 
 span[role='img'] {
@@ -17,17 +17,33 @@ span[role='img'] {
   display: unset !important;
 }
 
+section,
+header {
+  border-bottom: 0.2px solid #001000;
+}
+
+section:last-child {
+  border-bottom: 0px;
+}
+
+section:nth-last-child(2) {
+  border-bottom: 0px;
+}
+
+
 h1[data-print],
 h2[data-print],
 h3[data-print] {
   visibility: hidden;
   text-indent: -9999px;
   line-height: 0;
+  font-size: 1.6em;
+  text-align: center;
 }
 
 h1[data-print]:after,
 h2[data-print]:after,
-h3[data-print]:after{
+h3[data-print]:after {
   content: attr(data-print);
   visibility: visible;
   text-indent: 0;

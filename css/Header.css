@@ -1,4 +1,4 @@
-.App header a.button {
+header a.button {
   display: inline-block;
   -webkit-text-fill-color: unset;
   color: unset;
@@ -11,12 +11,12 @@
   background-clip: none;
   -webkit-background-clip: none;
   text-decoration: none;
-  max-width: 8em;
+  max-width: 7em;
   text-align: center;
   color: var(--button-font-color);
 }
 
-.App header a.button:hover {
+header a.button:hover {
   background: #cc6666;
   color: white;
   text-decoration: none;
@@ -24,31 +24,15 @@
   text-decoration: none;
 }
 
-.App header .grid {
+header .grid {
   display: grid;
-  grid-template-columns: 67% 33%;
+  grid-template-columns: 80% 20%;
 }
 
 @media screen and (max-width: 500px) {
-  .App header {
+  header .grid {
     display: grid;
-    grid-template-columns: 100%;
-  }
-
-  .App header a.button {
-    grid-column-start: 1;
-    grid-column-end: 1;
-    margin-top: 1em;
-  }
-
-  .App header h1 {
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
-
-  .App header p {
-    grid-column-start: 1;
-    grid-column-end: 1;
+    grid-template-columns: 70% 30%;
   }
 }
 

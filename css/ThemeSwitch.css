@@ -1,25 +1,25 @@
-.App .theme-switch-wrapper em {
+.theme-switch-wrapper em {
   margin-left: 10px;
   font-size: 1rem;
 }
 
-.App .theme-switch-wrapper {
+.theme-switch-wrapper {
   display: flex;
   align-items: center;
 }
 
-.App .theme-switch {
+.theme-switch {
   display: inline-block;
   height: 34px;
   position: relative;
   width: 60px;
 }
 
-.App .theme-switch input {
+.theme-switch input {
   display: none;
 }
 
-.App .slider {
+.slider {
   background-color: #f0e6e7;
   bottom: 0;
   cursor: pointer;
@@ -30,7 +30,7 @@
   transition: 0.4s;
 }
 
-.App .theme-switch .slider:before {
+.theme-switch .slider:before {
   background-color: #fff;
   bottom: 0.25rem;
   content: '';
@@ -41,18 +41,18 @@
   width: 26px;
 }
 
-.App .theme-switch input:checked + .slider {
+.theme-switch input:checked + .slider {
   background-color: #66bb6a;
 }
 
-.App .theme-switch input:checked + .slider:before {
+.theme-switch input:checked + .slider:before {
   transform: translateX(25px);
 }
 
-.App .theme-switch .slider.round {
+.theme-switch .slider.round {
   border-radius: 2em;
 }
 
-.App .theme-switch .slider.round:before {
+.theme-switch .slider.round:before {
   border-radius: 50%;
 }

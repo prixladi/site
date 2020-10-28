@@ -1,11 +1,7 @@
 var setupTheme = () => {
   theme = localStorage.getItem('theme');
   if (!theme) {
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    )
-      theme = 'dark';
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
     else theme = 'light';
   }
 
@@ -20,10 +16,8 @@ var setupTheme = () => {
       localStorage.setItem('theme', 'light');
     }
   }
-  
-  const toggleSwitch = document.querySelector(
-    '.theme-switch input[type="checkbox"]'
-  );
+
+  const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
 
   toggleSwitch.addEventListener('change', switchTheme, false);
   toggleSwitch.checked = theme == 'dark';

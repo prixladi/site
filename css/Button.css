@@ -1,4 +1,4 @@
-header a.button {
+a.button {
   display: inline-block;
   -webkit-text-fill-color: unset;
   color: unset;
@@ -7,33 +7,22 @@ header a.button {
   padding: 0 1em;
   line-height: 2.5rem;
   font-weight: 650;
-  font-size: 0.85em;
+  font-size: 0.95em;
   background-clip: none;
   -webkit-background-clip: none;
   text-decoration: none;
-  max-width: 7em;
   text-align: center;
   color: var(--button-font-color);
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
-header a.button:hover {
+a.button:hover {
   background: #cc6666;
   color: white;
   text-decoration: none;
   -webkit-text-fill-color: white;
   text-decoration: none;
-}
-
-header .grid {
-  display: grid;
-  grid-template-columns: 80% 20%;
-}
-
-@media screen and (max-width: 500px) {
-  header .grid {
-    display: grid;
-    grid-template-columns: 70% 30%;
-  }
 }
 
 :root {

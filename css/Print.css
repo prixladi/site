@@ -3,6 +3,7 @@ body {
   background-color: white;
   color: black;
   padding-top: 0px;
+  display: block;
 }
 
 span[role='img'] {
@@ -21,15 +22,6 @@ section,
 header {
   border-bottom: 0.2px solid #001000;
 }
-
-section:last-child {
-  border-bottom: 0px;
-}
-
-section:nth-last-child(2) {
-  border-bottom: 0px;
-}
-
 
 h1[data-print],
 h2[data-print],

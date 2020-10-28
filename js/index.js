@@ -1,4 +1,5 @@
-window.onload = () =>{
-    setupForm();
-    setupTheme();
-}
+window.onload = () => {
+  setupForm();
+  setupTheme();
+  setupLayout();
+};

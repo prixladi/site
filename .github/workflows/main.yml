@@ -1,19 +1,31 @@
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - 'releases/**'
   
-name: Deploy via FTP
+name: Build and Deploy via FTP
 jobs:
-  DeployFTP:        
+  BuildAndDeployFTP:        
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
     steps:
     - uses: actions/checkout@v2.1.0
       with:
         fetch-depth: 2
-    
+
+    - name: Use Node.js 12.x	
+      uses: actions/setup-node@v1	
+      with:	
+        node-version: '12.x'	
+
+    - name: Build Project	
+      run: |	
+        yarn	
+        yarn build 
+        yarn export    
+        
     - name: List output files
-      run: ls
+      run: ls build
       
     - name: Deploy via FTP
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
@@ -21,3 +33,4 @@ jobs:
         ftp-server: ftp.ladislavprix.cz
         ftp-username: root.ladislavprix.cz
         ftp-password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: build

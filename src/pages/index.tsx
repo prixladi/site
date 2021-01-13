@@ -60,7 +60,7 @@ const Index: React.FC = () => (
         <Link isExternal={true} href="https://github.com/prixladi">
           <Icon as={FaGithub} />
         </Link>
-        <Link isExternal={true} href="https://linkedin.com/in/ladislav-prix-50a5a6200">
+        <Link isExternal={true} href="https://linkedin.com/in/ladislav-prix/">
           <Icon as={FaLinkedin} />
         </Link>
         <Link isExternal={true} href="https://twitter.com">

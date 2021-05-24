@@ -41,7 +41,7 @@ const Title: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
 };
 
 const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
-  const yearCount = getYearCount(project);
+  const yearCount = Math.max(1, getYearCount(project));
 
   return (
     <Box pt="1em" pb="1em" borderRadius="lg">
@@ -54,7 +54,7 @@ const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
           <Flex mb="0em" d="flex" alignItems="baseline">
             <YearRange from={project.fromYear.toString()} to={project.toYear?.toString() ?? 'now'} />
             <Badge borderRadius="full" px="2" colorScheme="teal">
-              {Math.max(1, yearCount)} Years
+              {yearCount} { yearCount == 1 ? 'Year' : 'Years'}
             </Badge>
           </Flex>
           <Text fontSize={['1em', '1.2em', '1.3em', '1.3em']}>{project.text}</Text>

@@ -1,59 +1,58 @@
-import { Badge, Box, Flex } from '@chakra-ui/react';
 import * as React from 'react';
-import CardText from '../../components/CardText';
-import ExternalLink from '../../components/ExternalLink';
-import H2 from '../../components/H2';
-import H3 from '../../components/H3';
-import TechnologyList from '../../components/TechnologyList';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+import H1 from '../../components/H1';
+import JobTimelineItem from '../../components/timeline/JobTimelineItem';
+import EducationTimelineItem from '../../components/timeline/EducationTimelineItem';
 import Text from '../../components/Text';
-import YearRange from '../../components/YearRange';
-import { getDateRepresentation, getJobSpan } from '../../data/helpers';
-import jobs, { Job } from '../../data/jobs';
-
-type JobProps = {
-  job: Job;
-};
-
-const JobCard: React.FC<JobProps> = ({ job }: JobProps) => {
-  const fromString = getDateRepresentation(job.from);
-  const toString = getDateRepresentation(job.to);
-  const span = getJobSpan(job);
-
-  return (
-    <Box pt="1em" pb="1em" borderRadius="lg">
-      <Box>
-        <H3>{job.title}</H3> <br />
-        <Flex mb="0em" d="flex" alignItems="baseline">
-          <YearRange from={fromString} to={toString} />
-          <Badge borderRadius="full" px="2" colorScheme="teal">
-            {span.years} Years {span.months} months
-          </Badge>
-        </Flex>
-        <CardText>{job.text}</CardText>
-        <TechnologyList type="sm" technologies={job.technologies}>
-          Some of used <strong>technologies:</strong>
-        </TechnologyList>
-      </Box>
-    </Box>
-  );
-};
+import { Box } from '@chakra-ui/layout';
+import InternalLink from '../../components/InternalLink';
 
 const Experience: React.FC = () => (
   <>
-    <H2>Work experience.</H2>
+    <H1 align="center">My experience timeline.</H1>
     <Text>
-      I{"'"}ve started working in the tech industry in my first year at college. And I{"'"}ve been working since.
+      Timeline of my education and jobs with brief descriptions. You can also download my resume{' '}
+      <InternalLink href="/data/Resume.pdf" download="resume.pdf">
+        here
+      </InternalLink>
+      .
     </Text>
-    {jobs.map((job) => (
-      <JobCard job={job} key={job.title} />
-    ))}
-    <H2 mt="1em">School experience.</H2>
-    <CardText>
-      I{"'"}ve attended <ExternalLink href="https://gympt.cz/">Secondary Grammar School Prachatice, Zlatá Stezka 137</ExternalLink>. After
-      that, I acquired a Bachelor{"'"}s degree at the{' '}
-      <ExternalLink href="https://fit.cvut.cz/">Faculty of Information Technology, Czech Technical University in Prague</ExternalLink> in
-      June 2020. My bachelor thesis was application <ExternalLink href="https://dspace.cvut.cz/handle/10467/88708">Treeloc</ExternalLink>.
-    </CardText>
+    <Box pt="1.5em">
+      <VerticalTimeline>
+        <EducationTimelineItem
+          name="Secondary grammar school"
+          title="Basic education"
+          date="September 2008 - June 2016"
+          description="Secondary Grammar School Prachatice, Zlatá Stezka 137."
+        />
+        <JobTimelineItem
+          name="Shamyr"
+          title="Software developer, Designer and DevOps"
+          date=" Janury 2016 - present"
+          description="Shamyr is the brand that I use for freelancing and my independent projects."
+        />
+        <EducationTimelineItem
+          name="FIT CTU"
+          title="Bachelor's degree"
+          date="September 2016 - May 2020"
+          description="Faculty of Information Technology, Czech Technical University in Prague."
+        />
+        <JobTimelineItem
+          name="Quest automation"
+          title="Software developer, DevOps"
+          date="May 2017 - December 2020"
+          description="In Qest, I worked as a developer mostly focused on .NET backend. I worked on many projects including logistic platform Shipvio and
+        home automation system Qest Home."
+        />
+        <JobTimelineItem
+          name="Designeo Creative s.r.o."
+          title="Software developer"
+          date="February 2021 - present"
+          description="In Designeo, I work as a developer mostly focused on .NET backend."
+        />
+      </VerticalTimeline>
+    </Box>
   </>
 );
 

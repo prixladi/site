@@ -40,7 +40,7 @@ const Burger: React.FC = () => {
             <LinkText href={ProjectsRoute}>Projects</LinkText>
           </MenuItem>
           <MenuItem onClick={pushFunction(ExperienceRoute)}>
-            <LinkText href={ExperienceRoute}>Jobs &amp; Schools</LinkText>
+            <LinkText href={ExperienceRoute}>Experience timeline</LinkText>
           </MenuItem>
           <MenuItem>
             <ColorModeSwitcher />
@@ -57,7 +57,7 @@ const Inline: React.FC = () => (
       <LinkText href={ProjectsRoute}>Projects</LinkText>
     </Flex>
     <Flex>
-      <LinkText href={ExperienceRoute}>Jobs &amp; Schools</LinkText>
+      <LinkText href={ExperienceRoute}>Experience timeline</LinkText>
     </Flex>
     <ColorModeButton />
   </Flex>

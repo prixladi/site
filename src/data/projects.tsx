@@ -169,7 +169,7 @@ const opendentity: Project = {
       Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> and <TechTag tech="OpenID Connect" />
     </>
   ),
-  imgSrc: '/images/opendentity.png',
+  imgSrc: '/images/opendentityOIDC.png',
 };
 
 export default [expendity, opendentity, siteCapture, imaginess, urlik, shamyrRescues, treeloc, ladislavPrix, eimHome, shipvio];

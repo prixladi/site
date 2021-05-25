@@ -1,6 +1,6 @@
 import { Box, Divider, Flex, Menu, MenuButton, MenuItem, Text, MenuList, Icon, Link } from '@chakra-ui/react';
 import React from 'react';
-import { IndexRoute, ProjectsRoute, ExperienceRoute } from '../Routes';
+import { IndexRoute, ProjectsRoute, TimelineRoute } from '../Routes';
 import ColorModeButton from './ColorModeButton';
 import ColorModeSwitcher from './ColorModeSwitcher';
 import { useRouter } from 'next/router';
@@ -39,8 +39,8 @@ const Burger: React.FC = () => {
           <MenuItem onClick={pushFunction(ProjectsRoute)}>
             <LinkText href={ProjectsRoute}>Projects</LinkText>
           </MenuItem>
-          <MenuItem onClick={pushFunction(ExperienceRoute)}>
-            <LinkText href={ExperienceRoute}>Experience timeline</LinkText>
+          <MenuItem onClick={pushFunction(TimelineRoute)}>
+            <LinkText href={TimelineRoute}>Timeline</LinkText>
           </MenuItem>
           <MenuItem>
             <ColorModeSwitcher />
@@ -57,7 +57,7 @@ const Inline: React.FC = () => (
       <LinkText href={ProjectsRoute}>Projects</LinkText>
     </Flex>
     <Flex>
-      <LinkText href={ExperienceRoute}>Experience timeline</LinkText>
+      <LinkText href={TimelineRoute}>Timeline</LinkText>
     </Flex>
     <ColorModeButton />
   </Flex>

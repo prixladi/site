@@ -29,6 +29,7 @@ type Misc =
   | 'Apollo Server'
   | 'Apollo Client'
   | 'Serverless'
-  | 'Azure Blob Storage';
+  | 'Azure Blob Storage'
+  | 'OpenID Connect';
 
 export type Technology = DBs | DevOps | Languages | FWs | Misc;

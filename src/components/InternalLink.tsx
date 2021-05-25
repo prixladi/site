@@ -4,7 +4,7 @@ import React from 'react';
 type Props = {
   href: string;
   children: React.ReactNode;
-  download?: any;
+  download?: unknown;
 };
 
 const InternalLink: React.FC<Props> = ({ children, download, href }: Props) => (

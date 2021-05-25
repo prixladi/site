@@ -160,18 +160,16 @@ const treeloc: Project = {
   imgSrc: '/images/treeloc.png',
 };
 
-const shamyrAuthority: Project = {
-  title: 'Shamyr Authority',
-  link: 'https://github.com/prixladi/shamyr-cloud',
-  fromYear: 2018,
-  toYear: 2021,
+const opendentity: Project = {
+  title: 'Opendentity',
+  link: 'https://github.com/prixladi/opendentity',
+  fromYear: 2021,
   text: (
     <>
-      Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> <TechTag tech="MongoDB" /> and{' '}
-      <TechTag tech="SignalR" />
+      Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> and <TechTag tech="OpenID Connect" />
     </>
   ),
-  imgSrc: '/images/shamyrAuthority.png',
+  imgSrc: '/images/opendentity.png',
 };
 
-export default [eimHome, expendity, siteCapture, urlik, shipvio, shamyrAuthority, imaginess, shamyrRescues, ladislavPrix, treeloc];
+export default [expendity, opendentity, siteCapture, imaginess, urlik, shamyrRescues, treeloc, ladislavPrix, eimHome, shipvio];

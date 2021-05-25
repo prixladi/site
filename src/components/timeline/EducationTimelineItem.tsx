@@ -9,6 +9,7 @@ type Props = {
   name: string;
   title: string;
   description: string;
+  link?: string;
 };
 
 const ExucationTimelineItem: React.FC<Props> = ({ date, ...props }: Props) => {

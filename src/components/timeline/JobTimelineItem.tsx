@@ -9,6 +9,7 @@ type Props = {
   name: string;
   title: string;
   description: string;
+  link?: string;
 };
 
 const JobTimelineItem: React.FC<Props> = ({ date, ...props }: Props) => {

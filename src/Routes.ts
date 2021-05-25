@@ -1,5 +1,5 @@
 const IndexRoute = '/';
-const ExperienceRoute = '/experience';
+const TimelineRoute = '/timeline';
 const ProjectsRoute = '/projects';
 
-export { IndexRoute, ExperienceRoute, ProjectsRoute };
+export { IndexRoute, TimelineRoute, ProjectsRoute };

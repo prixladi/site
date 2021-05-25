@@ -1,4 +1,4 @@
-import { Badge, Box, Flex, Grid, Image, Icon } from '@chakra-ui/react';
+import { Badge, Box, Flex, Grid, Image, Icon, useColorModeValue } from '@chakra-ui/react';
 import * as React from 'react';
 import ExternalLink from '../../components/ExternalLink';
 import H1 from '../../components/H1';
@@ -42,6 +42,7 @@ const Title: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
 
 const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
   const yearCount = Math.max(1, getYearCount(project));
+  const borderColor = useColorModeValue('rgb(0,0,0,0.15)', 'rgb(255,255,255,0.15)');
 
   return (
     <Box pt="1em" pb="1em" borderRadius="lg">
@@ -54,14 +55,14 @@ const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
           <Flex mb="0em" d="flex" alignItems="baseline">
             <YearRange from={project.fromYear.toString()} to={project.toYear?.toString() ?? 'now'} />
             <Badge borderRadius="full" px="2" colorScheme="teal">
-              {yearCount} { yearCount == 1 ? 'Year' : 'Years'}
+              {yearCount} {yearCount == 1 ? 'Year' : 'Years'}
             </Badge>
           </Flex>
           <Text fontSize={['1em', '1.2em', '1.3em', '1.3em']}>{project.text}</Text>
         </Box>
 
         <Box width="99%">
-          <Image border="1px" borderRadius="1em" src={project.imgSrc} alt={project.title} />
+          <Image border="1px" borderColor={borderColor} borderRadius="1em" src={project.imgSrc} alt={project.title} />
         </Box>
       </Grid>
     </Box>

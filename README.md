@@ -2,6 +2,8 @@
 
 Ladislav Prix's personal site / web resume.
 
+[![CI](https://github.com/prixladi/ladislavprix/actions/workflows/main.yml/badge.svg)](https://github.com/prixladi/ladislavprix/actions/workflows/main.yml)
+
 ## Available Scripts
 
 In the project directory, you can run:

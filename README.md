@@ -25,5 +25,5 @@ Starts the app in production mode.
 
 ### `yarn export`
 
-Export static production ready files to build folder
+Exports static production ready files to build folder
 

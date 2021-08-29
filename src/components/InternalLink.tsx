@@ -4,10 +4,11 @@ import React from 'react';
 type Props = {
   href: string;
   children: React.ReactNode;
+  download?: unknown;
 };
 
-const InternalLink: React.FC<Props> = ({ children, href }: Props) => (
-  <Link isExternal={false} color="red.500" href={href}>
+const InternalLink: React.FC<Props> = ({ children, download, href }: Props) => (
+  <Link download={download} isExternal={false} color="red.500" href={href}>
     {children}
   </Link>
 );

@@ -1,7 +1,7 @@
 on:
   push:
-    branches: 
-      - 'releases/**'
+    tags:        
+      - '**' 
   
 name: Build and Deploy via FTP
 jobs:

@@ -1,4 +1,4 @@
-type DBs = 'MongoDB' | 'Redis' | 'PostgreSQL' | 'SQL Server' | 'SQL';
+type DBs = 'MongoDB' | 'Redis' | 'PostgreSQL' | 'SQL Server' | 'SQL' | 'CosmosDB';
 
 type DevOps = 'Github Actions' | 'Azure' | 'Azure DevOps';
 
@@ -15,7 +15,8 @@ type FWs =
   | 'Entity Framework'
   | 'Chakra UI'
   | 'Ant Design'
-  | 'Leaflet';
+  | 'Leaflet'
+  | 'Vue';
 
 type Misc =
   | 'RabbitMQ'
@@ -26,6 +27,9 @@ type Misc =
   | 'Express.js'
   | 'GraphQL'
   | 'Apollo Server'
-  | 'Apollo Client';
+  | 'Apollo Client'
+  | 'Serverless'
+  | 'Azure Blob Storage'
+  | 'OpenID Connect';
 
 export type Technology = DBs | DevOps | Languages | FWs | Misc;

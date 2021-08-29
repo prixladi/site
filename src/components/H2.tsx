@@ -7,7 +7,7 @@ type Props = SpaceProps & {
 };
 
 const H2: React.FC<Props> = ({ children, as, ...props }: Props) => (
-  <Heading mb={'0.75em'} textAlign="left" fontSize={['2em', '2.5em', '2.5em', '2.5em']} as={as || "h2"} {...props}>
+  <Heading mb={'0.75em'} textAlign="left" fontSize={['2em', '2.5em', '2.5em', '2.5em']} as={as || 'h2'} {...props}>
     {children}
   </Heading>
 );

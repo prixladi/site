@@ -41,10 +41,26 @@ const eimHome: Project = {
   imgSrc: '/images/laptop2.jpg',
 };
 
+const expendity: Project = {
+  title: 'Expendity',
+  link: 'https://github.com/prixladi/expendity',
+  fromYear: 2021,
+  toYear: 2021,
+  text: (
+    <>
+      Expense tracking application with user permissions, invites and statistics. Using <TechTag tech="ASP.NET Core" />{' '}
+      <TechTag tech="GraphQL" /> <TechTag tech="Entity Framework" /> and <TechTag tech="PostgreSQL" /> on the backend, and{' '}
+      <TechTag tech="React" /> and <TechTag tech="Apollo Client" /> on the frontend.
+    </>
+  ),
+  imgSrc: '/images/expendity.png',
+};
+
 const siteCapture: Project = {
   title: 'Site Capture',
   link: 'https://github.com/prixladi/site-capture',
   fromYear: 2020,
+  toYear: 2020,
   text: (
     <>
       Web application for automatically creating screenshots of defined sites. Using <TechTag tech="Node.js" /> <TechTag tech="GraphQL" />{' '}
@@ -59,6 +75,7 @@ const urlik: Project = {
   title: 'Urlik',
   link: 'https://github.com/prixladi/shamyr-urlik',
   fromYear: 2020,
+  toYear: 2020,
   text: (
     <>
       Url shortener with advanced statistics for registered users. Using <TechTag tech="Node.js" /> <TechTag tech="ASP.NET Core" />{' '}
@@ -82,7 +99,21 @@ const shipvio: Project = {
       <ExternalLink href="https://qest.cz/project/shipvio">article</ExternalLink>.
     </>
   ),
-  imgSrc: '/images/laptop1.jpg',
+  imgSrc: '/images/laptop3.jpg',
+};
+
+const imaginess: Project = {
+  title: 'Imaginess',
+  link: 'https://github.com/prixladi/imaginess',
+  fromYear: 2021,
+  toYear: 2021,
+  text: (
+    <>
+      Random image sharing app. Using <TechTag tech="Node.js" /> <TechTag tech="Serverless" /> <TechTag tech="Azure Blob Storage" /> and{' '}
+      <TechTag tech="CosmosDB" /> on the backend, and <TechTag tech="Vue" /> on the frontend.
+    </>
+  ),
+  imgSrc: '/images/imaginess.png',
 };
 
 const ladislavPrix: Project = {
@@ -103,6 +134,7 @@ const shamyrRescues: Project = {
   title: 'Shamyr Rescues',
   link: 'https://github.com/prixladi/shamyr-rescues',
   fromYear: 2019,
+  toYear: 2020,
   text: (
     <>
       Web application informing about various animal rescues. Using <TechTag tech="Node.js" /> <TechTag tech={'Express.js'} /> and{' '}
@@ -128,17 +160,16 @@ const treeloc: Project = {
   imgSrc: '/images/treeloc.png',
 };
 
-const shamyrAuthority: Project = {
-  title: 'Shamyr Authority',
-  link: 'https://github.com/prixladi/shamyr-cloud-authority',
-  fromYear: 2018,
+const opendentity: Project = {
+  title: 'Opendentity',
+  link: 'https://github.com/prixladi/opendentity',
+  fromYear: 2021,
   text: (
     <>
-      Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> <TechTag tech="MongoDB" /> and{' '}
-      <TechTag tech="SignalR" />
+      Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> and <TechTag tech="OpenID Connect" />
     </>
   ),
-  imgSrc: '/images/shamyrAuthority.png',
+  imgSrc: '/images/opendentityOIDC.png',
 };
 
-export default [eimHome, siteCapture, urlik, shipvio, shamyrAuthority, shamyrRescues, ladislavPrix, treeloc];
+export default [expendity, opendentity, siteCapture, imaginess, urlik, shamyrRescues, treeloc, ladislavPrix, eimHome, shipvio];

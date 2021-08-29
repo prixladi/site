@@ -35,7 +35,7 @@ const Index: React.FC = () => (
       <Box>
         <Text>
           I’m a {calculateAge()} years old developer mostly interested in web development. I have been in the tech industry for more than 4
-          years and I have experience with both back-end and front-end web development and a little bit with hardware. In my free time, I like
+          years and I have experience with both backend and frontend web development and a little bit with hardware. In my free time, I like
           learning new technologies, biking, skiing, going to nature or watching TV series.
         </Text>
       </Box>

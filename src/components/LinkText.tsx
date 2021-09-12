@@ -9,7 +9,7 @@ type LinkTextProps = {
 };
 
 const LinkText: React.FC<LinkTextProps> = ({ children, href }: LinkTextProps) => {
-  var { pathname } = useRouter();
+  const { pathname } = useRouter();
   const isCurrent = pathname.includes(href);
 
   return (

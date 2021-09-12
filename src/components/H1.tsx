@@ -8,7 +8,12 @@ type Props = {
 };
 
 const H1: React.FC<Props> = ({ as, align, children }: Props) => (
-  <Heading mb={'0.75em'} textAlign={align ?? 'left'} fontSize={['2.4em', '3em', '3em', '3em']} as={as || 'h1'}>
+  <Heading
+    mb={'0.75em'}
+    textAlign={align ?? 'left'}
+    fontSize={['2.4em', '3em', '3em', '3em']}
+    as={as || 'h1'}
+  >
     {children}
   </Heading>
 );

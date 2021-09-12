@@ -12,7 +12,8 @@ const Timeline: React.FC = () => (
   <>
     <H1>My experience timeline.</H1>
     <Text>
-      Timeline of my education and jobs with brief descriptions. You can also download my resume{' '}
+      Timeline of my education and jobs with brief descriptions. You can also download my
+      resume{' '}
       <InternalLink href="/data/Resume.pdf" download="resume.pdf">
         here
       </InternalLink>

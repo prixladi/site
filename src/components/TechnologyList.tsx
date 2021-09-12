@@ -28,7 +28,13 @@ const TechnologyList: React.FC<Props> = ({ children, technologies, type }: Props
     <Inner type={type}>
       {children}
       {Array.from(new Set(technologies)).map((tech) => (
-        <Tag key={tech} verticalAlign="center" ml="0.25em" borderRadius="full" colorScheme="blue">
+        <Tag
+          key={tech}
+          verticalAlign="center"
+          ml="0.25em"
+          borderRadius="full"
+          colorScheme="blue"
+        >
           {tech}
         </Tag>
       ))}

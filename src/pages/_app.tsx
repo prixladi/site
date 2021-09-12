@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, ChakraProvider, Container } from '@chakra-ui/react';
+
 import theme from '../theme';
 import Head from 'next/head';
 import NavBar from '../components/NavBar';
@@ -12,6 +13,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => (
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#1A202C" />
+      );
     </Head>
     <ChakraProvider theme={theme}>
       <Box>

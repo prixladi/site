@@ -16,7 +16,8 @@ type FWs =
   | 'Chakra UI'
   | 'Ant Design'
   | 'Leaflet'
-  | 'Vue';
+  | 'Vue'
+  | 'Tailwind CSS';
 
 type Misc =
   | 'RabbitMQ'

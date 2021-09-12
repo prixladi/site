@@ -29,9 +29,10 @@ const eimHome: Project = {
   toYear: 2020,
   text: (
     <>
-      Home automation system, which is based on a microservice architecture that I worked on in{' '}
-      <ExternalLink href="https://qest.cz/">Qest</ExternalLink>. I worked on backend. <br /> You can see images from the application and
-      read more about the project using the link above or in this{' '}
+      Home automation system, which is based on a microservice architecture that I worked
+      on in <ExternalLink href="https://qest.cz/">Qest</ExternalLink>. I worked on
+      backend. <br /> You can see images from the application and read more about the
+      project using the link above or in this{' '}
       <ExternalLink href="https://elektro.tzb-info.cz/inteligentni-budovy/21427-qest-home-predprogramovane-reseni-chytre-domacnosti-na-hw-teco">
         article
       </ExternalLink>
@@ -48,9 +49,11 @@ const expendity: Project = {
   toYear: 2021,
   text: (
     <>
-      Expense tracking application with user permissions, invites and statistics. Using <TechTag tech="ASP.NET Core" />{' '}
-      <TechTag tech="GraphQL" /> <TechTag tech="Entity Framework" /> and <TechTag tech="PostgreSQL" /> on the backend, and{' '}
-      <TechTag tech="React" /> and <TechTag tech="Apollo Client" /> on the frontend.
+      Expense tracking application with user permissions, invites and statistics. Using{' '}
+      <TechTag tech="ASP.NET Core" /> <TechTag tech="GraphQL" />{' '}
+      <TechTag tech="Entity Framework" /> and <TechTag tech="PostgreSQL" /> on the
+      backend, and <TechTag tech="React" /> and <TechTag tech="Apollo Client" /> on the
+      frontend.
     </>
   ),
   imgSrc: '/images/expendity.png',
@@ -63,9 +66,11 @@ const siteCapture: Project = {
   toYear: 2020,
   text: (
     <>
-      Web application for automatically creating screenshots of defined sites. Using <TechTag tech="Node.js" /> <TechTag tech="GraphQL" />{' '}
-      <TechTag tech="Apollo Server" /> <TechTag tech="MongoDB" /> and <TechTag tech="Redis" /> on the backend, and <TechTag tech="React" />{' '}
-      with <TechTag tech="Next.js" /> and <TechTag tech="Apollo Client" /> on the frontend.
+      Web application for automatically creating screenshots of defined sites. Using{' '}
+      <TechTag tech="Node.js" /> <TechTag tech="GraphQL" />{' '}
+      <TechTag tech="Apollo Server" /> <TechTag tech="MongoDB" /> and{' '}
+      <TechTag tech="Redis" /> on the backend, and <TechTag tech="React" /> with{' '}
+      <TechTag tech="Next.js" /> and <TechTag tech="Apollo Client" /> on the frontend.
     </>
   ),
   imgSrc: '/images/siteCapture.png',
@@ -78,9 +83,10 @@ const urlik: Project = {
   toYear: 2020,
   text: (
     <>
-      Url shortener with advanced statistics for registered users. Using <TechTag tech="Node.js" /> <TechTag tech="ASP.NET Core" />{' '}
-      <TechTag tech="MongoDB" /> and <TechTag tech="Redis" /> on the backend, and <TechTag tech="React" /> with <TechTag tech="Next.js" />{' '}
-      on the frontend.
+      Url shortener with advanced statistics for registered users. Using{' '}
+      <TechTag tech="Node.js" /> <TechTag tech="ASP.NET Core" />{' '}
+      <TechTag tech="MongoDB" /> and <TechTag tech="Redis" /> on the backend, and{' '}
+      <TechTag tech="React" /> with <TechTag tech="Next.js" /> on the frontend.
     </>
   ),
   imgSrc: '/images/urlik.png',
@@ -93,9 +99,11 @@ const shipvio: Project = {
   toYear: 2019,
   text: (
     <>
-      A logistics platform connecting carriers and customers that I worked on in <ExternalLink href="https://qest.cz/">Qest</ExternalLink>.
+      A logistics platform connecting carriers and customers that I worked on in{' '}
+      <ExternalLink href="https://qest.cz/">Qest</ExternalLink>.
       <br />
-      You can see images from the application and read more about the project using link above or in this{' '}
+      You can see images from the application and read more about the project using link
+      above or in this{' '}
       <ExternalLink href="https://qest.cz/project/shipvio">article</ExternalLink>.
     </>
   ),
@@ -109,8 +117,10 @@ const imaginess: Project = {
   toYear: 2021,
   text: (
     <>
-      Random image sharing app. Using <TechTag tech="Node.js" /> <TechTag tech="Serverless" /> <TechTag tech="Azure Blob Storage" /> and{' '}
-      <TechTag tech="CosmosDB" /> on the backend, and <TechTag tech="Vue" /> on the frontend.
+      Random image sharing app. Using <TechTag tech="Node.js" />{' '}
+      <TechTag tech="Serverless" /> <TechTag tech="Azure Blob Storage" /> and{' '}
+      <TechTag tech="CosmosDB" /> on the backend, and <TechTag tech="Vue" /> on the
+      frontend.
     </>
   ),
   imgSrc: '/images/imaginess.png',
@@ -123,8 +133,10 @@ const ladislavPrix: Project = {
   toYear: 2020,
   text: (
     <>
-      Personal website running on <ExternalLink href="http://ladislavprix.cz/">ladislavprix.cz</ExternalLink>. Developed using{' '}
-      <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Chakra UI" />.
+      Personal website running on{' '}
+      <ExternalLink href="http://ladislavprix.cz/">ladislavprix.cz</ExternalLink>.
+      Developed using <TechTag tech="React" /> <TechTag tech="Next.js" /> and{' '}
+      <TechTag tech="Chakra UI" />.
     </>
   ),
   imgSrc: '/images/ladislavprix.png',
@@ -137,8 +149,10 @@ const shamyrRescues: Project = {
   toYear: 2020,
   text: (
     <>
-      Web application informing about various animal rescues. Using <TechTag tech="Node.js" /> <TechTag tech={'Express.js'} /> and{' '}
-      <TechTag tech="PostgreSQL" /> on the backend, and <TechTag tech="React" /> on the frontend.
+      Web application informing about various animal rescues. Using{' '}
+      <TechTag tech="Node.js" /> <TechTag tech={'Express.js'} /> and{' '}
+      <TechTag tech="PostgreSQL" /> on the backend, and <TechTag tech="React" /> on the
+      frontend.
     </>
   ),
   imgSrc: '/images/shamyrRescues.png',
@@ -151,10 +165,14 @@ const treeloc: Project = {
   toYear: 2020,
   text: (
     <>
-      My bachelor thesis assignment. It is a web application searching and displaying woody plants developed for the Ministry of Interior
-      using <ExternalLink href="https://www.zakonyprolidi.cz/cs/1999-106#p3-9">Open formal norm</ExternalLink> (Czech). Using{' '}
-      <TechTag tech="ASP.NET Core" /> with <TechTag tech="MongoDB" /> on the backend, and <TechTag tech="React" /> with{' '}
-      <TechTag tech="Leaflet" /> on the frontend.
+      My bachelor thesis assignment. It is a web application searching and displaying
+      woody plants developed for the Ministry of Interior using{' '}
+      <ExternalLink href="https://www.zakonyprolidi.cz/cs/1999-106#p3-9">
+        Open formal norm
+      </ExternalLink>{' '}
+      (Czech). Using <TechTag tech="ASP.NET Core" /> with <TechTag tech="MongoDB" /> on
+      the backend, and <TechTag tech="React" /> with <TechTag tech="Leaflet" /> on the
+      frontend.
     </>
   ),
   imgSrc: '/images/treeloc.png',
@@ -166,10 +184,37 @@ const opendentity: Project = {
   fromYear: 2021,
   text: (
     <>
-      Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" /> and <TechTag tech="OpenID Connect" />
+      Identity provider and Access Control service. Developed using{' '}
+      <TechTag tech="ASP.NET Core" /> and <TechTag tech="OpenID Connect" />
     </>
   ),
   imgSrc: '/images/opendentityOIDC.png',
 };
 
-export default [expendity, opendentity, siteCapture, imaginess, urlik, shamyrRescues, treeloc, ladislavPrix, eimHome, shipvio];
+const contentium: Project = {
+  title: 'Contentium',
+  link: 'https://github.com/prixladi/contentium',
+  fromYear: 2021,
+  text: (
+    <>
+      Project you can use for creating sites with search engine optimized content from
+      markdown source. It is written using <TechTag tech="Next.js" /> and{' '}
+      <TechTag tech="Tailwind CSS" />
+    </>
+  ),
+  imgSrc: '/images/contentium.png',
+};
+
+export default [
+  contentium,
+  expendity,
+  opendentity,
+  siteCapture,
+  imaginess,
+  urlik,
+  shamyrRescues,
+  treeloc,
+  ladislavPrix,
+  eimHome,
+  shipvio,
+];

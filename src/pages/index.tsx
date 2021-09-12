@@ -31,12 +31,18 @@ const technologies: Technology[] = [
 const Index: React.FC = () => (
   <>
     <H1>Hey, my name is Láďa.</H1>
-    <Grid mb="0.5em" gridGap="1em" templateColumns={['1fr', '1fr', '1.1fr 1fr', '1.1fr 1fr']}>
+    <Grid
+      mb="0.5em"
+      gridGap="1em"
+      templateColumns={['1fr', '1fr', '1.1fr 1fr', '1.1fr 1fr']}
+    >
       <Box>
         <Text>
-          I’m a {calculateAge()} years old developer mostly interested in web development. I have been in the tech industry for more than 4
-          years and I have experience with both backend and frontend web development and a little bit with hardware. In my free time, I like
-          learning new technologies, biking, skiing, going to nature or watching TV series.
+          I’m a {calculateAge()} years old developer mostly interested in web development.
+          I have been in the tech industry for more than 4 years and I have experience
+          with both backend and frontend web development and a little bit with hardware.
+          In my free time, I like learning new technologies, biking, skiing, going to
+          nature or watching TV series.
         </Text>
       </Box>
       <Box width="99%">
@@ -48,7 +54,8 @@ const Index: React.FC = () => (
     </TechnologyList>
     <H2 mt="1em">How to contact me.</H2>
     <Text>
-      My full name is <strong>Ladislav Prix</strong> and I’m based in Prachatice and Prague, Czech Republic. You can write me an email ✉️{' '}
+      My full name is <strong>Ladislav Prix</strong> and I’m based in Prachatice and
+      Prague, Czech Republic. You can write me an email ✉️{' '}
       <Link color="red.500" isExternal={true} href="mailto://elix78963@gmail.com">
         elix78963(at)gmail.com
       </Link>

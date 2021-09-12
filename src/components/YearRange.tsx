@@ -7,7 +7,14 @@ type Props = {
 };
 
 const YearRange: React.FC<Props> = ({ from, to }: Props) => (
-  <Box color="gray.500" fontWeight="semibold" letterSpacing="wide" fontSize="xs" textTransform="uppercase" mr="0.5em">
+  <Box
+    color="gray.500"
+    fontWeight="semibold"
+    letterSpacing="wide"
+    fontSize="xs"
+    textTransform="uppercase"
+    mr="0.5em"
+  >
     {from} &bull; {to}
   </Box>
 );

@@ -48,12 +48,20 @@ const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
     <Box pt="1em" pb="1em" borderRadius="lg">
       <Grid
         gridGap={['1em', '1em', '1.5em', '2em']}
-        templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(2, 1fr)']}
+        templateColumns={[
+          'repeat(1, 1fr)',
+          'repeat(1, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(2, 1fr)',
+        ]}
       >
         <Box>
           <Title project={project} /> <br />
           <Flex mb="0em" d="flex" alignItems="baseline">
-            <YearRange from={project.fromYear.toString()} to={project.toYear?.toString() ?? 'now'} />
+            <YearRange
+              from={project.fromYear.toString()}
+              to={project.toYear?.toString() ?? 'now'}
+            />
             <Badge borderRadius="full" px="2" colorScheme="teal">
               {yearCount} {yearCount == 1 ? 'Year' : 'Years'}
             </Badge>
@@ -62,7 +70,13 @@ const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
         </Box>
 
         <Box width="99%">
-          <Image border="1px" borderColor={borderColor} borderRadius="1em" src={project.imgSrc} alt={project.title} />
+          <Image
+            border="1px"
+            borderColor={borderColor}
+            borderRadius="1em"
+            src={project.imgSrc}
+            alt={project.title}
+          />
         </Box>
       </Grid>
     </Box>
@@ -73,8 +87,9 @@ const Projects: React.FC = () => (
   <>
     <H1>My projects.</H1>
     <Text>
-      Here are some selected projects I{"'"}ve worked on. Each project has a time window I{"'"}ve worked on it, very brief description, and
-      a link to a repository or in case of a non-opensource project link to an informational site.
+      Here are some selected projects I{"'"}ve worked on. Each project has a time window when I
+      {"'"}ve worked on it, a very brief description, and a link to a repository, or in case
+      of a non-opensource project link to an informational site.
     </Text>
     <Grid mt="1em" gridGap={['1em', '2em', '3em', '5em']}>
       {projects.map((project) => (

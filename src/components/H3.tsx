@@ -7,7 +7,12 @@ type Props = SpaceProps & {
 };
 
 const H3: React.FC<Props> = ({ children, as, ...props }: Props) => (
-  <Heading textAlign="left" fontSize={['1.5em', '1.8em', '1.8em', '1.8em']} as={as || 'h3'} {...props}>
+  <Heading
+    textAlign="left"
+    fontSize={['1.5em', '1.8em', '1.8em', '1.8em']}
+    as={as || 'h3'}
+    {...props}
+  >
     {children}
   </Heading>
 );

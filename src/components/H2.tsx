@@ -10,7 +10,8 @@ const H2: React.FC<Props> = ({ children, as, ...props }: Props) => (
   <Heading
     mb={'0.75em'}
     textAlign="left"
-    fontSize={['2em', '2.5em', '2.5em', '2.5em']}
+    fontSize={['1.8em', '2.2em', '2.2em', '2.5em']}
+    fontWeight={700}
     as={as || 'h2'}
     {...props}
   >

@@ -10,7 +10,7 @@ type Props = SpaceProps &
   };
 
 const CardText: React.FC<Props> = ({ children, ...props }: Props) => (
-  <Text fontSize={['1em', '1.2em', '1.3em', '1.3em']} {...props}>
+  <Text {...props}>
     {children}
   </Text>
 );

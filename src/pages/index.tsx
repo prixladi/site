@@ -6,6 +6,7 @@ import H1 from '../components/H1';
 import { Technology } from '../data/types';
 import TechnologyList from '../components/TechnologyList';
 import { FaGithub, FaTwitter, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import ExternalLink from '../components/ExternalLink';
 
 const birthday = new Date(1996, 11, 29);
 
@@ -37,12 +38,25 @@ const Index: React.FC = () => (
       templateColumns={['1fr', '1fr', '1.1fr 1fr', '1.1fr 1fr']}
     >
       <Box>
+        <Text marginBottom="1.5rem">
+          I’m a {calculateAge()} years old developer mostly interested in{' '}
+          <strong>web</strong> and <strong>cloud development</strong>. You can see some of
+          my project on{' '}
+          <ExternalLink href="https://github.com/prixladi">
+            Github
+          </ExternalLink>
+          .
+        </Text>
         <Text>
-          I’m a {calculateAge()} years old developer mostly interested in web development.
           I have been in the tech industry for more than 4 years and I have experience
-          with both backend and frontend web development and a little bit with hardware.
-          In my free time, I like learning new technologies, biking, skiing, going to
-          nature or watching TV series.
+          with both <strong>backend</strong> and <strong>frontend</strong> web development
+          and a little bit with hardware. In my free time, I like learning new
+          technologies, biking, skiing, going to nature or watching TV series. I also
+          sometimes write article on{' '}
+          <ExternalLink href="https://blog.ladislavprix.cz">
+            my blog
+          </ExternalLink>
+          .
         </Text>
       </Box>
       <Box width="99%">
@@ -56,9 +70,9 @@ const Index: React.FC = () => (
     <Text>
       My full name is <strong>Ladislav Prix</strong> and I’m based in Prachatice and
       Prague, Czech Republic. You can write me an email ✉️{' '}
-      <Link color="red.500" isExternal={true} href="mailto://elix78963@gmail.com">
+      <ExternalLink href="mailto://elix78963@gmail.com">
         elix78963(at)gmail.com
-      </Link>
+      </ExternalLink>
       {', '}
       or you can contact me on social media listed below.
     </Text>

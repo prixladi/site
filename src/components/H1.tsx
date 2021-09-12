@@ -11,7 +11,8 @@ const H1: React.FC<Props> = ({ as, align, children }: Props) => (
   <Heading
     mb={'0.75em'}
     textAlign={align ?? 'left'}
-    fontSize={['2.4em', '3em', '3em', '3em']}
+    fontSize={['2em', '2.2em', '2.4em', '2.4em']}
+    fontWeight={800}
     as={as || 'h1'}
   >
     {children}

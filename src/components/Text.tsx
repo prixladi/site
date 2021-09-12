@@ -11,8 +11,8 @@ type Props = SpaceProps &
 const InfoText: React.FC<Props> = ({ children, fontSize, ...props }: Props) => (
   <Text
     textAlign="justify"
-    fontSize={fontSize ?? ['1.3em', '1.4em', '1.5em', '1.5em']}
-    fontWeight="300"
+    fontSize={fontSize ?? ['1.125rem', '1.125rem', '1.125rem', '1.125rem']}
+    lineHeight="1.75rem"
     {...props}
   >
     {children}

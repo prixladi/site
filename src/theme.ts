@@ -22,6 +22,10 @@ const theme = extendTheme({
     global: (props) => ({
       body: {
         backgroundColor: mode('white', '#1f2937')(props),
+        color: mode('black', 'white')(props),
+      },
+      strong: {
+        color: mode('black', '#FDE68A')(props),
       },
       nav: {
         color: mode('gray.500', 'white')(props),

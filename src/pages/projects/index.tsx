@@ -66,7 +66,7 @@ const ProjectsCard: React.FC<ProjectProps> = ({ project }: ProjectProps) => {
               {yearCount} {yearCount == 1 ? 'Year' : 'Years'}
             </Badge>
           </Flex>
-          <Text fontSize={['1em', '1.2em', '1.3em', '1.3em']}>{project.text}</Text>
+          <Text>{project.text}</Text>
         </Box>
 
         <Box width="99%">
@@ -87,9 +87,9 @@ const Projects: React.FC = () => (
   <>
     <H1>My projects.</H1>
     <Text>
-      Here are some selected projects I{"'"}ve worked on. Each project has a time window when I
-      {"'"}ve worked on it, a very brief description, and a link to a repository, or in case
-      of a non-opensource project link to an informational site.
+      Here are some selected projects I{"'"}ve worked on. Each project has a time window
+      when I{"'"}ve worked on it, a very brief description, and a link to a repository, or
+      in case of a <strong>non-opensource</strong> project link to an informational site.
     </Text>
     <Grid mt="1em" gridGap={['1em', '2em', '3em', '5em']}>
       {projects.map((project) => (

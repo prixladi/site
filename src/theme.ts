@@ -20,6 +20,9 @@ const theme = extendTheme({
   },
   styles: {
     global: (props) => ({
+      body: {
+        backgroundColor: mode('white', '#1f2937')(props),
+      },
       nav: {
         color: mode('gray.500', 'white')(props),
         fontWeight: 720,

@@ -1,8 +1,9 @@
 .github
+.next
 .eslintrc.json
 node_modules
-.next
-build
 package.json
 package-lock.json
 public
+out
+build

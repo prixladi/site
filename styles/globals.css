@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./navBar.css');
+@import url('./themeSwitcher.css');
+
+@layer base {
+    h2 {
+        @apply text-3xl font-thin leading-tight;
+    }
+    p {
+        @apply text-lg;
+    }
+    body {
+        @apply transition-all ease-in duration-300;
+        /*@apply bg-gray-900;*/
+        @apply dark:bg-[url('/assets/bg-dark.png')];
+        @apply bg-[url('/assets/bg-light.png')];
+        @apply bg-no-repeat;
+        @apply bg-cover;
+        @apply bg-center;
+        @apply bg-fixed;
+    }
+}

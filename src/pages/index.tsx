@@ -7,7 +7,7 @@ const Home: NextPage = () => (
         <h2 className="text-4xl font-semibold leading-[3rem]">Hi, I'm Láďa, I'm software developer from Czech Republic.</h2>
         <p className="text-4xl font-semibold leading-[3rem] text-gray-500 dark:text-gray-400">
           I’m a 24 years old developer mostly interested in web and cloud development. You can see
-          some of my project on Github.
+          some of my projects on Github.
         </p>
       </div>
       <div className="w-full">

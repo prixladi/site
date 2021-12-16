@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @import url('./navBar.css');
-@import url('./themeSwitcher.css');
+@import url('./themeSwitch.css');
 
 @layer base {
     h2 {

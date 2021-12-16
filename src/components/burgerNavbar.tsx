@@ -3,13 +3,21 @@ import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { FaMoon } from 'react-icons/fa';
 import { BsSun } from 'react-icons/bs';
-import { Route, routes } from '../constants';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
+import { Route, routes } from '../constants';
 
-const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => {
+const NavBarItem = ({
+  route,
+  currentPathname,
+  close,
+}: {
+  route: Route;
+  currentPathname: string;
+  close: () => void;
+}) => {
   const selected = !route.isExternal && route.path === currentPathname;
 
   return (
@@ -18,12 +26,17 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
         'navbar-item-selected': selected,
       })}
     >
-      <Link href={route.path}>{route.name}</Link>
+      <Link passHref href={route.path}>
+        {/* eslint-ignore-next-line */}
+        <button type="button" onClick={() => close()} className="w-full text-left">
+          {route.name}
+        </button>
+      </Link>
     </li>
   );
 };
 
-const { root, ...navRoutes } = routes;
+const { ...navRoutes } = routes;
 const BurgerNavbar = () => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -35,14 +48,14 @@ const BurgerNavbar = () => {
   }, []);
 
   const func = R.map((x: Route) => (
-    <NavBarItem key={x.path} route={x} currentPathname={pathname} />
+    <NavBarItem key={x.path} route={x} currentPathname={pathname} close={() => setOpen(false)} />
   ));
 
   return (
     <div className="navbar-burger">
       <button type="button" className="navbar-burger-button">
         <svg
-          className="block h-8 w-8 fill-current"
+          className="block h-8 w-8 mt-0 fill-current"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
           onClick={() => setOpen(true)}
@@ -55,11 +68,9 @@ const BurgerNavbar = () => {
         <div role="banner" className="navbar-burger-backdrop" onClick={() => setOpen(false)} />
         <nav className="navbar-burger-card">
           <div className="navbar-burger-header">
-            <Link href="/">
-              <div className="mr-auto text-5xl font-bold leading-none flex gap-2">
-                <MdLaptopChromebook />
-              </div>
-            </Link>
+            <div className="mr-auto text-5xl font-bold leading-none flex gap-2">
+              <MdLaptopChromebook />
+            </div>
             <button type="button" className="navbar-close" onClick={() => setOpen(false)}>
               <svg
                 className="navbar-burger-close"

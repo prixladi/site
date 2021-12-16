@@ -1,11 +1,18 @@
 import Link from 'next/link';
 import { BiDotsVerticalRounded } from 'react-icons/bi';
-import TehemeSwitcher from './themeSwitcher';
-import { Route, routes } from '../constants';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
+import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
+import { Route, routes } from '../constants';
+import ThemeSwitcher from './themeSwitcher';
+import {
+  fadeUpChildVariants,
+  fadeWrapperVariants,
+  scaleUpMediumAndFastWhileHoverVariants,
+  scaleUpTinyWhileHoverVariants,
+} from '../utils/motions';
 
 const Dots = () => (
   <div className="flex items-center">
@@ -17,14 +24,18 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
   const selected = !route.isExternal && route.path === currentPathname;
 
   return (
-    <li
-      className={clsx('navbar-hover-underline', {
-        'navbar-item': !selected,
-        'navbar-item-selected': selected,
-      })}
-    >
-      <Link href={route.path}>{route.name}</Link>
-    </li>
+    <motion.div className="w-full flex" variants={fadeUpChildVariants}>
+      <motion.li
+        whileHover="whileHover"
+        variants={R.mergeRight(scaleUpTinyWhileHoverVariants(), fadeUpChildVariants)}
+        className={clsx('navbar-hover-underline', {
+          'navbar-item': !selected,
+          'navbar-item-selected': selected,
+        })}
+      >
+        <Link href={route.path}>{route.name}</Link>
+      </motion.li>
+    </motion.div>
   );
 };
 
@@ -44,19 +55,29 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-content">
         <div
-          className={clsx('navbar-hover-underline', {
-            'navbar-name-selected': pathname === root.path,
-            'navbar-name': pathname !== root.path,
+          className={clsx('navbar-hover-underline navbar-name', {
+            'lg:navbar-name-selected': pathname === root.path,
           })}
         >
           <Link href={root.path}>Ladislav Prix</Link>
         </div>
         <nav className="navbar-middle">
-          <ul className="navbar-middle">{func(Object.values(navRoutes))}</ul>
+          <motion.ul
+            initial="initial"
+            animate="animate"
+            variants={fadeWrapperVariants}
+            className="navbar-middle"
+          >
+            {func(Object.values(navRoutes))}
+          </motion.ul>
         </nav>
-        <div className="navbar-theme-switch-wrapper">
-          <TehemeSwitcher />
-        </div>
+        <motion.div
+          whileHover="whileHover"
+          variants={scaleUpMediumAndFastWhileHoverVariants}
+          className="navbar-theme-switch-wrapper"
+        >
+          <ThemeSwitcher />
+        </motion.div>
         <BurgerNavbar />
       </div>
     </div>

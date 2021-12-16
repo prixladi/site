@@ -1,8 +1,0 @@
-@tailwind base;
-
-@layer base {
-    .theme-switcher {
-        @apply border-gray-500 hover:border-black hover:animate-pulse duration-500 inline-flex items-center justify-center p-1 h-12 w-12 border-[3px] rounded-full overflow-hidden;
-        @apply dark:border-gray-500 dark:hover:border-white;
-    }
-}

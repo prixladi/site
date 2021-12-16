@@ -1,2 +1,0 @@
-Some animation on buger menu open.
-Theme switch border transition - something like this https://codepen.io/giana/pen/yYBpVY (spin circle)

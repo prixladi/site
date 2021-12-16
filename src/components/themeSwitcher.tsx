@@ -2,7 +2,7 @@ import { useTheme } from 'next-themes';
 import { BsSun } from 'react-icons/bs';
 import { BiMoon } from 'react-icons/bi';
 
-const TehemeSwitcher = () => {
+const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
 
   const style = { transformOrigin: '50% 100px' };
@@ -30,4 +30,4 @@ const TehemeSwitcher = () => {
   );
 };
 
-export default TehemeSwitcher;
+export default ThemeSwitcher;

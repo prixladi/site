@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import { motion } from 'framer-motion';
 import * as R from 'ramda';
+import Link from 'next/link';
 import PageSEO from '../components/pageSEO';
 import {
   fadeWrapperVariants,
@@ -8,7 +9,6 @@ import {
   scaleUpVariants,
   scaleUpTinyWhileHoverVariants,
 } from '../utils/motions';
-import Link from 'next/link';
 
 const Home: NextPage = () => (
   <>
@@ -39,6 +39,7 @@ const Home: NextPage = () => (
               I&apos;m a 24 years old developer mostly interested in web and cloud development. You
               can see some of my projects on my{' '}
               <Link passHref href="https://github.com/prixladi">
+                {/* eslint-disable-next-line */}
                 <a className="text-red-600 underline hover:no-underline">Github</a>
               </Link>
               .

@@ -13,8 +13,8 @@
         @apply text-lg;
     }
     body {
+        @apply dark:text-white text-black;
         @apply transition-all ease-in duration-300;
-        /*@apply bg-gray-900;*/
         @apply dark:bg-[url('/assets/bg-dark.png')];
         @apply bg-[url('/assets/bg-light.png')];
         @apply bg-no-repeat;

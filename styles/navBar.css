@@ -9,7 +9,7 @@
     }
 
     .navbar {
-        @apply min-h-0 max-w-[100rem] m-auto pt-8 lg:pt-16 px-10;
+        @apply min-h-0 max-w-[100rem] m-auto pt-6 md:pt-8 lg:pt-16 px-4 md:px-10;
     }
 	.navbar-hover-underline {
 		background-size: 0 3px;
@@ -53,7 +53,8 @@
         @apply lg:hidden;
     }
     .navbar-burger-button {
-        @apply flex items-center text-gray-700 dark:text-gray-300 p-3;
+        @apply flex items-center text-gray-700 p-3;
+        @apply dark:text-gray-300;
     }
     .navbar-burger-menu {
         @apply relative z-50;
@@ -62,24 +63,26 @@
         @apply fixed inset-0 bg-gray-800 opacity-25;
     }
     .navbar-burger-card {
-        @apply fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 dark:bg-white bg-gray-800 border-r overflow-y-auto;
+        @apply fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white  border-r overflow-y-auto;
+        @apply dark:bg-gray-800;
     }
     .navbar-burger-header {
         @apply flex items-center mb-8;
     }
     .navbar-burger-close {
-        @apply h-6 w-6 text-gray-400 cursor-pointer dark:text-gray-600 hover:text-gray-900;
+        @apply h-6 w-6  cursor-pointer text-gray-600 hover:text-gray-900;
+        @apply dark:text-gray-400;
     }
     .navbar-burger-item-wrapper {
         @apply gap-8 lg:gap-12 flex flex-col;
     }
     .navbar-burger-item {
-        @apply text-xl  text-gray-400 font-semibold items-center flex;
-        @apply dark:text-gray-600;
+        @apply text-xl text-gray-600 font-semibold items-center flex leading-10;
+        @apply dark:text-gray-400;
     }
     .navbar-burger-theme-button {
-        @apply block w-full px-4 py-3 mb-2 leading-loose text-sm  text-gray-400 border-2 border-gray-400  font-semibold bg-transparent rounded-xl;
-        @apply dark:text-gray-600 dark:border-gray-600;
+        @apply block w-full px-4 py-3 mb-2 leading-loose text-sm text-gray-600 border-2 border-gray-600 font-semibold bg-transparent rounded-xl;
+        @apply dark:text-gray-400 dark:border-gray-400;
     }
     .navbar-burger-footer {
         @apply my-4 text-xs text-center text-gray-400;

@@ -6,7 +6,7 @@ const NotFound: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-    router.push(routes.root.name);
+    router.push(routes.root.path);
   }, [router]);
 
   return null;

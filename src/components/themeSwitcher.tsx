@@ -1,5 +1,5 @@
 import { useTheme } from 'next-themes';
-import { BsSun, BsMoon } from 'react-icons/bs';
+import { BsSun } from 'react-icons/bs';
 import { BiMoon } from 'react-icons/bi';
 
 const TehemeSwitcher = () => {

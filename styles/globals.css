@@ -21,5 +21,6 @@
         @apply bg-cover;
         @apply bg-center;
         @apply bg-fixed;
+        @apply min-h-screen relative;
     }
 }

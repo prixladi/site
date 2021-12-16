@@ -54,13 +54,15 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbar-content">
-        <div
+        <motion.div
+          whileHover="whileHover"
+          variants={scaleUpMediumAndFastWhileHoverVariants}
           className={clsx('navbar-hover-underline navbar-name', {
             'lg:navbar-name-selected': pathname === root.path,
           })}
         >
           <Link href={root.path}>Ladislav Prix</Link>
-        </div>
+        </motion.div>
         <nav className="navbar-middle">
           <motion.ul
             initial="initial"

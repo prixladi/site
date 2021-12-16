@@ -1,13 +1,13 @@
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => (
-  <div className="max-w-7xl m-auto pt-8 md:pt-16 lg:pt-24 xl:pt-32 px-10">
+  <div className="max-w-7xl m-auto pt-8 md:pt-16 lg:pt-24 xl:pt-32 px-4 md:px-10">
     <main className="flex flex-col lg:flex-row flex-1 gap-8 items-center">
       <div className="w-full flex flex-col gap-4">
-        <h2 className="text-4xl font-semibold leading-[3rem]">
+        <h2 className="text-3xl md:text-4xl font-semibold leading-tight md:leading-[3rem]">
           Hi, I&apos;m Láďa, I&apos;m software developer from Czech Republic.
         </h2>
-        <p className="text-4xl font-semibold leading-[3rem] text-gray-500 dark:text-gray-400">
+        <p className="text-xl md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400">
           I&apos;m a 24 years old developer mostly interested in web and cloud development. You can
           see some of my projects on Github.
         </p>

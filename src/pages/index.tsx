@@ -33,9 +33,6 @@ const Home: NextPage = () => (
           src="/assets/profile.jpg"
           alt="profile pricture"
           className="rounded-full object-cover scale-95"
-          initial="initial"
-          animate="animate"
-          whileHover="whileHover"
           {...mergeMotions(
             scaleUpInit(),
             scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 0.95 }),

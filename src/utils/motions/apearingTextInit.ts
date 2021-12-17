@@ -6,7 +6,17 @@ type MotionType = {
   children: Motion;
 };
 
-const apearingTextInit = (): MotionType => ({
+type AppearingTextInitProps = {
+  delayChildren?: number;
+};
+
+const defaultAppearingTextInitProps: AppearingTextInitProps = {
+  delayChildren: undefined,
+};
+
+const apearingTextInit = ({
+  delayChildren,
+}: AppearingTextInitProps = defaultAppearingTextInitProps): MotionType => ({
   standalone: {
     ...intialMotionBase,
     variants: {
@@ -18,7 +28,7 @@ const apearingTextInit = (): MotionType => ({
     ...intialMotionBase,
     variants: {
       initial: { opacity: 0 },
-      animate: { opacity: 1, transition: { staggerChildren: 0.5 } },
+      animate: { opacity: 1, transition: { staggerChildren: 0.5, delayChildren } },
     },
   },
   children: {
@@ -29,4 +39,5 @@ const apearingTextInit = (): MotionType => ({
   },
 });
 
+export { defaultAppearingTextInitProps };
 export default apearingTextInit;

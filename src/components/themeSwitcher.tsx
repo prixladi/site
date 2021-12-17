@@ -13,10 +13,10 @@ const ThemeSwitcher = () => {
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <div className="relative w-6 h-6">
-        <span className="rounded-swap-1" style={style}>
+        <span className="rounded-swap-1 dark:rotate-0" style={style}>
           <BiMoon className="w-6 h-6" />
         </span>
-        <span className="rounded-swap-2" style={style}>
+        <span className="rounded-swap-2 dark:-rotate-90" style={style}>
           <BsSun className="w-6 h-6" />
         </span>
       </div>

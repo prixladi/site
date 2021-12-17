@@ -13,7 +13,7 @@ const scaleUpHover = ({
 }: ScaleUpHoverOptions = defaultScaleUpHoverOptions): Motion => ({
   ...whileHoverMotionBase,
   variants: {
-    whileHover: { scale, transition: { duration } },
+    whileHover: { scale, transition: { duration, ease: 'easeInOut' } },
   },
 });
 

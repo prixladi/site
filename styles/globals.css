@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 @import url('./navBar.css');
-@import url('./themeSwitch.css');
 
 @layer base {
-    h2 {
-        @apply text-3xl font-thin leading-tight;
-    }
-    p {
-        @apply text-lg;
-    }
     body {
-        @apply dark:text-white text-black;
         @apply transition-all ease-in duration-300;
         @apply dark:bg-[url('/assets/bg-dark.png')];
         @apply bg-[url('/assets/bg-light.png')];
@@ -22,5 +14,17 @@
         @apply bg-center;
         @apply bg-fixed;
         @apply min-h-screen relative;
+    }
+
+    .rounded-swap-button {
+        @apply border-gray-500 hover:border-black dark:border-gray-500 dark:hover:border-white duration-500 inline-flex items-center justify-center p-1 h-12 w-12 border-[3px] rounded-full overflow-hidden;
+    }
+
+    .rounded-swap-1 {
+        @apply absolute inset-0 text-black dark:text-white transform dark:rotate-0 rotate-90 transition-transform duration-700;
+    }
+
+    .rounded-swap-2 {
+        @apply absolute inset-0 text-black dark:text-white transform dark:-rotate-90 rotate-0 transition-transform duration-700;
     }
 }

@@ -7,12 +7,10 @@ import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
 import { Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
-import {
-  fadeUpChildVariants,
-  fadeWrapperVariants,
-  scaleUpMediumAndFastWhileHoverVariants,
-  scaleUpTinyWhileHoverVariants,
-} from '../utils/motions';
+import { apearingTextInit, scaleUpHover, mergeMotions } from '../utils/motions';
+import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
+
+const { root, ...navRoutes } = routes;
 
 const Dots = () => (
   <div className="flex items-center">
@@ -24,10 +22,9 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
   const selected = !route.isExternal && route.path === currentPathname;
 
   return (
-    <motion.div className="w-full flex" variants={fadeUpChildVariants}>
+    <motion.div className="w-full flex" {...apearingTextInit().children}>
       <motion.li
-        whileHover="whileHover"
-        variants={R.mergeRight(scaleUpTinyWhileHoverVariants(), fadeUpChildVariants)}
+        {...mergeMotions(scaleUpHover(), apearingTextInit().children)}
         className={clsx('navbar-hover-underline', {
           'navbar-item': !selected,
           'navbar-item-selected': selected,
@@ -39,7 +36,6 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
   );
 };
 
-const { root, ...navRoutes } = routes;
 const Navbar = () => {
   const { pathname } = useRouter();
 
@@ -55,8 +51,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-content">
         <motion.div
-          whileHover="whileHover"
-          variants={scaleUpMediumAndFastWhileHoverVariants}
+          {...scaleUpHover()}
           className={clsx('navbar-hover-underline navbar-name', {
             'lg:navbar-name-selected': pathname === root.path,
           })}
@@ -64,18 +59,12 @@ const Navbar = () => {
           <Link href={root.path}>Ladislav Prix</Link>
         </motion.div>
         <nav className="navbar-middle">
-          <motion.ul
-            initial="initial"
-            animate="animate"
-            variants={fadeWrapperVariants}
-            className="navbar-middle"
-          >
+          <motion.ul {...apearingTextInit().parent} className="navbar-middle">
             {func(Object.values(navRoutes))}
           </motion.ul>
         </nav>
         <motion.div
-          whileHover="whileHover"
-          variants={scaleUpMediumAndFastWhileHoverVariants}
+          {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 })}
           className="navbar-theme-switch-wrapper"
         >
           <ThemeSwitcher />

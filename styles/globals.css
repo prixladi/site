@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('./navBar.css');
+@import url('./timeline.css');
 
 @layer base {
     body {
@@ -30,5 +31,9 @@
 
     .rounded-swap-2 {
         @apply absolute inset-0 text-black dark:text-white transform rotate-0 transition-transform duration-700;
+    }
+
+    .content-wrapper {
+        @apply m-auto pt-8 md:pt-16 lg:pt-24 xl:pt-32 px-4 md:px-10 pb-16 md:pb-10;
     }
 }

@@ -1,0 +1,27 @@
+@tailwind base;
+
+@layer base {
+    .timeline {
+    }
+    .timeline-date {
+        @apply px-4 font-bold text-red-700 !important;
+    }
+    .timeline-icon {
+        @apply bg-gray-800 dark:bg-gray-300 text-white dark:text-black !important;
+        @apply transition-all ease-in duration-300;
+    }
+    .timeline-text {
+        @apply rounded-lg !important;
+        @apply bg-gray-800 dark:bg-gray-300 text-white dark:text-black !important;
+        @apply transition-all ease-in duration-300;
+    }
+    .timeline-body-text {
+        @apply text-sm font-semibold text-white dark:text-black !important;
+    }
+    .timeline-body-title {
+        @apply text-lg font-bold text-white dark:text-black !important;
+    }
+    .timeline-body-position {
+        @apply italic text-white dark:text-black !important;
+    }
+}

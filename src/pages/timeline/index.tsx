@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
-import { VerticalTimeline } from 'react-vertical-timeline-component';
-import { VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 const Timeline: NextPage = () => (
   <>

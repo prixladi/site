@@ -51,7 +51,7 @@ const ProjectTitle = ({ project }: ProjectProps) => {
 };
 
 const ProjectCard = ({ project }: ProjectProps) => (
-  <motion.div {...apearingTextInit().children} className="grid grid-cols-2 gap-4">
+  <motion.div {...apearingTextInit().children} className="grid grid-cols-1 md:grid-cols-2 gap-4">
     <div className="flex">
       <div className="flex flex-col">
         <ProjectTitle project={project} />

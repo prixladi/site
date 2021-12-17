@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
 import { Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
-import { apearingTextInit, scaleUpHover, mergeMotions, scaleUpInit } from '../utils/motions';
+import { apearingTextInit, scaleUpHover } from '../utils/motions';
 import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
 
 const { root, ...navRoutes } = routes;

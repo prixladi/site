@@ -7,7 +7,12 @@ import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { motion } from 'framer-motion';
 import { Route, routes } from '../constants';
+import { scaleUpInit } from '../utils/motions';
+
+const { ...navRoutes } = routes;
 
 const NavBarItem = ({
   route,
@@ -27,16 +32,32 @@ const NavBarItem = ({
       })}
     >
       <Link passHref href={route.path}>
-        {/* eslint-ignore-next-line */}
-        <button type="button" onClick={() => close()} className="w-full text-left">
+        {/* eslint-disable */}
+        <a
+          target={route.isExternal ? '_blank' : undefined}
+          onClick={() => close()}
+          className="w-full text-left"
+        >
+          {/* eslint-enable */}
           {route.name}
-        </button>
+        </a>
       </Link>
     </li>
   );
 };
 
-const { ...navRoutes } = routes;
+const Cross = () => (
+  <svg
+    className="navbar-burger-close"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
+
 const BurgerNavbar = () => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -51,18 +72,24 @@ const BurgerNavbar = () => {
     <NavBarItem key={x.path} route={x} currentPathname={pathname} close={() => setOpen(false)} />
   ));
 
+  const style = { transformOrigin: '50% 100px' };
   return (
     <div className="navbar-burger">
-      <button type="button" className="navbar-burger-button">
-        <svg
-          className="block h-8 w-8 mt-0 fill-current"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-          onClick={() => setOpen(true)}
-        >
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
+      <motion.button
+        {...scaleUpInit()}
+        type="button"
+        className="rounded-swap-button"
+        onClick={() => setOpen(true)}
+      >
+        <div className="relative w-6 h-6">
+          <span className={open ? 'rounded-swap-2' : 'rounded-swap-1'} style={style}>
+            <Cross />
+          </span>
+          <span className={open ? 'rounded-swap-1' : 'rounded-swap-2'} style={style}>
+            <GiHamburgerMenu className="w-6 h-6" />
+          </span>
+        </div>
+      </motion.button>
       <div className={clsx('navbar-burger-menu', { hidden: !open })}>
         {/* eslint-disable-next-line */}
         <div role="banner" className="navbar-burger-backdrop" onClick={() => setOpen(false)} />
@@ -72,20 +99,7 @@ const BurgerNavbar = () => {
               <MdLaptopChromebook />
             </div>
             <button type="button" className="navbar-close" onClick={() => setOpen(false)}>
-              <svg
-                className="navbar-burger-close"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
+              <Cross />
             </button>
           </div>
           <div className="mb-8">

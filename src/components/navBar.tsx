@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
 import { Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
-import { apearingTextInit, scaleUpHover, mergeMotions } from '../utils/motions';
+import { apearingTextInit, scaleUpHover, mergeMotions, scaleUpInit } from '../utils/motions';
 import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
 
 const { root, ...navRoutes } = routes;
@@ -30,7 +30,11 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
           'navbar-item-selected': selected,
         })}
       >
-        <Link href={route.path}>{route.name}</Link>
+        <Link passHref href={route.path}>
+          {/* eslint-disable */}
+          <a target={route.isExternal ? '_blank' : undefined}>{route.name}</a>
+          {/* eslint-enable */}
+        </Link>
       </motion.li>
     </motion.div>
   );
@@ -51,7 +55,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-content">
         <motion.div
-          {...scaleUpHover()}
+          {...mergeMotions(scaleUpHover(), scaleUpInit())}
           className={clsx('navbar-hover-underline navbar-name', {
             'lg:navbar-name-selected': pathname === root.path,
           })}
@@ -64,7 +68,10 @@ const Navbar = () => {
           </motion.ul>
         </nav>
         <motion.div
-          {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 })}
+          {...mergeMotions(
+            scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 }),
+            scaleUpInit(),
+          )}
           className="navbar-theme-switch-wrapper"
         >
           <ThemeSwitcher />

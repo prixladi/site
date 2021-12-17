@@ -49,14 +49,14 @@ const Timeline: NextPage = () => (
             {...scaleUpHover()}
             className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
           >
-            Items here are major time points in my career. You can also find information on my{' '}
+            Items here are major time points in my career. You can also check out my{' '}
             <InlineLink href="https://www.linkedin.com/in/ladislav-prix/" text="Linkedin" /> or in
             my <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" /> you
-            can download if you prefer that format.
+            can download.
           </motion.p>
         </motion.div>
 
-        <motion.div {...apearingTextInit().children}>
+        <motion.div {...apearingTextInit().children} className="mt-8">
           <VerticalTimeline className="timeline">
             <Item
               title="Designeo Creative s.r.o."

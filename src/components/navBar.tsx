@@ -24,7 +24,6 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
   return (
     <motion.div className="w-full flex" {...apearingTextInit().children}>
       <motion.li
-        {...mergeMotions(scaleUpHover(), apearingTextInit().children)}
         className={clsx('navbar-hover-underline', {
           'navbar-item': !selected,
           'navbar-item-selected': selected,
@@ -55,7 +54,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbar-content">
         <motion.div
-          {...mergeMotions(scaleUpHover(), scaleUpInit())}
+          {...scaleUpHover()}
           className={clsx('navbar-hover-underline navbar-name', {
             'lg:navbar-name-selected': pathname === root.path,
           })}
@@ -63,15 +62,10 @@ const Navbar = () => {
           <Link href={root.path}>Ladislav Prix</Link>
         </motion.div>
         <nav className="navbar-middle">
-          <motion.ul {...apearingTextInit().parent} className="navbar-middle">
-            {func(Object.values(navRoutes))}
-          </motion.ul>
+          <motion.ul className="navbar-middle">{func(Object.values(navRoutes))}</motion.ul>
         </nav>
         <motion.div
-          {...mergeMotions(
-            scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 }),
-            scaleUpInit(),
-          )}
+          {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 })}
           className="navbar-theme-switch-wrapper"
         >
           <ThemeSwitcher />

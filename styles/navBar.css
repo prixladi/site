@@ -18,6 +18,7 @@
 	}
     .navbar-name {
         @apply font-semibold text-3xl leading-[3rem];
+        @apply text-black dark:text-white;
     }
 	.navbar-selected {
 		background-size: 100% 3px;

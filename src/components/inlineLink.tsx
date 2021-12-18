@@ -11,6 +11,7 @@ const InlineLink = ({ text, href, download }: Props) => (
   <Link passHref href={href}>
     {/* eslint-disable-next-line */}
     <a
+      rel="noopener"
       target={
         href.startsWith('https://') || href.startsWith('http://') || !R.isNil(download)
           ? '_blank'

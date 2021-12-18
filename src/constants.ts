@@ -1,16 +1,73 @@
+import { AiOutlineHome, AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import { BiTimeFive } from 'react-icons/bi';
+import { IconType } from 'react-icons/lib';
+import { IoLogoReact } from 'react-icons/io5';
+import { BsFillPencilFill } from 'react-icons/bs';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+
 type Route = {
   path: string;
   name: string;
-  isExternal: boolean;
+  Icon?: IconType;
+  showInNavigation?: boolean;
+  description?: string;
+  shortcuts?: string[];
 };
 
 type Routes = { [key: string]: Route };
 
 export type { Route, Routes };
 export const routes: Routes = {
-  root: { path: '/', name: 'Home', isExternal: false },
-  projects: { path: '/projects', name: 'Projects', isExternal: false },
-  timeline: { path: '/timeline', name: 'Timeline', isExternal: false },
-  technologies: { path: '/technologies', name: 'Technologies', isExternal: false },
-  blog: { path: 'https://blog.ladislavprix.cz', name: 'Blog', isExternal: true },
+  root: {
+    path: '/',
+    name: 'Home',
+    showInNavigation: true,
+    Icon: AiOutlineHome,
+    description: 'Default Home page',
+    shortcuts: ['alt', 'h'],
+  },
+  projects: {
+    path: '/projects',
+    name: 'Projects',
+    showInNavigation: true,
+    shortcuts: ['alt', 'p'],
+    Icon: AiOutlineFundProjectionScreen,
+  },
+  timeline: {
+    path: '/timeline',
+    name: 'Timeline',
+    showInNavigation: true,
+    shortcuts: ['alt', 't'],
+    Icon: BiTimeFive,
+  },
+  technologies: {
+    path: '/technologies',
+    name: 'Technologies',
+    showInNavigation: true,
+    shortcuts: ['alt', 'l'],
+    Icon: IoLogoReact,
+  },
+  blog: {
+    path: 'https://blog.ladislavprix.cz',
+    name: 'Blog',
+    showInNavigation: true,
+    shortcuts: ['alt', 'b', 'l'],
+    Icon: BsFillPencilFill,
+  },
+  github: {
+    path: 'https://github.com/prixladi',
+    name: 'Gihub',
+    shortcuts: ['alt', 'g', 'h'],
+    Icon: FaGithub,
+  },
+  linkedin: {
+    path: 'https://www.linkedin.com/in/ladislav-prix/',
+    name: 'Linkedin',
+    shortcuts: ['alt', 'l', 'k'],
+    Icon: FaLinkedin,
+  },
+};
+
+export const isExternalRoute = (route: Route) => {
+  return route.path.startsWith('http://') || route.path.startsWith('https://');
 };

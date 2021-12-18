@@ -1,0 +1,13 @@
+@tailwind base;
+
+@layer base {
+    .kbar-animator {
+        @apply max-w-xl w-full bg-white text-black rounded-lg overflow-hidden shadow-md dark:bg-gray-700 dark:text-white;
+    }
+    .kbar-search {
+        @apply pl-3 py-4 w-full outline box-border outline-none border-none bg-white dark:bg-gray-700;
+    }
+    .kbar-group {
+        @apply pb-2 pt-1 text-xs scale-90 font-semibold opacity-40 uppercase;
+    }
+}

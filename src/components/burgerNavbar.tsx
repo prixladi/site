@@ -9,10 +9,8 @@ import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion } from 'framer-motion';
-import { Route, routes } from '../constants';
+import { isExternalRoute, Route } from '../constants';
 import { scaleUpInit } from '../utils/motions';
-
-const { ...navRoutes } = routes;
 
 const NavBarItem = ({
   route,
@@ -23,7 +21,7 @@ const NavBarItem = ({
   currentPathname: string;
   close: () => void;
 }) => {
-  const selected = !route.isExternal && route.path === currentPathname;
+  const selected = currentPathname.includes(route.path);
 
   return (
     <li
@@ -35,7 +33,7 @@ const NavBarItem = ({
         {/* eslint-disable */}
         <a
           rel="noopener"
-          target={route.isExternal ? '_blank' : undefined}
+          target={isExternalRoute(route) ? '_blank' : undefined}
           onClick={() => close()}
           className="w-full text-left"
         >
@@ -59,7 +57,11 @@ const Cross = () => (
   </svg>
 );
 
-const BurgerNavbar = () => {
+type BurgerNavbarProps = {
+  routes: Route[];
+};
+
+const BurgerNavbar = ({ routes }: BurgerNavbarProps) => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [client, setClient] = useState(false);
@@ -110,7 +112,7 @@ const BurgerNavbar = () => {
             </button>
           </div>
           <div className="mb-8">
-            <ul className="navbar-burger-item-wrapper">{func(Object.values(navRoutes))}</ul>
+            <ul className="navbar-burger-item-wrapper">{func(routes)}</ul>
           </div>
           <div className="mt-auto">
             <button

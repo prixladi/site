@@ -6,7 +6,7 @@ import Content from '../../components/content';
 import InlineLink from '../../components/inlineLink';
 import { routes } from '../../constants';
 import technologies from '../../data/technologies';
-import { apearingTextInit, scaleUpHover } from '../../utils/motions';
+import { appearingTextInit, scaleUpHover } from '../../utils/motions';
 
 const options: OptionsProp = {
   colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
@@ -37,21 +37,21 @@ const Timeline: NextPage = () => {
   return (
     <Content title="Technologies | Ladislav Prix" className="max-w-4xl">
       <main className="flex flex-col gap-8 items-center">
-        <motion.div {...apearingTextInit().parent} className="w-full flex flex-col gap-4">
-          <motion.div {...apearingTextInit().children}>
+        <motion.div {...appearingTextInit().parent} className="w-full flex flex-col gap-4">
+          <motion.div {...appearingTextInit().children}>
             <motion.h2
               {...scaleUpHover()}
               className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
             >
-              Here is a word cloud of technologies i usually work with or used to work with.
+              Here are some of the technologies I use.
             </motion.h2>
           </motion.div>
-          <motion.div {...apearingTextInit().children}>
+          <motion.div {...appearingTextInit().children}>
             <motion.p
               {...scaleUpHover()}
               className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
             >
-              To see on what projects i used some of the technologies you can check{' '}
+              To see on what projects I used some of the technologies you can check the{' '}
               <InlineLink href={routes.projects.path} text="projects page" />.
             </motion.p>
           </motion.div>

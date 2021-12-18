@@ -88,7 +88,7 @@ const Results = () => {
   return <KBarResults items={results} onRender={ResultsRender} />;
 };
 
-const KbarContext: React.FC = ({ children }) => {
+const KBar: React.FC = ({ children }) => {
   const actions = useKActions();
 
   return (
@@ -106,4 +106,4 @@ const KbarContext: React.FC = ({ children }) => {
   );
 };
 
-export default KbarContext;
+export default KBar;

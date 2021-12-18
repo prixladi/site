@@ -1,6 +1,7 @@
 import { useTheme } from 'next-themes';
 import { BsSun } from 'react-icons/bs';
 import { BiMoon } from 'react-icons/bi';
+import { toggleTheme } from '../utils';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
@@ -11,7 +12,7 @@ const ThemeSwitcher = () => {
       aria-label="change theme"
       type="button"
       className="rounded-swap-button"
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(toggleTheme(theme))}
     >
       <div className="relative w-6 h-6">
         <span className="rounded-swap-1 dark:rotate-0" style={style}>

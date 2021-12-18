@@ -34,6 +34,7 @@ const NavBarItem = ({
       <Link passHref href={route.path}>
         {/* eslint-disable */}
         <a
+          rel="noopener"
           target={route.isExternal ? '_blank' : undefined}
           onClick={() => close()}
           className="w-full text-left"
@@ -76,6 +77,7 @@ const BurgerNavbar = () => {
   return (
     <div className="navbar-burger">
       <motion.button
+        aria-label="toggle menu"
         {...scaleUpInit()}
         type="button"
         className="rounded-swap-button"
@@ -98,7 +100,12 @@ const BurgerNavbar = () => {
             <div className="mr-auto text-5xl font-bold leading-none flex gap-2">
               <MdLaptopChromebook />
             </div>
-            <button type="button" className="navbar-close" onClick={() => setOpen(false)}>
+            <button
+              aria-label="close menu"
+              type="button"
+              className="navbar-close"
+              onClick={() => setOpen(false)}
+            >
               <Cross />
             </button>
           </div>
@@ -107,6 +114,7 @@ const BurgerNavbar = () => {
           </div>
           <div className="mt-auto">
             <button
+              aria-label="change theme"
               type="button"
               className="navbar-burger-theme-button"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

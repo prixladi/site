@@ -41,7 +41,10 @@ const ProjectTitle = ({ project }: ProjectProps) => {
     <h3 className="pb-4">
       <Link passHref href={project.link}>
         {/* eslint-disable */}
-        <a className="span items-center text-red-600 font-bold text-2xl hover:underline">
+        <a
+          rel="noopener"
+          className="span items-center text-red-600 font-bold text-2xl hover:underline"
+        >
           {project.title} {isGithub ? <FaGithub className="inline-block pb-1" /> : null}
         </a>
         {/* eslint-enable */}

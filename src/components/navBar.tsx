@@ -31,7 +31,12 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
       >
         <Link passHref href={route.path}>
           {/* eslint-disable */}
-          <a target={route.isExternal ? '_blank' : undefined}>{route.name}</a>
+          <a
+            rel={route.isExternal ? 'noopener' : undefined}
+            target={route.isExternal ? '_blank' : undefined}
+          >
+            {route.name}
+          </a>
           {/* eslint-enable */}
         </Link>
       </motion.li>

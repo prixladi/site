@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
 import Content from '../../components/content';
 import InlineLink from '../../components/inlineLink';
+import { routes } from '../../constants';
 import technologies from '../../data/technologies';
 import { apearingTextInit, scaleUpHover } from '../../utils/motions';
 
@@ -42,7 +43,7 @@ const Timeline: NextPage = () => {
               {...scaleUpHover()}
               className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
             >
-              This is timeline of my education and career.
+              Here is a word cloud of technologies i usually work with or used to work with.
             </motion.h2>
           </motion.div>
           <motion.div {...apearingTextInit().children}>
@@ -50,10 +51,8 @@ const Timeline: NextPage = () => {
               {...scaleUpHover()}
               className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
             >
-              Items here are major time points in my career. You can also check out my{' '}
-              <InlineLink href="https://www.linkedin.com/in/ladislav-prix/" text="Linkedin" /> or in
-              my <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" /> you
-              can download.
+              To see on what projects i used some of the technologies you can check{' '}
+              <InlineLink href={routes.projects.path} text="projects page" />.
             </motion.p>
           </motion.div>
           {renderCloud && <ReactWordcloud options={options} words={technologies} />}

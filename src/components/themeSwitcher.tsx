@@ -8,6 +8,7 @@ const ThemeSwitcher = () => {
   const style = { transformOrigin: '50% 100px' };
   return (
     <button
+      aria-label="change theme"
       type="button"
       className="rounded-swap-button"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}

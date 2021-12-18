@@ -71,7 +71,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <Content title="Ladislav Prix | Timeline" className="max-w-4xl">
+  <Content title="Projects | Ladislav Prix" className="max-w-4xl">
     <main className="flex flex-col gap-8 items-center">
       <motion.div {...apearingTextInit().parent} className="w-full flex flex-col gap-4">
         <motion.div {...apearingTextInit().children}>

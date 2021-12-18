@@ -34,7 +34,7 @@
     }
     
     ::-webkit-scrollbar-track {
-        @apply bg-gray-700;
+        @apply dark:bg-gray-700 bg-white;
     }
     
     ::-webkit-scrollbar-thumb {

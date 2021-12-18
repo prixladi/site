@@ -5,12 +5,13 @@ import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
-import { Route, routes } from '../constants';
+import { isExternalRoute, Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
 import { apearingTextInit, scaleUpHover } from '../utils/motions';
 import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
 
-const { root, ...navRoutes } = routes;
+const { root, ...restRoutes } = routes;
+const navRoutes = Object.values(restRoutes).filter((x) => x.showInNavigation);
 
 const Dots = () => (
   <div className="flex items-center">
@@ -19,7 +20,7 @@ const Dots = () => (
 );
 
 const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => {
-  const selected = !route.isExternal && route.path === currentPathname;
+  const selected = currentPathname.includes(route.path);
 
   return (
     <motion.div className="w-full flex" {...apearingTextInit().children}>
@@ -32,8 +33,8 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
         <Link passHref href={route.path}>
           {/* eslint-disable */}
           <a
-            rel={route.isExternal ? 'noopener' : undefined}
-            target={route.isExternal ? '_blank' : undefined}
+            rel={isExternalRoute(route) ? 'noopener' : undefined}
+            target={isExternalRoute(route) ? '_blank' : undefined}
           >
             {route.name}
           </a>
@@ -67,7 +68,7 @@ const Navbar = () => {
           <Link href={root.path}>Ladislav Prix</Link>
         </motion.div>
         <nav className="navbar-middle">
-          <motion.ul className="navbar-middle">{func(Object.values(navRoutes))}</motion.ul>
+          <motion.ul className="navbar-middle">{func(navRoutes)}</motion.ul>
         </nav>
         <motion.div
           {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 })}
@@ -75,7 +76,7 @@ const Navbar = () => {
         >
           <ThemeSwitcher />
         </motion.div>
-        <BurgerNavbar />
+        <BurgerNavbar routes={navRoutes} />
       </div>
     </div>
   );

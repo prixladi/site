@@ -1,6 +1,6 @@
 type DBs = 'MongoDB' | 'Redis' | 'PostgreSQL' | 'SQL Server' | 'SQL' | 'CosmosDB';
 
-type DevOps = 'Github Actions' | 'Azure' | 'Azure DevOps';
+type DevOps = 'Github Actions' | 'Azure' | 'Azure DevOps' | 'AWS';
 
 type Languages = 'C#' | 'JavaScript' | 'TypeScript';
 

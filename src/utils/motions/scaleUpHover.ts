@@ -5,7 +5,7 @@ type ScaleUpHoverOptions = {
   duration: number;
 };
 
-const defaultScaleUpHoverOptions: ScaleUpHoverOptions = { scale: 1.07, duration: 0.75 };
+const defaultScaleUpHoverOptions: ScaleUpHoverOptions = { scale: 1.03, duration: 0.75 };
 
 const scaleUpHover = ({
   scale,

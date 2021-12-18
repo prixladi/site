@@ -5,10 +5,11 @@ import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { motion } from 'framer-motion';
 import BurgerNavbar from './burgerNavbar';
-import { isExternalRoute, Route, routes } from '../constants';
+import { Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
-import { apearingTextInit, scaleUpHover } from '../utils/motions';
+import { appearingTextInit, scaleUpHover } from '../utils/motions';
 import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
+import { isActivePath, isExternalRoute } from '../utils';
 
 const { root, ...restRoutes } = routes;
 const navRoutes = Object.values(restRoutes).filter((x) => x.showInNavigation);
@@ -19,31 +20,27 @@ const Dots = () => (
   </div>
 );
 
-const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => {
-  const selected = currentPathname.includes(route.path);
-
-  return (
-    <motion.div className="w-full flex" {...apearingTextInit().children}>
-      <motion.li
-        className={clsx('navbar-hover-underline', {
-          'navbar-item': !selected,
-          'navbar-item-selected': selected,
-        })}
-      >
-        <Link passHref href={route.path}>
-          {/* eslint-disable */}
-          <a
-            rel={isExternalRoute(route) ? 'noopener' : undefined}
-            target={isExternalRoute(route) ? '_blank' : undefined}
-          >
-            {route.name}
-          </a>
-          {/* eslint-enable */}
-        </Link>
-      </motion.li>
-    </motion.div>
-  );
-};
+const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => (
+  <motion.div className="w-full flex" {...appearingTextInit().children}>
+    <motion.li
+      className={clsx('navbar-hover-underline', {
+        'navbar-item': !isActivePath(route.path, currentPathname),
+        'navbar-item-selected': isActivePath(route.path, currentPathname),
+      })}
+    >
+      <Link passHref href={route.path}>
+        {/* eslint-disable */}
+        <a
+          rel={isExternalRoute(route) ? 'noopener' : undefined}
+          target={isExternalRoute(route) ? '_blank' : undefined}
+        >
+          {route.name}
+        </a>
+        {/* eslint-enable */}
+      </Link>
+    </motion.li>
+  </motion.div>
+);
 
 const Navbar = () => {
   const { pathname } = useRouter();
@@ -76,7 +73,7 @@ const Navbar = () => {
         >
           <ThemeSwitcher />
         </motion.div>
-        <BurgerNavbar routes={navRoutes} />
+        <BurgerNavbar navRoutes={navRoutes} />
       </div>
     </div>
   );

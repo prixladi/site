@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
-import { FaMoon } from 'react-icons/fa';
+import { BiMoon } from 'react-icons/bi';
 import { BsSun } from 'react-icons/bs';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
@@ -9,8 +9,8 @@ import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion } from 'framer-motion';
-import { isExternalRoute, Route } from '../constants';
-import { scaleUpInit } from '../utils/motions';
+import { Route, routes } from '../constants';
+import { isActivePath, isExternalRoute, toggleTheme } from '../utils';
 
 const NavBarItem = ({
   route,
@@ -20,30 +20,26 @@ const NavBarItem = ({
   route: Route;
   currentPathname: string;
   close: () => void;
-}) => {
-  const selected = currentPathname.includes(route.path);
-
-  return (
-    <li
-      className={clsx('navbar-hover-underline navbar-burger-item', {
-        'navbar-item-selected': selected,
-      })}
-    >
-      <Link passHref href={route.path}>
-        {/* eslint-disable */}
-        <a
-          rel="noopener"
-          target={isExternalRoute(route) ? '_blank' : undefined}
-          onClick={() => close()}
-          className="w-full text-left"
-        >
-          {/* eslint-enable */}
-          {route.name}
-        </a>
-      </Link>
-    </li>
-  );
-};
+}) => (
+  <li
+    className={clsx('navbar-hover-underline navbar-burger-item', {
+      'navbar-item-selected': isActivePath(route.path, currentPathname),
+    })}
+  >
+    <Link passHref href={route.path}>
+      {/* eslint-disable */}
+      <a
+        rel="noopener"
+        target={isExternalRoute(route) ? '_blank' : undefined}
+        onClick={() => close()}
+        className="w-full text-left"
+      >
+        {/* eslint-enable */}
+        {route.name}
+      </a>
+    </Link>
+  </li>
+);
 
 const Cross = () => (
   <svg
@@ -58,10 +54,10 @@ const Cross = () => (
 );
 
 type BurgerNavbarProps = {
-  routes: Route[];
+  navRoutes: Route[];
 };
 
-const BurgerNavbar = ({ routes }: BurgerNavbarProps) => {
+const BurgerNavbar = ({ navRoutes }: BurgerNavbarProps) => {
   const [open, setOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [client, setClient] = useState(false);
@@ -80,7 +76,6 @@ const BurgerNavbar = ({ routes }: BurgerNavbarProps) => {
     <div className="navbar-burger">
       <motion.button
         aria-label="toggle menu"
-        {...scaleUpInit()}
         type="button"
         className="rounded-swap-button"
         onClick={() => setOpen(true)}
@@ -112,19 +107,19 @@ const BurgerNavbar = ({ routes }: BurgerNavbarProps) => {
             </button>
           </div>
           <div className="mb-8">
-            <ul className="navbar-burger-item-wrapper">{func(routes)}</ul>
+            <ul className="navbar-burger-item-wrapper">{func([routes.root, ...navRoutes])}</ul>
           </div>
           <div className="mt-auto">
             <button
               aria-label="change theme"
               type="button"
               className="navbar-burger-theme-button"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(toggleTheme(theme))}
             >
               <span className="flex flex1 gap-4">
                 <span className="items-center flex">
                   {client && theme === 'dark' ? (
-                    <FaMoon className="w-4 h-4" />
+                    <BiMoon className="w-4 h-4" />
                   ) : (
                     <BsSun className="w-4 h-4" />
                   )}

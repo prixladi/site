@@ -5,7 +5,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import { SiNextdotjs, SiDotnet } from 'react-icons/si';
 import { IoMdSchool } from 'react-icons/io';
 import InlineLink from '../../components/inlineLink';
-import { apearingTextInit, scaleUpHover } from '../../utils/motions';
+import { appearingTextInit, scaleUpHover } from '../../utils/motions';
 import Content from '../../components/content';
 
 type ItemProps = {
@@ -35,28 +35,28 @@ const Item = ({ date, icon, title, position, children }: ItemProps) => (
 const Timeline: NextPage = () => (
   <Content title="Timeline | Ladislav Prix" className="max-w-4xl">
     <main className="flex flex-col gap-8 items-center">
-      <motion.div {...apearingTextInit().parent} className="w-full flex flex-col gap-4">
-        <motion.div {...apearingTextInit().children}>
+      <motion.div {...appearingTextInit().parent} className="w-full flex flex-col gap-4">
+        <motion.div {...appearingTextInit().children}>
           <motion.h2
             {...scaleUpHover()}
             className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
           >
-            This is timeline of my education and career.
+            This is a timeline of my education and career.
           </motion.h2>
         </motion.div>
-        <motion.div {...apearingTextInit().children}>
+        <motion.div {...appearingTextInit().children}>
           <motion.p
             {...scaleUpHover()}
             className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
           >
             Items here are major time points in my career. You can also check out my{' '}
-            <InlineLink href="https://www.linkedin.com/in/ladislav-prix/" text="Linkedin" /> or in
-            my <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" /> you
-            can download.
+            <InlineLink href="https://www.linkedin.com/in/ladislav-prix/" text="Linkedin" /> or
+            download my{' '}
+            <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" />.
           </motion.p>
         </motion.div>
 
-        <motion.div {...apearingTextInit().children} className="mt-8">
+        <motion.div {...appearingTextInit().children} className="mt-8">
           <VerticalTimeline className="timeline">
             <Item
               title="Designeo Creative s.r.o."

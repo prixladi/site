@@ -67,7 +67,3 @@ export const routes: Routes = {
     Icon: FaLinkedin,
   },
 };
-
-export const isExternalRoute = (route: Route) => {
-  return route.path.startsWith('http://') || route.path.startsWith('https://');
-};

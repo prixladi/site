@@ -1,0 +1,29 @@
+@tailwind base;
+
+@layer base {
+    .border-tiny-black {
+        border-color: rgb(0,0,0,0.15);
+        @apply border-[1px];
+    }
+    .border-tiny-white {
+        border-color: rgb(255,255,255,0.15);
+        @apply border-[1px];
+    }
+    .tag {
+        @apply rounded-full px-2 py-[1px] pb-[2px] font-semibold  text-sm;
+    }
+    .tech-tag-colors-light {
+        @apply bg-sky-200 text-black;
+    }
+    .tech-tag-colors-dark {
+        background-color: rgba(144, 205, 244, 0.16);
+        color: rgb(144, 205, 244) !important;
+    }
+    .year-tag-colors-light {
+        @apply bg-emerald-300 text-black;
+    }
+    .year-tag-colors-dark {
+        background-color: rgba(129, 230, 217, 0.16);
+        color: rgb(129, 230, 217) !important;
+    }
+}

@@ -18,7 +18,7 @@ const InlineLink = ({ text, href, download }: Props) => (
           : undefined
       }
       download={download}
-      className="text-red-600 underline hover:no-underline"
+      className="text-red-600 underline hover:no-underline font-bold"
     >
       {text}
     </a>

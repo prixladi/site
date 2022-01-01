@@ -5,6 +5,7 @@
 @import url('./navBar.css');
 @import url('./timeline.css');
 @import url('./kbar.css');
+@import url('./projects.css');
 
 @layer base {
     body {
@@ -34,12 +35,11 @@
     }
     
     ::-webkit-scrollbar-track {
-        @apply dark:bg-gray-700 bg-white;
+        @apply bg-transparent;
     }
     
     ::-webkit-scrollbar-thumb {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.9);
-        @apply bg-zinc-50
+        @apply bg-zinc-500;
     }
 
     .rounded-swap-button {
@@ -62,30 +62,19 @@
         @apply w-full md:w-fit text-center md:text-left my-4 text-xl text-gray-500 dark:text-gray-400 pb-4;
     }
 
-    .border-tiny-black {
-        border-color: rgb(0,0,0,0.15);
-        @apply border-[1px];
+    .article {
+        @apply flex flex-col gap-8 items-center;
     }
-    .border-tiny-white {
-        border-color: rgb(255,255,255,0.15);
-        @apply border-[1px];
+    .article-header {
+        @apply w-full flex flex-col gap-4;
     }
-
-    .tag {
-        @apply rounded-full px-2 py-[1px] pb-[2px] font-semibold  text-sm;
+    .article-main {
+        @apply w-full;
     }
-    .tech-tag-colors-light {
-        @apply bg-sky-200 text-black;
+    .article-title {
+        @apply text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem];
     }
-    .tech-tag-colors-dark {
-        background-color: rgba(144, 205, 244, 0.16);
-        color: rgb(144, 205, 244) !important;
-    }
-    .year-tag-colors-light {
-        @apply bg-emerald-300 text-black;
-    }
-    .year-tag-colors-dark {
-        background-color: rgba(129, 230, 217, 0.16);
-        color: rgb(129, 230, 217) !important;
+    .article-subtitle {
+        @apply text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700;
     }
 }

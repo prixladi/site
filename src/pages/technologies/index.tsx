@@ -2,11 +2,12 @@ import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
+import ArticleHeader from '../../components/articleHeader';
 import Content from '../../components/content';
 import InlineLink from '../../components/inlineLink';
 import { routes } from '../../constants';
 import technologies from '../../data/technologies';
-import { appearingTextInit, scaleUpHover } from '../../utils/motions';
+import { appearingTextInit } from '../../utils/motions';
 
 const options: OptionsProp = {
   colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
@@ -36,28 +37,23 @@ const Timeline: NextPage = () => {
 
   return (
     <Content title="Technologies | Ladislav Prix" className="max-w-4xl">
-      <main className="flex flex-col gap-8 items-center">
-        <motion.div {...appearingTextInit().parent} className="w-full flex flex-col gap-4">
-          <motion.div {...appearingTextInit().children}>
-            <motion.h2
-              {...scaleUpHover()}
-              className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
-            >
-              Here are some of the technologies I use.
-            </motion.h2>
-          </motion.div>
-          <motion.div {...appearingTextInit().children}>
-            <motion.p
-              {...scaleUpHover()}
-              className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
-            >
+      <article className="article">
+        <ArticleHeader
+          title={<>Here are some of the technologies I use.</>}
+          subTitle={
+            <>
               To see on what projects I used some of the technologies you can check the{' '}
               <InlineLink href={routes.projects.path} text="projects page" />.
-            </motion.p>
+            </>
+          }
+        />
+
+        <motion.main className="article-main" {...appearingTextInit().parent}>
+          <motion.div {...appearingTextInit().children}>
+            {renderCloud && <ReactWordcloud options={options} words={technologies} />}
           </motion.div>
-          {renderCloud && <ReactWordcloud options={options} words={technologies} />}
-        </motion.div>
-      </main>
+        </motion.main>
+      </article>
     </Content>
   );
 };

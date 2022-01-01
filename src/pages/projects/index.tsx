@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
-import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { useMemo } from 'react';
 import InlineLink from '../../components/inlineLink';
@@ -8,6 +7,7 @@ import { appearingTextInit, scaleUpHover } from '../../utils/motions';
 import Content from '../../components/content';
 import { defaultScaleUpHoverOptions } from '../../utils/motions/scaleUpHover';
 import projects, { Project } from '../../data/projects';
+import ArticleHeader from '../../components/articleHeader';
 
 type ProjectProps = {
   project: Project;
@@ -39,16 +39,14 @@ const ProjectTitle = ({ project }: ProjectProps) => {
 
   return (
     <h3 className="pb-4">
-      <Link passHref href={project.link}>
-        {/* eslint-disable */}
-        <a
-          rel="noopener"
-          className="span items-center text-red-600 font-bold text-2xl hover:underline"
-        >
-          {project.title} {isGithub ? <FaGithub className="inline-block pb-1" /> : null}
-        </a>
-        {/* eslint-enable */}
-      </Link>
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="span items-center text-red-600 font-bold text-2xl hover:underline"
+      >
+        {project.title} {isGithub ? <FaGithub className="inline-block pb-1" /> : null}
+      </a>
     </h3>
   );
 };
@@ -75,35 +73,26 @@ const ProjectCard = ({ project }: ProjectProps) => (
 
 const Projects: NextPage = () => (
   <Content title="Projects | Ladislav Prix" className="max-w-4xl">
-    <main className="flex flex-col gap-8 items-center">
-      <motion.div {...appearingTextInit().parent} className="w-full flex flex-col gap-4">
-        <motion.div {...appearingTextInit().children}>
-          <motion.h2
-            {...scaleUpHover()}
-            className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
-          >
-            Here are some selected projects I&apos;ve worked on.
-          </motion.h2>
-        </motion.div>
-        <motion.div {...appearingTextInit().children}>
-          <motion.p
-            {...scaleUpHover()}
-            className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
-          >
+    <article className="article">
+      <ArticleHeader
+        title={<>Here are some selected projects I&apos;ve worked on.</>}
+        subTitle={
+          <>
             They contain a descriptions and links to repos or sites. Most of them you can find on my{' '}
             <InlineLink href="https://github.com/prixladi" text="Github" />.
-          </motion.p>
-        </motion.div>
-      </motion.div>
-      <motion.div
+          </>
+        }
+      />
+
+      <motion.main
         {...appearingTextInit({ delayChildren: 1 }).parent}
-        className="w-full flex flex-col gap-20 mt-8"
+        className="article-main flex flex-col gap-10 md:gap-16 md:mt-8"
       >
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}
-      </motion.div>
-    </main>
+      </motion.main>
+    </article>
   </Content>
 );
 

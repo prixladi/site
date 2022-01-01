@@ -8,7 +8,6 @@ import BurgerNavbar from './burgerNavbar';
 import { Route, routes } from '../constants';
 import ThemeSwitcher from './themeSwitcher';
 import { appearingTextInit, scaleUpHover } from '../utils/motions';
-import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
 import { isActivePath, isExternalRoute } from '../utils';
 
 const { root, ...restRoutes } = routes;
@@ -67,12 +66,9 @@ const Navbar = () => {
         <nav className="navbar-middle">
           <motion.ul className="navbar-middle">{func(navRoutes)}</motion.ul>
         </nav>
-        <motion.div
-          {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.3, duration: 0.5 })}
-          className="navbar-theme-switch-wrapper"
-        >
+        <div className="navbar-theme-switch-wrapper">
           <ThemeSwitcher />
-        </motion.div>
+        </div>
         <BurgerNavbar navRoutes={navRoutes} />
       </div>
     </div>

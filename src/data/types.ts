@@ -31,6 +31,8 @@ type Misc =
   | 'Apollo Client'
   | 'Serverless'
   | 'Azure Blob Storage'
-  | 'OpenID Connect';
+  | 'OpenID Connect'
+  | 'Socket.io'
+  | 'React Query';
 
 export type Technology = DBs | DevOps | Languages | FWs | Misc;

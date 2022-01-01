@@ -1,34 +1,26 @@
 import type { NextPage } from 'next';
 import { motion } from 'framer-motion';
-import { scaleUpHover, appearingTextInit, scaleUpInit, mergeMotions } from '../utils/motions';
+import { scaleUpHover, scaleUpInit, mergeMotions } from '../utils/motions';
 import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
 import InlineLink from '../components/inlineLink';
 import Content from '../components/content';
+import ArticleHeader from '../components/articleHeader';
 
 const Home: NextPage = () => (
   <Content title="Ladislav Prix" className="max-w-7xl">
-    <main className="flex flex-col lg:flex-row flex-1 gap-8 items-center">
-      <motion.div {...appearingTextInit().parent} className="w-full flex flex-col gap-4">
-        <motion.div {...appearingTextInit().children}>
-          <motion.h2
-            {...scaleUpHover()}
-            className="text-3xl md:text-4xl font-semibold duration-700 leading-tight md:leading-[3rem]"
-          >
-            Hi, I&apos;m Láďa, a software developer from the Czech Republic.
-          </motion.h2>
-        </motion.div>
-        <motion.div {...appearingTextInit().children}>
-          <motion.p
-            {...scaleUpHover()}
-            className="text-xl lg:pl-2 md:text-4xl font-semibold leading-tight md:leading-[3rem] text-gray-500 dark:text-gray-400 duration-700"
-          >
-            I&apos;m a 24 years old developer mostly interested in web and cloud development. You
-            can see some of my projects on my{' '}
+    <article className="flex flex-col lg:flex-row flex-1 gap-8 items-center">
+      <ArticleHeader
+        title={<> Hi, I&apos;m Láďa, a software developer from the Czech Republic.</>}
+        subTitle={
+          <>
+            I&apos;m a {new Date().getFullYear() - 1997} years old developer mostly interested in
+            web and cloud development. You can see some of my projects on my{' '}
             <InlineLink href="https://github.com/prixladi" text="Github" />.
-          </motion.p>
-        </motion.div>
-      </motion.div>
-      <div className="w-full">
+          </>
+        }
+      />
+
+      <main className="article-main flex justify-center">
         <motion.img
           src="/assets/profile.jpg"
           alt="profile pricture"
@@ -38,8 +30,8 @@ const Home: NextPage = () => (
             scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 0.95 }),
           )}
         />
-      </div>
-    </main>
+      </main>
+    </article>
   </Content>
 );
 

@@ -128,7 +128,7 @@ const ladislavPrix: Project = {
     <>
       Personal website running on{' '}
       <InlineLink text="ladislavprix.cz" href="http://ladislavprix.cz/" />. Developed using{' '}
-      <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />.
+      <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />
     </>
   ),
   imgSrc: '/assets/ladislavprix.png',
@@ -192,7 +192,23 @@ const contentium: Project = {
   imgSrc: '/assets/contentium.png',
 };
 
+const ezchat: Project = {
+  title: 'Ezchat',
+  link: 'https://github.com/prixladi/ezchat',
+  fromYear: 2022,
+  text: (
+    <>
+      Dead simple chat aplication. Using <TechTag tech="Node.js" /> <TechTag tech="Socket.io" />{' '}
+      <TechTag tech="Redis" /> and <TechTag tech="PostgreSQL" /> on the backend, and{' '}
+      <TechTag tech="Next.js" /> <TechTag tech="Socket.io" /> and <TechTag tech="React Query" /> on
+      the frontend.
+    </>
+  ),
+  imgSrc: '/assets/ezchat.png',
+};
+
 export default [
+  ezchat,
   contentium,
   expendity,
   opendentity,

@@ -32,4 +32,6 @@ export default [
   { text: 'Apollo Client', value: 52 },
   { text: 'Serverless', value: 38 },
   { text: 'Azure Blob Storage', value: 29 },
+  { text: 'Socket.io', value: 30 },
+  { text: 'React Query', value: 35 },
 ];

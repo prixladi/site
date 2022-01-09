@@ -13,7 +13,7 @@ type TimelineItem = {
 const designeo: TimelineItem = {
   title: 'Designeo Creative s.r.o.',
   position: 'Software developer',
-  date: 'February 2021 - present',
+  date: 'Spring 2021 - Winter 2021',
   icon: <SiDotnet />,
   body: <>In Designeo, I work as a developer mostly focused on .NET backend.</>,
 };
@@ -21,7 +21,7 @@ const designeo: TimelineItem = {
 const qest: TimelineItem = {
   title: 'Qest automation',
   position: 'Software developer, DevOps',
-  date: 'May 2017 - December 2020',
+  date: 'Spring 2017 - Winter 2020',
   icon: <FaDatabase />,
   body: (
     <>
@@ -34,7 +34,7 @@ const qest: TimelineItem = {
 const fit: TimelineItem = {
   title: 'FIT CTU',
   position: "Bachelor's degree",
-  date: 'September 2016 - May 2020',
+  date: 'Winter 2016 - Summer 2020',
   icon: <IoMdSchool />,
   body: <>Faculty of Information Technology, Czech Technical University in Prague.</>,
 };
@@ -42,7 +42,7 @@ const fit: TimelineItem = {
 const shamyr: TimelineItem = {
   title: 'Shamyr',
   position: 'Software developer, Designer and DevOps',
-  date: 'Janury 2016 - present',
+  date: 'Fall 2016 - present',
   icon: <SiNextdotjs />,
   body: <>Shamyr is the brand that I use for freelancing and my independent projects.</>,
 };
@@ -50,7 +50,7 @@ const shamyr: TimelineItem = {
 const gympt: TimelineItem = {
   title: 'Secondary grammar school',
   position: 'Basic education',
-  date: 'September 2008 - June 2016',
+  date: 'Fall 2008 - Summer 2016',
   icon: <FaReact />,
   body: <>Secondary Grammar School Prachatice, Zlatá Stezka 137. Basic education.</>,
 };

@@ -3,7 +3,7 @@ import { BiTimeFive } from 'react-icons/bi';
 import { IconType } from 'react-icons/lib';
 import { IoLogoReact } from 'react-icons/io5';
 import { BsFillPencilFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaRegNewspaper } from 'react-icons/fa';
 
 type Route = {
   path: string;
@@ -56,7 +56,7 @@ export const routes: Routes = {
   },
   github: {
     path: 'https://github.com/prixladi',
-    name: 'Gihub',
+    name: 'Github',
     shortcuts: ['alt', 'g', 'h'],
     Icon: FaGithub,
   },
@@ -65,5 +65,11 @@ export const routes: Routes = {
     name: 'Linkedin',
     shortcuts: ['alt', 'l', 'k'],
     Icon: FaLinkedin,
+  },
+  backlog: {
+    path: '/backlog',
+    name: 'Backlog',
+    shortcuts: ['alt', 'b'],
+    Icon: FaRegNewspaper,
   },
 };

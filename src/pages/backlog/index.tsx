@@ -34,11 +34,11 @@ const Backlog: NextPage = () => {
         </ul>
         <span className="flex justify-between text-lg">
           <InlineLink
-            href="https://github.com/prixladi/ladislavprix/blob/master/public/backlog.html"
+            href="https://github.com/prixladi/ladislavprix/blob/master/public/data/backlog.json"
             text="view"
           />
           <InlineLink
-            href="https://github.com/prixladi/ladislavprix/edit/master/public/backlog.html"
+            href="https://github.com/prixladi/ladislavprix/edit/master/public/data/backlog.json"
             text="edit"
           />
         </span>

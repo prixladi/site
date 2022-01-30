@@ -21,7 +21,7 @@ const apearingTextInit = ({
     ...intialMotionBase,
     variants: {
       initial: { opacity: 0, y: 30 },
-      animate: { opacity: 1, y: 0, transition: { duration: 1 } },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.75 } },
     },
   },
   parent: {
@@ -34,7 +34,7 @@ const apearingTextInit = ({
   children: {
     variants: {
       initial: { opacity: 0, y: 30 },
-      animate: { opacity: 1, y: 0, transition: { duration: 1 } },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.75 } },
     },
   },
 });

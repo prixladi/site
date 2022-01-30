@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import { motion } from 'framer-motion';
-import { scaleUpHover, scaleUpInit, mergeMotions } from '../utils/motions';
-import { defaultScaleUpHoverOptions } from '../utils/motions/scaleUpHover';
+import { scaleUpInit } from '../utils/motions';
 import InlineLink from '../components/inlineLink';
 import Content from '../components/content';
 import ArticleHeader from '../components/articleHeader';
@@ -25,10 +24,7 @@ const Home: NextPage = () => (
           src="/assets/profile.jpg"
           alt="profile pricture"
           className="rounded-full object-cover scale-95"
-          {...mergeMotions(
-            scaleUpInit(),
-            scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 0.95 }),
-          )}
+          {...scaleUpInit()}
         />
       </main>
     </article>

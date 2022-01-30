@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { appearingTextInit, scaleUpHover } from '../utils/motions';
+import { appearingTextInit } from '../utils/motions';
 
 type Props = {
   title: React.ReactNode;
@@ -9,15 +9,11 @@ type Props = {
 const ArticleHeader: React.FC<Props> = ({ title, subTitle }) => (
   <motion.header {...appearingTextInit().parent} className="article-header">
     <motion.div {...appearingTextInit().children}>
-      <motion.h2 {...scaleUpHover()} className="article-title">
-        {title}
-      </motion.h2>
+      <h2 className="article-title">{title}</h2>
     </motion.div>
 
     <motion.div {...appearingTextInit().children}>
-      <motion.p {...scaleUpHover()} className="article-subtitle">
-        {subTitle}
-      </motion.p>
+      <p className="article-subtitle">{subTitle}</p>
     </motion.div>
   </motion.header>
 );

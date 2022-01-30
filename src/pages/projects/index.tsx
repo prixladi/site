@@ -3,9 +3,8 @@ import type { NextPage } from 'next';
 import { FaGithub } from 'react-icons/fa';
 import { useMemo } from 'react';
 import InlineLink from '../../components/inlineLink';
-import { appearingTextInit, scaleUpHover } from '../../utils/motions';
+import { appearingTextInit } from '../../utils/motions';
 import Content from '../../components/content';
-import { defaultScaleUpHoverOptions } from '../../utils/motions/scaleUpHover';
 import projects, { Project } from '../../data/projects';
 import ArticleHeader from '../../components/articleHeader';
 
@@ -65,7 +64,6 @@ const ProjectCard = ({ project }: ProjectProps) => (
         src={project.imgSrc}
         alt="profile pricture"
         className="rounded-3xl object-cover border-tiny-black dark:border-tiny-white"
-        {...scaleUpHover({ ...defaultScaleUpHoverOptions, scale: 1.03 })}
       />
     </div>
   </motion.div>

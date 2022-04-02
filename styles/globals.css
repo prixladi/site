@@ -1,11 +1,6 @@
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
-
-@import url('./navBar.css');
-@import url('./timeline.css');
-@import url('./kbar.css');
-@import url('./projects.css');
+@tailwind components;
 
 @layer base {
     body {
@@ -40,5 +35,50 @@
     
     ::-webkit-scrollbar-thumb {
         @apply bg-zinc-500;
+    }
+}
+
+@layer utilities {
+    .border-tiny-black {
+        border-color: rgb(0,0,0,0.15);
+        @apply border-[1px];
+    }
+    .border-tiny-white {
+        border-color: rgb(255,255,255,0.15);
+        @apply border-[1px];
+    }
+
+    .dark-gradient {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#000, #000);
+    }
+    .white-gradient {
+		background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    }
+}
+
+@layer components {
+    .navbar-selected-bg-size {
+		background-size: 100% 3px !important;
+		background-position: 0 100% !important;
+    }
+    .navbar-deselected-bg-size {
+		background-size: 0 3px !important;
+		background-position: 0 100% !important;
+    }
+	.navbar-hover-underline {
+        @apply border-b-0 bg-no-repeat dark:white-gradient dark-gradient duration-300 navbar-deselected-bg-size;
+	}
+	.navbar-hover-underline:hover {
+        @apply dark:text-white text-black navbar-selected-bg-size;
+	}
+
+    .timeline-date {
+        @apply px-4 font-bold text-red-700 !important;
+    }
+    .timeline-icon {
+        @apply bg-gray-800 dark:bg-gray-300 text-white dark:text-black transition-all ease-in duration-300 !important;
+    }
+    .timeline-text {
+        @apply rounded-lg bg-gray-800 dark:bg-gray-300 text-white dark:text-black transition-all ease-in duration-300 !important;
     }
 }

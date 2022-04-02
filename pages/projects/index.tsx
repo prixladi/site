@@ -5,9 +5,7 @@ import { useMemo } from 'react';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article from '~components/article';
-import ArticleHeader from '~/components/articleHeader';
-import ArticleMain from '~components/articleMain';
+import Article, { ArticleHeader, ArticleMain } from '~components/article';
 
 import projects, { Project } from '~/lib/data/projects';
 import { appearingTextInit } from '~/lib/utils/motions';

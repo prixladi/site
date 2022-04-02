@@ -12,7 +12,7 @@ const ThemeSwitcher = () => {
 
   return (
     <SwapButton ariaLabel="change theme" onClick={() => setTheme(toggleTheme(theme))}>
-      <SwapItem isIn={true} className="dark:rotate-0">
+      <SwapItem isIn className="dark:rotate-0">
         <BiMoon className="w-6 h-6" />
       </SwapItem>
       <SwapItem isIn={false} className="dark:-rotate-90">

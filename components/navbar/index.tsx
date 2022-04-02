@@ -22,9 +22,15 @@ const Dots = () => (
 const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => (
   <div className="w-full flex">
     <li
-      className={clsx('navbar-hover-underline text-xl text-gray-500 font-bold items-center flex dark:text-gray-400', {
-        'dark:text-white text-black navbar-selected-bg-size': isActivePath(route.path, currentPathname),
-      })}
+      className={clsx(
+        'navbar-hover-underline text-xl text-gray-500 font-bold items-center flex dark:text-gray-400',
+        {
+          'dark:text-white text-black navbar-selected-bg-size': isActivePath(
+            route.path,
+            currentPathname,
+          ),
+        },
+      )}
     >
       <Link passHref href={route.path}>
         {/* eslint-disable */}

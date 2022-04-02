@@ -25,9 +25,15 @@ const NavBarItem = ({
   close: () => void;
 }) => (
   <li
-    className={clsx('navbar-hover-underline text-xl text-gray-600 font-semibold items-center flex leading-10 dark:text-gray-400', {
-      'dark:text-white text-black navbar-selected-bg-size': isActivePath(route.path, currentPathname),
-    })}
+    className={clsx(
+      'navbar-hover-underline text-xl text-gray-600 font-semibold items-center flex leading-10 dark:text-gray-400',
+      {
+        'dark:text-white text-black navbar-selected-bg-size': isActivePath(
+          route.path,
+          currentPathname,
+        ),
+      },
+    )}
   >
     <Link passHref href={route.path}>
       {/* eslint-disable */}
@@ -86,7 +92,11 @@ const Burger = ({ navRoutes }: BurgerProps) => {
       </SwapButton>
       <div className={clsx('relative z-50', { hidden: !open })}>
         {/* eslint-disable-next-line */}
-        <div role="banner" className="fixed inset-0 bg-gray-800 opacity-25" onClick={() => setOpen(false)} />
+        <div
+          role="banner"
+          className="fixed inset-0 bg-gray-800 opacity-25"
+          onClick={() => setOpen(false)}
+        />
         <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto dark:bg-[url('/assets/bg-dark.png')] bg-[url('/assets/bg-light.png')]">
           <div className="flex items-center mb-8">
             <div className="mr-auto text-5xl font-bold leading-none flex gap-2">

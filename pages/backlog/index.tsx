@@ -19,6 +19,7 @@ type BLIs = {
   }[];
 };
 
+/* eslint-disable-next-line */ // Ramda placeholder is not a dangling __ !!
 const keyedMap = <T extends unknown>(item: T[]) => R.addIndex<T>(R.map)(R.__, item);
 
 const Backlog: NextPage = () => {
@@ -63,7 +64,7 @@ const Backlog: NextPage = () => {
             </ul>
           </>
         )}
-        
+
         {data.closed?.length > 0 && (
           <>
             <h2 className="font-bold text-3xl">Closed:</h2>
@@ -77,7 +78,7 @@ const Backlog: NextPage = () => {
             </ul>
           </>
         )}
-        
+
         <span className="flex justify-between text-lg">
           <InlineLink
             href="https://github.com/prixladi/ladislavprix/blob/master/public/data/backlog.json"

@@ -5,9 +5,7 @@ import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
 
 import Content from '~/components/content';
 import InlineLink from '~/components/inlineLink';
-import Article from '~components/article';
-import ArticleHeader from '~/components/articleHeader';
-import ArticleMain from '~components/articleMain';
+import Article, { ArticleHeader, ArticleMain } from '~components/article';
 
 import { routes } from '~/lib/constants';
 import technologies from '~/lib/data/technologies';

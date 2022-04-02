@@ -5,9 +5,7 @@ import * as R from 'ramda';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article from '~components/article';
-import ArticleHeader from '~/components/articleHeader';
-import ArticleMain from '~components/articleMain';
+import Article, { ArticleHeader, ArticleMain } from '~components/article';
 
 import { appearingTextInit } from '~/lib/utils/motions';
 import timelineItems from '~/lib/data/timelineItems';

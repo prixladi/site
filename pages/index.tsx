@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article from '~components/article';
-import ArticleHeader from '~/components/articleHeader';
+import Article, { ArticleHeader } from '~components/article';
 
 import { scaleUpInit } from '~/lib/utils/motions';
 

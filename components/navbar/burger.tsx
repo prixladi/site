@@ -25,9 +25,15 @@ const NavBarItem = ({
   close: () => void;
 }) => (
   <li
-    className={clsx('navbar-hover-underline navbar-burger-item', {
-      'navbar-item-selected': isActivePath(route.path, currentPathname),
-    })}
+    className={clsx(
+      'navbar-hover-underline text-xl text-gray-600 font-semibold items-center flex leading-10 dark:text-gray-400',
+      {
+        'dark:text-white text-black navbar-selected-bg-size': isActivePath(
+          route.path,
+          currentPathname,
+        ),
+      },
+    )}
   >
     <Link passHref href={route.path}>
       {/* eslint-disable */}
@@ -46,7 +52,7 @@ const NavBarItem = ({
 
 const Cross = () => (
   <svg
-    className="navbar-burger-close"
+    className="h-6 w-6  cursor-pointer text-gray-600 hover:text-gray-900 dark:text-gray-400"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -75,7 +81,7 @@ const Burger = ({ navRoutes }: BurgerProps) => {
   ));
 
   return (
-    <div className="navbar-burger">
+    <div className="lg:hidden">
       <SwapButton ariaLabel="toggle menu" onClick={() => setOpen(true)}>
         <SwapItem isIn={!open}>
           <Cross />
@@ -84,11 +90,15 @@ const Burger = ({ navRoutes }: BurgerProps) => {
           <GiHamburgerMenu className="w-6 h-6" />
         </SwapItem>
       </SwapButton>
-      <div className={clsx('navbar-burger-menu', { hidden: !open })}>
+      <div className={clsx('relative z-50', { hidden: !open })}>
         {/* eslint-disable-next-line */}
-        <div role="banner" className="navbar-burger-backdrop" onClick={() => setOpen(false)} />
-        <nav className="navbar-burger-card">
-          <div className="navbar-burger-header">
+        <div
+          role="banner"
+          className="fixed inset-0 bg-gray-800 opacity-25"
+          onClick={() => setOpen(false)}
+        />
+        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto dark:bg-[url('/assets/bg-dark.png')] bg-[url('/assets/bg-light.png')]">
+          <div className="flex items-center mb-8">
             <div className="mr-auto text-5xl font-bold leading-none flex gap-2">
               <MdLaptopChromebook />
             </div>
@@ -102,13 +112,13 @@ const Burger = ({ navRoutes }: BurgerProps) => {
             </button>
           </div>
           <div className="mb-8">
-            <ul className="navbar-burger-item-wrapper">{func([routes.root, ...navRoutes])}</ul>
+            <ul className="gap-8 lg:gap-12 flex flex-col">{func([routes.root, ...navRoutes])}</ul>
           </div>
           <div className="mt-auto">
             <button
               aria-label="change theme"
               type="button"
-              className="navbar-burger-theme-button"
+              className="block w-full px-4 py-3 mb-2 leading-loose text-sm text-gray-600 border-2 border-gray-600 font-semibold bg-transparent rounded-xl dark:text-gray-400 dark:border-gray-400"
               onClick={() => setTheme(toggleTheme(theme))}
             >
               <span className="flex flex1 gap-4">
@@ -122,7 +132,7 @@ const Burger = ({ navRoutes }: BurgerProps) => {
                 switch to {client && theme === 'dark' ? 'light' : 'dark'} mode{' '}
               </span>
             </button>
-            <p className="navbar-burger-footer">
+            <p className="my-4 text-xs text-center text-gray-400">
               <span>Copyright © 2021 Ladislav Prix</span>
             </p>
           </div>

@@ -3,10 +3,8 @@ import { BiDotsVerticalRounded } from 'react-icons/bi';
 import clsx from 'clsx';
 import { useRouter } from 'next/router';
 import * as R from 'ramda';
-import { motion } from 'framer-motion';
 
 import { Route, routes } from '~/lib/constants';
-import { appearingTextInit, scaleUpHover } from '~/lib/utils/motions';
 import { isActivePath, isExternalRoute } from '~/lib/utils';
 
 import BurgerNavbar from './burger';
@@ -22,12 +20,17 @@ const Dots = () => (
 );
 
 const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => (
-  <motion.div className="w-full flex" {...appearingTextInit().children}>
-    <motion.li
-      className={clsx('navbar-hover-underline', {
-        'navbar-item': !isActivePath(route.path, currentPathname),
-        'navbar-item-selected': isActivePath(route.path, currentPathname),
-      })}
+  <div className="w-full flex">
+    <li
+      className={clsx(
+        'navbar-hover-underline text-xl text-gray-500 font-bold items-center flex dark:text-gray-400',
+        {
+          'dark:text-white text-black navbar-selected-bg-size': isActivePath(
+            route.path,
+            currentPathname,
+          ),
+        },
+      )}
     >
       <Link passHref href={route.path}>
         {/* eslint-disable */}
@@ -39,8 +42,8 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
         </a>
         {/* eslint-enable */}
       </Link>
-    </motion.li>
-  </motion.div>
+    </li>
+  </div>
 );
 
 const Navbar = () => {
@@ -55,20 +58,22 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar">
-      <div className="navbar-content">
-        <motion.div
-          {...scaleUpHover()}
-          className={clsx('navbar-hover-underline navbar-name', {
-            'lg:navbar-name-selected': pathname === root.path,
-          })}
+    <div className="min-h-0 max-w-[100rem] m-auto pt-6 md:pt-8 lg:pt-16 px-4 md:px-10">
+      <div className="flex justify-between">
+        <div
+          className={clsx(
+            'navbar-hover-underline font-semibold text-3xl leading-[3rem] text-black dark:text-white',
+            {
+              'dark:text-white text-black navbar-selected-bg-size': pathname === root.path,
+            },
+          )}
         >
           <Link href={root.path}>Ladislav Prix</Link>
-        </motion.div>
-        <nav className="navbar-middle">
-          <motion.ul className="navbar-middle">{func(navRoutes)}</motion.ul>
+        </div>
+        <nav className="gap-8 hidden lg:flex">
+          <ul className="gap-8 hidden lg:flex">{func(navRoutes)}</ul>
         </nav>
-        <div className="navbar-theme-switch-wrapper">
+        <div className="hidden lg:flex">
           <ThemeSwitcher />
         </div>
         <BurgerNavbar navRoutes={navRoutes} />

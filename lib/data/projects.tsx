@@ -1,6 +1,7 @@
 import React from 'react';
 
 import InlineLink from '~/components/inlineLink';
+import Tag from '~components/tag';
 
 import { Technology } from './types';
 
@@ -18,7 +19,9 @@ type TechTagProps = {
 };
 
 const TechTag = ({ tech }: TechTagProps) => (
-  <span className="tech-tag-colors-light dark:tech-tag-colors-dark tag">{tech}</span>
+  <Tag className="bg-sky-200 text-black dark:bg-slate-700 dark:text-sky-300 font-semibold">
+    {tech}
+  </Tag>
 );
 
 const eimHome: Project = {

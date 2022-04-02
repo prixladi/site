@@ -9,6 +9,7 @@ import Article, { ArticleHeader, ArticleMain } from '~components/article';
 
 import projects, { Project } from '~/lib/data/projects';
 import { appearingTextInit } from '~/lib/utils/motions';
+import Tag from '~components/tag';
 
 type ProjectProps = {
   project: Project;
@@ -28,9 +29,9 @@ const ProjectYears = ({ project }: ProjectProps) => {
   return (
     <span className="inline text-sm font-bold text-gray-700 dark:text-gray-500">
       {project.fromYear} - {project.toYear ?? 'NOW'}{' '}
-      <span className="year-tag-colors-light dark:year-tag-colors-dark tag text-xs font-bold">
+      <Tag className="bg-emerald-300 text-black dark:bg-slate-700 dark:text-emerald-300 text-xs font-bold">
         {yearCount > 1 ? `${yearCount} YEARS` : `${yearCount} YEAR`}
-      </span>
+      </Tag>
     </span>
   );
 };

@@ -27,7 +27,7 @@ const Timeline: NextPage = () => (
 
       <ArticleMain m={appearingTextInit({ delayChildren: 1 }).parent}>
         <motion.div {...appearingTextInit().children}>
-          <VerticalTimeline className="timeline">
+          <VerticalTimeline>
             {R.map(
               ({ date, title, icon, position, body }) => (
                 <VerticalTimelineElement
@@ -38,11 +38,11 @@ const Timeline: NextPage = () => (
                   textClassName="timeline-text"
                   icon={icon}
                 >
-                  <>
-                    <h3 className="timeline-body-title">{title}</h3>
-                    <span className="timeline-body-position">{position}</span>
-                    <p className="timeline-body-text">{body}</p>
-                  </>
+                  <div className="text-white dark:text-black">
+                    <h3 className="text-lg font-bold text-white dark:text-black">{title}</h3>
+                    <span className="italic text-white dark:text-black">{position}</span>
+                    <p>{body}</p>
+                  </div>
                 </VerticalTimelineElement>
               ),
               timelineItems,

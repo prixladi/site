@@ -2,7 +2,7 @@ import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 
 import Navbar from '~components/navbar';
-import Kbar from '~/components/kbar';
+import Kbar from '~/components/kbar'aaa;
 
 import '../styles/globals.css';
 import 'react-vertical-timeline-component/style.min.css';

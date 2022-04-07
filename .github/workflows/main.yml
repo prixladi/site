@@ -22,8 +22,8 @@ jobs:
 
       - name: Lib
         if: ${{ steps.filter.outputs.lib == 'true' }}
-        run: echo "LIIB"
+        run: echo ${{ steps.filter.outputs }}
 
       - name: Pages
-        if: ${{ steps.filter.outputs.pages == 'true' }}
-        run: echo "PAGES"
+        if: ${{ steps.filter.outputs }}
+        run: echo ${{ steps.filter.outputs }}

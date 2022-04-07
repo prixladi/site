@@ -10,5 +10,5 @@ export const isActivePath = (path: string, currentPath: string) => {
     return currentPath === '/' || currentPath === '';
   }
 
-  return currentPath.includes(path);
+  return currentPath.includes(path);asdasd
 };

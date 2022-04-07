@@ -26,8 +26,8 @@ jobs:
 
       - name: Lib
         if: ${{ steps.filter.outputs.lib == 'true' }}
-        run: echo ${{ steps.filter.outputs.lib }}
+        run: echo ${{ fromJSON(steps.filter.outputs) }}
 
       - name: Pages
-        if: ${{ steps.filter.outputs }}
-        run: echo ${{ steps.filter.outputs.pages }}
+        if: ${{ steps.filter.outputs == 'true' }}
+        run: echo ${{ fromJSON(steps.filter.outputs.pages) }}

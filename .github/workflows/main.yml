@@ -1,39 +1,29 @@
-on:
-  push:
-    tags:        
-      - '**' 
+on: push
   
-name: Build and Deploy via FTP
+name: tst
 jobs:
-  BuildAndDeployFTP:        
+  tst:        
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
 
-    - name: Use Node.js 12.x	
-      uses: actions/setup-node@v1	
-      with:	
-        node-version: '12.x'	
+      - name: Check 
+        uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            lib:
+              - 'lib/**'
+            pages:
+              - 'pages/**'
 
-    - name: Build Project	
-      run: |	
-        yarn	
-        yarn build 
-        yarn export    
-        
-    - name: List output files
-      run: ls build
+      - name: Lib
+        if: ${{ steps.filter.outputs.lib == 'true' }}
+        run: echo "LIIB"
 
-    - name: Git status
-      run: git status
-
-    - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ftp.ladislavprix.cz
-        ftp-username: root.ladislavprix.cz
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: build
+      - name: Pages
+        if: ${{ steps.filter.outputs.pages == 'true' }}
+        run: echo "PAGES"

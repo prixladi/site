@@ -10,10 +10,14 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: print
+        run: echo ${{ github.ref }}
+
       - name: Check 
         uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
+          base: ${{ github.ref }}
           filters: |
             lib:
               - 'lib/**'

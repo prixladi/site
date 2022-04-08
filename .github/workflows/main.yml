@@ -32,11 +32,12 @@ jobs:
         run: echo ${{ steps.filter.outputs.lib }}
 
       - name: Pages
-        if: ${{ steps.filter.outputs == 'true' }}
+        if: ${{ steps.filter.outputs.pages == 'true' }}
         run: echo ${{ steps.filter.outputs.pages }}
 
   run:        
     name: RR	
+    needs: tst
     if: ${{ needs.tst.outputs.lib == 'true' || needs.tst.outputs.pages == 'true' }}
     runs-on: ubuntu-latest	
     steps:
@@ -46,8 +47,8 @@ jobs:
 
       - name: Lib
         if: ${{ needs.tst.outputs.lib == 'true' }}
-        run: echo ${{ steps.filter.outputs.lib }}
+        run: echo ${{ needs.tst.outputs.lib  }}
 
       - name: Pages
-        if: ${{ needs.tst.outputs == 'true' }}
-        run: echo ${{ steps.filter.outputs.pages }}
+        if: ${{ needs.tst.outputs.pages == 'true' }}
+        run: echo ${{ needs.tst.outputs.pages }}

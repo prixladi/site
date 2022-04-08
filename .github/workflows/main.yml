@@ -5,6 +5,9 @@ jobs:
   tst:        
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
+    outputs:
+      backend: ${{ steps.filter.outputs.lib }}
+      frontend: ${{ steps.filter.outputs.pages }}
     steps:
       - uses: actions/checkout@v2.1.0
         with:
@@ -30,4 +33,21 @@ jobs:
 
       - name: Pages
         if: ${{ steps.filter.outputs == 'true' }}
+        run: echo ${{ steps.filter.outputs.pages }}
+
+  run:        
+    name: RR	
+    if: ${{ needs.tst.outputs.lib == 'true' || needs.tst.outputs.pages == 'true' }}
+    runs-on: ubuntu-latest	
+    steps:
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+
+      - name: Lib
+        if: ${{ needs.tst.outputs.lib == 'true' }}
+        run: echo ${{ steps.filter.outputs.lib }}
+
+      - name: Pages
+        if: ${{ needs.tst.outputs == 'true' }}
         run: echo ${{ steps.filter.outputs.pages }}

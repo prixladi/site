@@ -6,8 +6,8 @@ jobs:
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
     outputs:
-      backend: ${{ steps.filter.outputs.lib }}
-      frontend: ${{ steps.filter.outputs.pages }}
+      lib: ${{ steps.filter.outputs.lib }}
+      pages: ${{ steps.filter.outputs.pages }}
     steps:
       - uses: actions/checkout@v2.1.0
         with:

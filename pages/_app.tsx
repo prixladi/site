@@ -9,7 +9,7 @@ import 'react-vertical-timeline-component/style.min.css';
 asdadgit aadasdasdasdad
 const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
-    <Kbar>
+    <Kbar>asdad
       <Navbar />
       <Component {...pageProps} />
     </Kbar>

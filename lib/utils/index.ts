@@ -8,7 +8,7 @@ ddasdasdasdasd
 export const isActivePath = (path: string, currentPath: string) => {
   if (path === '/' || path === '') {
     return currentPath === '/' || currentPath === '';
-  }asdasd
+  }asdasdasdasd
 adasd
   return currentPath.includes(path);asdasd
 };

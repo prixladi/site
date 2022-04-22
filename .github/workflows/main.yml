@@ -5,9 +5,10 @@ jobs:
   tst:        
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
+    strategy:
+      fail-fast: false
     steps:
       - name: damn
-        continue-on-error: true
         run: exit 1
 
       - name: print

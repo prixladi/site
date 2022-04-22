@@ -5,7 +5,7 @@ import PageSEO from './pageSEO';
 type Props = {
   className?: string | undefined;
   children: React.ReactNode;
-  title: string;
+  title: string;asdad
 };
 
 const Content = ({ className, children, title }: Props) => (

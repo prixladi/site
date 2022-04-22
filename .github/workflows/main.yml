@@ -12,4 +12,5 @@ jobs:
         run: exit 1
 
       - name: print
+        if: always()
         run: echo here

@@ -5,12 +5,63 @@ jobs:
   tst:        
     name: Deploy via FTP	
     runs-on: ubuntu-latest	
-    strategy:
-      fail-fast: false
+    outputs:
+      lib: ${{ steps.filter.outputs.lib }}
+      pages: ${{ steps.filter.outputs.pages }}
+      styles: ${{ steps.filter.outputs.styles }}
+      components: ${{ steps.filter.outputs.components }}
     steps:
-      - name: damn
-        run: exit 1
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
 
       - name: print
-        if: always()
-        run: echo here
+        run: echo ${{ github.ref }}
+
+      - name: Check 
+        uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          base: ${{ github.ref }}
+          filters: |
+            lib:
+              - 'lib/**'
+            pages:
+              - 'pages/**'
+            styles:
+              - 'styles/**'
+            components:
+              - 'components/**'
+
+      - name: Lib
+        if: ${{ steps.filter.outputs.lib == 'true' }}
+        run: echo ${{ steps.filter.outputs.lib }}
+
+      - name: Pages
+        if: ${{ steps.filter.outputs.pages == 'true' }}
+        run: echo ${{ steps.filter.outputs.pages }}
+
+  run:        
+    name: RR	
+    needs: tst
+    runs-on: ubuntu-latest	
+    steps:
+      - uses: actions/checkout@v2.1.0
+        with:
+          fetch-depth: 2
+
+      - name: Lib
+        if: ${{ needs.tst.outputs.lib == 'true' }}
+        run: echo ${{ needs.tst.outputs.lib  }}
+
+      - name: Pages
+        if: ${{ needs.tst.outputs.pages == 'true' }}
+        run: echo ${{ needs.tst.outputs.pages }}
+
+      - name: styles
+        if: ${{ needs.tst.outputs.styles == 'true' }}
+        run: echo ${{ needs.tst.outputs.styles }}
+
+      - name: components
+        if: ${{ needs.tst.outputs.components == 'true' }}
+        run: echo ${{ needs.tst.outputs.components }}

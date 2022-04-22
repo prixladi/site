@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest	
     steps:
       - name: damn
-        run: ex
+        run: exit 1
 
       - name: print
         run: echo here

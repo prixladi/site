@@ -212,10 +212,23 @@ const ezchat: Project = {
   imgSrc: '/assets/ezchat.png',
 };
 
+const survefy: Project = {
+  title: 'Survefy',
+  link: 'https://github.com/prixladi/survefy',
+  fromYear: 2022,
+  text: (
+    <>
+      Webapp fo creating and sharing surveys. Using <TechTag tech="Next.js" /> and <TechTag tech="MongoDB" />.
+    </>
+  ),
+  imgSrc: '/assets/survefy.png',
+};
+
 const projects = [
   ezchat,
   contentium,
   expendity,
+  survefy,
   opendentity,
   siteCapture,
   imaginess,

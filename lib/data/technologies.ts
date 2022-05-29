@@ -37,6 +37,9 @@ const technologies = [
   { text: 'Serverless', value: 38 },
   { text: 'Socket.io', value: 30 },
   { text: 'React Query', value: 35 },
+  { text: 'Cypress', value: 60 },
+  { text: 'Puppeteer', value: 50 },
+  { text: 'Playwright', value: 35 },
 ];
 
 export default technologies;

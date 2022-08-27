@@ -1,8 +1,8 @@
-# Ladislav Prix
+# Láďa Prix
 
-Ladislav Prix's personal site / web resume.
+Láďa Prix's personal site / web resume.
 
-[![CI](https://github.com/prixladi/ladislavprix/actions/workflows/main.yml/badge.svg)](https://github.com/prixladi/ladislavprix/actions/workflows/main.yml)
+[![CI](https://github.com/prixladi/site/actions/workflows/main.yml/badge.svg)](https://github.com/prixladi/site/actions/workflows/main.yml)
 
 ## Available Scripts
 

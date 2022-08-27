@@ -24,7 +24,7 @@ type WhileHoverMotion = {
   };
 };
 
-const intialMotionBase: {
+const initialMotionBase: {
   initial: 'initial';
   animate: 'animate';
 } = {
@@ -46,4 +46,4 @@ const mergeMotions = (...motions: Motion[]): CombinedMotion =>
   R.reduce(R.mergeDeepRight, {} as CombinedMotion, motions);
 
 export type { Motion, CombinedMotion };
-export { mergeMotions, intialMotionBase, whileHoverMotionBase };
+export { mergeMotions, initialMotionBase, whileHoverMotionBase };

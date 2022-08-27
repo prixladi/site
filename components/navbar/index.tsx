@@ -68,7 +68,7 @@ const Navbar = () => {
             },
           )}
         >
-          <Link href={root.path}>Ladislav Prix</Link>
+          <Link href={root.path}>Láďa Prix</Link>
         </div>
         <nav className="gap-8 hidden lg:flex">
           <ul className="gap-8 hidden lg:flex">{func(navRoutes)}</ul>

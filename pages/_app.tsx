@@ -6,6 +6,7 @@ import Kbar from '~/components/kbar';
 
 import '../styles/globals.css';
 import 'react-vertical-timeline-component/style.min.css';
+import "@fontsource/ubuntu";
 
 const App = ({ Component, pageProps }: AppProps) => (
   <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">

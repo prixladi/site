@@ -5,7 +5,7 @@ type ScaleUpHoverOptions = {
   duration: number;
 };
 
-const defaultScaleUpHoverOptions: ScaleUpHoverOptions = { scale: 1.03, duration: 0.75 };
+const defaultScaleUpHoverOptions: ScaleUpHoverOptions = { scale: 1.03, duration: 0.25 };
 
 const scaleUpHover = ({
   scale,
@@ -13,7 +13,7 @@ const scaleUpHover = ({
 }: ScaleUpHoverOptions = defaultScaleUpHoverOptions): Motion => ({
   ...whileHoverMotionBase,
   variants: {
-    whileHover: { scale, transition: { duration, ease: 'easeInOut' } },
+    whileHover: { scale, transition: { duration, ease: 'easeOut' } },
   },
 });
 

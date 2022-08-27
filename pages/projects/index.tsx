@@ -73,7 +73,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <Content title="Projects | Ladislav Prix" className="max-w-4xl">
+  <Content title="Projects | Láďa Prix" className="max-w-4xl">
     <Article>
       <ArticleHeader
         title={<>Here are some selected projects I&apos;ve worked on.</>}
@@ -86,7 +86,7 @@ const Projects: NextPage = () => (
       />
 
       <ArticleMain
-        m={appearingTextInit({ delayChildren: 1 }).parent}
+        m={appearingTextInit({ delayChildren: 0.5 }).parent}
         className="flex flex-col gap-10 md:gap-16 md:mt-8"
       >
         {projects.map((project) => (

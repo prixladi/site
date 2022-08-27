@@ -1,6 +1,7 @@
 import appearingTextInit from './appearingTextInit';
 import scaleUpHover from './scaleUpHover';
 import scaleUpInit from './scaleUpInit';
+import scaleDownInit from './scaleDownInit';
 import { mergeMotions } from './shared';
 
 const scaleUpVariants = {
@@ -9,6 +10,6 @@ const scaleUpVariants = {
 };
 
 export { mergeMotions };
-export { appearingTextInit, scaleUpHover, scaleUpInit };
+export { appearingTextInit, scaleUpHover, scaleUpInit, scaleDownInit };
 
 export { scaleUpVariants };

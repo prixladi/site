@@ -5,10 +5,10 @@ import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
 import Article, { ArticleHeader } from '~components/article';
 
-import { scaleUpInit } from '~/lib/utils/motions';
+import { scaleDownInit } from '~/lib/utils/motions';
 
 const Home: NextPage = () => (
-  <Content title="Ladislav Prix" className="max-w-7xl">
+  <Content title="Láďa Prix" className="max-w-7xl">
     <Article className="lg:flex-row flex-1">
       <ArticleHeader
         title={<> Hi, I&apos;m Láďa, a software developer from the Czech Republic.</>}
@@ -24,9 +24,9 @@ const Home: NextPage = () => (
       <div className="w-full flex justify-center">
         <motion.img
           src="/assets/profile.jpg"
-          alt="profile pricture"
+          alt="profile picture"
           className="rounded-full object-cover scale-95"
-          {...scaleUpInit()}
+          {...scaleDownInit()}
         />
       </div>
     </Article>

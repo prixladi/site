@@ -1,4 +1,4 @@
-import { intialMotionBase, Motion } from './shared';
+import { initialMotionBase, Motion } from './shared';
 
 type MotionType = {
   standalone: Motion;
@@ -14,30 +14,30 @@ const defaultAppearingTextInitProps: AppearingTextInitProps = {
   delayChildren: undefined,
 };
 
-const apearingTextInit = ({
+const appearingTextInit = ({
   delayChildren,
 }: AppearingTextInitProps = defaultAppearingTextInitProps): MotionType => ({
   standalone: {
-    ...intialMotionBase,
+    ...initialMotionBase,
     variants: {
       initial: { opacity: 0, y: 30 },
-      animate: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.45 } },
     },
   },
   parent: {
-    ...intialMotionBase,
+    ...initialMotionBase,
     variants: {
       initial: { opacity: 0 },
-      animate: { opacity: 1, transition: { staggerChildren: 0.5, delayChildren } },
+      animate: { opacity: 1, transition: { staggerChildren: 0.3, delayChildren } },
     },
   },
   children: {
     variants: {
       initial: { opacity: 0, y: 30 },
-      animate: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+      animate: { opacity: 1, y: 0, transition: { duration: 0.45 } },
     },
   },
 });
 
 export { defaultAppearingTextInitProps };
-export default apearingTextInit;
+export default appearingTextInit;

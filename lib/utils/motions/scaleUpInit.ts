@@ -1,10 +1,10 @@
-import { intialMotionBase, Motion } from './shared';
+import { initialMotionBase, Motion } from './shared';
 
 const scaleUpInit = (): Motion => ({
-  ...intialMotionBase,
+  ...initialMotionBase,
   variants: {
     initial: { scale: 0.4, opacity: 0 },
-    animate: { scale: 0.9, opacity: 1, transition: { duration: 0.9, ease: 'easeInOut' } },
+    animate: { scale: 0.9, opacity: 1, transition: { duration: 0.5, ease: 'easeOut' } },
   },
 });
 

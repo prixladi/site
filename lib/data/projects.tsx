@@ -124,19 +124,19 @@ const imaginess: Project = {
   imgSrc: '/assets/imaginess.png',
 };
 
-const ladislavPrix: Project = {
-  title: 'ladislavprix.cz',
-  link: 'https://github.com/prixladi/ladislavprix',
+const láďaPrix: Project = {
+  title: 'láďaprix.cz',
+  link: 'https://github.com/prixladi/láďaprix',
   fromYear: 2020,
   toYear: 2020,
   text: (
     <>
-      Personal website running on{' '}
-      <InlineLink text="ladislavprix.cz" href="http://ladislavprix.cz/" />. Developed using{' '}
-      <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />
+      Personal website running on <InlineLink text="láďaprix.cz" href="http://láďaprix.cz/" />.
+      Developed using <TechTag tech="React" /> <TechTag tech="Next.js" /> and{' '}
+      <TechTag tech="Tailwind CSS" />
     </>
   ),
-  imgSrc: '/assets/ladislavprix.png',
+  imgSrc: '/assets/láďaprix.png',
 };
 
 const shamyrRescues: Project = {
@@ -218,7 +218,8 @@ const survefy: Project = {
   fromYear: 2022,
   text: (
     <>
-      Webapp fo creating and sharing surveys. Using <TechTag tech="Next.js" /> and <TechTag tech="MongoDB" />.
+      Webapp fo creating and sharing surveys. Using <TechTag tech="Next.js" /> and{' '}
+      <TechTag tech="MongoDB" />.
     </>
   ),
   imgSrc: '/assets/survefy.png',
@@ -235,7 +236,7 @@ const projects = [
   urlik,
   shamyrRescues,
   treeloc,
-  ladislavPrix,
+  láďaPrix,
   eimHome,
   shipvio,
 ];

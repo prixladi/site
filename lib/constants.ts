@@ -48,7 +48,7 @@ export const routes: Routes = {
     Icon: IoLogoReact,
   },
   blog: {
-    path: 'https://blog.ladislavprix.cz',
+    path: 'https://blog.láďaprix.cz',
     name: 'Blog',
     showInNavigation: true,
     shortcuts: ['alt', 'b', 'l'],
@@ -61,7 +61,7 @@ export const routes: Routes = {
     Icon: FaGithub,
   },
   linkedin: {
-    path: 'https://www.linkedin.com/in/ladislav-prix/',
+    path: 'https://www.linkedin.com/in/láďa-prix/',
     name: 'Linkedin',
     shortcuts: ['alt', 'l', 'k'],
     Icon: FaLinkedin,

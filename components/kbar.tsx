@@ -14,14 +14,14 @@ import clsx from 'clsx';
 
 import useKActions from '~/lib/hooks/useKActions';
 
-type ResutltItemProps = {
+type ResultItemProps = {
   action: ActionImpl;
   active: boolean;
   currentRootActionId: ActionId;
 };
 
 const ResultItem = React.forwardRef(
-  ({ action, active, currentRootActionId }: ResutltItemProps, ref: React.Ref<HTMLDivElement>) => {
+  ({ action, active, currentRootActionId }: ResultItemProps, ref: React.Ref<HTMLDivElement>) => {
     const ancestors = React.useMemo(() => {
       if (!currentRootActionId) return action.ancestors;
       const index = action.ancestors.findIndex((ancestor) => ancestor.id === currentRootActionId);

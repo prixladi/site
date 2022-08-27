@@ -11,21 +11,20 @@ import { appearingTextInit } from '~/lib/utils/motions';
 import timelineItems from '~/lib/data/timelineItems';
 
 const Timeline: NextPage = () => (
-  <Content title="Timeline | Ladislav Prix" className="max-w-4xl">
+  <Content title="Timeline | Láďa Prix" className="max-w-4xl">
     <Article>
       <ArticleHeader
         title={<>This is a timeline of my education and career.</>}
         subTitle={
           <>
             Items here are major time points in my career. You can also check out my{' '}
-            <InlineLink href="https://www.linkedin.com/in/ladislav-prix/" text="Linkedin" /> or
-            download my{' '}
-            <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" />.
+            <InlineLink href="https://www.linkedin.com/in/láďa-prix/" text="Linkedin" /> or download
+            my <InlineLink href="/data/resume.pdf" text="PDF resume" download="resume.pdf" />.
           </>
         }
       />
 
-      <ArticleMain m={appearingTextInit({ delayChildren: 1 }).parent}>
+      <ArticleMain m={appearingTextInit({ delayChildren: 0.5 }).parent}>
         <motion.div {...appearingTextInit().children}>
           <VerticalTimeline>
             {R.map(

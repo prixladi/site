@@ -133,7 +133,7 @@ const Burger = ({ navRoutes }: BurgerProps) => {
               </span>
             </button>
             <p className="my-4 text-xs text-center text-gray-400">
-              <span>Copyright © 2021 Ladislav Prix</span>
+              <span>Copyright © 2021 Láďa Prix</span>
             </p>
           </div>
         </nav>

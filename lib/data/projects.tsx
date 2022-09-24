@@ -125,18 +125,18 @@ const imaginess: Project = {
 };
 
 const láďaPrix: Project = {
-  title: 'láďaprix.cz',
-  link: 'https://github.com/prixladi/láďaprix',
+  title: 'ladislavprix.cz',
+  link: 'https://github.com/prixladi/site',
   fromYear: 2020,
   toYear: 2020,
   text: (
     <>
-      Personal website running on <InlineLink text="láďaprix.cz" href="http://láďaprix.cz/" />.
+      Personal website running on <InlineLink text="ladislavprix.cz" href="http://ladislavprix.cz/" />.
       Developed using <TechTag tech="React" /> <TechTag tech="Next.js" /> and{' '}
       <TechTag tech="Tailwind CSS" />
     </>
   ),
-  imgSrc: '/assets/láďaprix.png',
+  imgSrc: '/assets/ladislavprix.png',
 };
 
 const shamyrRescues: Project = {

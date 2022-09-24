@@ -48,7 +48,7 @@ export const routes: Routes = {
     Icon: IoLogoReact,
   },
   blog: {
-    path: 'https://blog.láďaprix.cz',
+    path: 'https://blog.ladislavprix.cz',
     name: 'Blog',
     showInNavigation: true,
     shortcuts: ['alt', 'b', 'l'],

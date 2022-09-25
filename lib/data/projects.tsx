@@ -24,26 +24,6 @@ const TechTag = ({ tech }: TechTagProps) => (
   </Tag>
 );
 
-const eimHome: Project = {
-  title: 'Qest Home',
-  link: 'https://qesthome.cz/',
-  fromYear: 2017,
-  toYear: 2020,
-  text: (
-    <>
-      Home automation system, which is based on a microservice architecture that I worked on in{' '}
-      <InlineLink text="Qest" href="https://qest.cz/" />. I worked on backend. <br /> You can see
-      images from the application and read more about the project using the link above or in this{' '}
-      <InlineLink
-        text="article"
-        href="https://elektro.tzb-info.cz/inteligentni-budovy/21427-qest-home-predprogramovane-reseni-chytre-domacnosti-na-hw-teco"
-      />
-      .
-    </>
-  ),
-  imgSrc: '/assets/laptop2.jpg',
-};
-
 const expendity: Project = {
   title: 'Expendity',
   link: 'https://github.com/prixladi/expendity',
@@ -92,23 +72,6 @@ const urlik: Project = {
   imgSrc: '/assets/urlik.png',
 };
 
-const shipvio: Project = {
-  title: 'Shipvio',
-  link: 'https://qest.cz/project/shipvio',
-  fromYear: 2017,
-  toYear: 2019,
-  text: (
-    <>
-      A logistics platform connecting carriers and customers that I worked on in{' '}
-      <InlineLink text="Qest" href="https://qest.cz/" />.
-      <br />
-      You can see images from the application and read more about the project using link above or in
-      this <InlineLink text="article" href="https://qest.cz/project/shipvio" />.
-    </>
-  ),
-  imgSrc: '/assets/laptop3.jpg',
-};
-
 const imaginess: Project = {
   title: 'Imaginess',
   link: 'https://github.com/prixladi/imaginess',
@@ -124,7 +87,7 @@ const imaginess: Project = {
   imgSrc: '/assets/imaginess.png',
 };
 
-const láďaPrix: Project = {
+const ladislavPrix: Project = {
   title: 'ladislavprix.cz',
   link: 'https://github.com/prixladi/site',
   fromYear: 2020,
@@ -236,9 +199,7 @@ const projects = [
   urlik,
   shamyrRescues,
   treeloc,
-  láďaPrix,
-  eimHome,
-  shipvio,
+  ladislavPrix
 ];
 
 export default projects;

@@ -10,6 +10,7 @@ import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import projects, { Project } from '~/lib/data/projects';
 import { appearingTextInit } from '~/lib/utils/motions';
 import Tag from '~/components/tag';
+import { routes } from '~/lib/constants';
 
 type ProjectProps = {
   project: Project;
@@ -79,8 +80,10 @@ const Projects: NextPage = () => (
         title={<>Here are some selected projects I&apos;ve worked on.</>}
         subTitle={
           <>
-            They contain a descriptions and links to repos or sites. Most of them you can find on my{' '}
-            <InlineLink href="https://github.com/prixladi" text="Github" />.
+            You can find them on my <InlineLink href="https://github.com/prixladi" text="Github" />.
+            Those are just my personal projects, my professional
+            experiences are listed on the{' '}
+            <InlineLink href={routes.timeline.path} text="timeline page" />.
           </>
         }
       />

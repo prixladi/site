@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
+
+import { motion } from 'framer-motion';
 import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
 
 import Content from '~/components/content';
 import InlineLink from '~/components/inlineLink';
-import Article, { ArticleHeader, ArticleMain } from '~components/article';
-
+import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { routes } from '~/lib/constants';
 import technologies from '~/lib/data/technologies';
-import { appearingTextInit } from '~lib/utils/motions';
+import { appearingTextInit } from '~/lib/utils/motions';
 
 const options: OptionsProp = {
   colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
-import * as R from 'ramda';
 import { useEffect, useState } from 'react';
+
+import * as R from 'ramda';
 
 import Content from '~/components/content';
 import InlineLink from '~/components/inlineLink';

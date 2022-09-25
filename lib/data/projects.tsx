@@ -1,7 +1,7 @@
 import React from 'react';
 
 import InlineLink from '~/components/inlineLink';
-import Tag from '~components/tag';
+import Tag from '~/components/tag';
 
 import { Technology } from './types';
 
@@ -131,9 +131,9 @@ const láďaPrix: Project = {
   toYear: 2020,
   text: (
     <>
-      Personal website running on <InlineLink text="ladislavprix.cz" href="http://ladislavprix.cz/" />.
-      Developed using <TechTag tech="React" /> <TechTag tech="Next.js" /> and{' '}
-      <TechTag tech="Tailwind CSS" />
+      Personal website running on{' '}
+      <InlineLink text="ladislavprix.cz" href="http://ladislavprix.cz/" />. Developed using{' '}
+      <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />
     </>
   ),
   imgSrc: '/assets/ladislavprix.png',

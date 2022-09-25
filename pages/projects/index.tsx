@@ -1,15 +1,15 @@
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
-import { FaGithub } from 'react-icons/fa';
 import { useMemo } from 'react';
+
+import { motion } from 'framer-motion';
+import { FaGithub } from 'react-icons/fa';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article, { ArticleHeader, ArticleMain } from '~components/article';
-
+import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import projects, { Project } from '~/lib/data/projects';
 import { appearingTextInit } from '~/lib/utils/motions';
-import Tag from '~components/tag';
+import Tag from '~/components/tag';
 
 type ProjectProps = {
   project: Project;

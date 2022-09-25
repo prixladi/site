@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+
 import { useTheme } from 'next-themes';
 import { BiMoon } from 'react-icons/bi';
 import { BsSun } from 'react-icons/bs';
 import clsx from 'clsx';
-import { useRouter } from 'next/router';
 import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';

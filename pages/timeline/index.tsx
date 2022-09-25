@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
 import type { NextPage } from 'next';
+
+import { motion } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import * as R from 'ramda';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article, { ArticleHeader, ArticleMain } from '~components/article';
-
+import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { appearingTextInit } from '~/lib/utils/motions';
 import timelineItems from '~/lib/data/timelineItems';
 

@@ -1,3 +1,5 @@
+import React, { useCallback } from 'react';
+
 import {
   ActionId,
   ActionImpl,
@@ -9,7 +11,6 @@ import {
   KBarSearch,
   useMatches,
 } from 'kbar';
-import React, { useCallback } from 'react';
 import clsx from 'clsx';
 
 import useKActions from '~/lib/hooks/useKActions';

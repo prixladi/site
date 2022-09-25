@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
+
 import { motion } from 'framer-motion';
 
 import InlineLink from '~/components/inlineLink';
 import Content from '~/components/content';
-import Article, { ArticleHeader } from '~components/article';
-
+import Article, { ArticleHeader } from '~/components/article';
 import { scaleDownInit } from '~/lib/utils/motions';
 
 const Home: NextPage = () => (

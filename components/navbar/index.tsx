@@ -1,14 +1,16 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import clsx from 'clsx';
-import { useRouter } from 'next/router';
 import * as R from 'ramda';
 
 import { Route, routes } from '~/lib/constants';
 import { isActivePath, isExternalRoute } from '~/lib/utils';
 
-import BurgerNavbar from './burger';
 import ThemeSwitcher from '../themeSwitcher';
+
+import BurgerNavbar from './burger';
 
 const { root, ...restRoutes } = routes;
 const navRoutes = Object.values(restRoutes).filter((x) => x.showInNavigation);

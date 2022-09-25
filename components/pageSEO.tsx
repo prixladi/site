@@ -1,5 +1,6 @@
-import { useTheme } from 'next-themes';
 import Head from 'next/head';
+
+import { useTheme } from 'next-themes';
 
 type Props = {
   title: string;

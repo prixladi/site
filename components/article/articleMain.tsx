@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
 
-import { Motion } from '~lib/utils/motions/shared';
+import { Motion } from '~/lib/utils/motions/shared';
 
 type Props = {
   children: React.ReactNode;

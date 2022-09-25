@@ -1,11 +1,12 @@
-import { Action } from 'kbar';
-import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import { useMemo } from 'react';
+
+import { Action } from 'kbar';
+import { useTheme } from 'next-themes';
 import { BsSun } from 'react-icons/bs';
 import { BiMoon } from 'react-icons/bi';
-import { routes } from '../constants';
 
+import { routes } from '../constants';
 import { isExternalRoute } from '../utils';
 
 const useKActions = (): Action[] => {

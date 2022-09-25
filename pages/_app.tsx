@@ -1,11 +1,12 @@
-import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
 
-import Navbar from '~components/navbar';
+import { ThemeProvider } from 'next-themes';
+import '@fontsource/ubuntu';
+
+import Navbar from '~/components/navbar';
 import Kbar from '~/components/kbar';
 
 import 'react-vertical-timeline-component/style.min.css';
-import "@fontsource/ubuntu";
 
 import '../styles/globals.css';
 

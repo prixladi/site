@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
-import { routes } from '~lib/constants';
+import { routes } from '~/lib/constants';
 
 const NotFound: React.FC = () => {
   const router = useRouter();

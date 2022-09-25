@@ -43,6 +43,30 @@
         "ts": "never",
         "tsx": "never"
       }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          ["sibling", "index"],
+          "type",
+          "object"
+        ],
+        "pathGroups": [
+          { "pattern": "react", "group": "builtin" },
+          { "pattern": "next", "group": "builtin" },
+          { "pattern": "next/**", "group": "builtin" },
+          { "pattern": "~/lib", "group": "internal", "position": "before" },
+          { "pattern": "~/components", "group": "internal" },
+          { "pattern": "~/styles", "group": "internal", "position": "before" }
+        ],
+        "pathGroupsExcludedImportTypes": ["react", "next", "next/**"],
+        "newlines-between": "always"
+      }
     ]
   }
 }

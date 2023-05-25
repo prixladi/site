@@ -1,17 +1,19 @@
 {
   "todo": [
-    { "title": "Some animation on navigation buger menu open." },
+    { "id": 1, "title": "Some animation on navigation buger menu open." },
     {
+      "id": 2,
       "title": "Theme switch border transition - something like this https://codepen.io/giana/pen/yYBpVY - codepen (spin circle)"
     },
-    { "title": "Prefer reduced motion implementation in framer motion." },
+    { "id": 3, "title": "Prefer reduced motion implementation in framer motion." },
     {
+      "id": 4,
       "title": "h1 and h2 change their colors on theme changes quicker than other elements, text in project page changes almost instatly."
     },
-    { "title": "Footer looks like shit, change it." },
-    { "title": "Some image preview / full screen on projects page." },
-    { "title": "Solve slow performance of technologies page on mobile." },
-    { "title": "Add links to items on timeline page." }
+    { "id": 5, "title": "Footer looks like shit, change it." },
+    { "id": 6, "title": "Some image preview / full screen on projects page." },
+    { "id": 7, "title": "Solve slow performance of technologies page on mobile." },
+    { "id": 8, "title": "Add links to items on timeline page." }
   ],
-  "closed": [{ "title": "Animate navigation on load.", "reason": "not a good idea tbh." }]
+  "closed": [{ "id": 9, "title": "Animate navigation on load.", "reason": "not a good idea tbh." }]
 }

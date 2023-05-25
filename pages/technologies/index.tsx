@@ -38,7 +38,7 @@ const Timeline: NextPage = () => {
   });
 
   return (
-    <Content title="Technologies | Láďa Prix" type='medium'>
+    <Content title="Technologies | Láďa Prix" type="medium">
       <Article>
         <ArticleHeader
           title={<>Here are some of the technologies I use.</>}

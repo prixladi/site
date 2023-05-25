@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useMemo } from 'react';
 
 import { BiDotsVerticalRounded } from 'react-icons/bi';
 import clsx from 'clsx';
-import * as R from 'ramda';
 
 import { Route, routes } from '~/lib/constants';
 import { isActivePath, isExternalRoute } from '~/lib/utils';
@@ -11,7 +11,6 @@ import { isActivePath, isExternalRoute } from '~/lib/utils';
 import ThemeSwitcher from '../themeSwitcher';
 
 import BurgerNavbar from './burger';
-import { useMemo } from 'react';
 
 const { root, ...restRoutes } = routes;
 const navRoutes = Object.values(restRoutes).filter((x) => x.showInNavigation);
@@ -51,7 +50,7 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
 const Navbar = () => {
   const { pathname } = useRouter();
 
-  const routes = useMemo(
+  const routesWithDots = useMemo(
     () =>
       navRoutes
         .map((route) => <NavBarItem key={route.path} route={route} currentPathname={pathname} />)
@@ -60,7 +59,7 @@ const Navbar = () => {
             acc.length > 0 ? [...acc, <Dots key={`dot.${acc.length}`} />, curr] : [curr],
           [],
         ),
-    [navRoutes, pathname],
+    [pathname],
   );
 
   return (
@@ -77,7 +76,7 @@ const Navbar = () => {
           <Link href={root.path}>Láďa Prix</Link>
         </div>
         <nav className="gap-8 hidden lg:flex">
-          <ul className="gap-8 hidden lg:flex">{routes}</ul>
+          <ul className="gap-8 hidden lg:flex">{routesWithDots}</ul>
         </nav>
         <div className="hidden lg:flex">
           <ThemeSwitcher />

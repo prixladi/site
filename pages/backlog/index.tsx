@@ -1,27 +1,25 @@
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
-import * as R from 'ramda';
-
 import Content from '~/components/content';
 import InlineLink from '~/components/inlineLink';
 
 type BLIs = {
   todo: {
+    id: string;
     title: string;
     description: string;
   }[];
   done: {
+    id: string;
     title: string;
   }[];
   closed: {
+    id: string;
     title: string;
     reason?: string;
   }[];
 };
-
-/* eslint-disable-next-line */ // Ramda placeholder is not a dangling __ !!
-const keyedMap = <T extends unknown>(item: T[]) => R.addIndex<T>(R.map)(R.__, item);
 
 const Backlog: NextPage = () => {
   const [data, setData] = useState<BLIs>();
@@ -37,15 +35,15 @@ const Backlog: NextPage = () => {
   if (!data) return null;
 
   return (
-    <Content title="Backlog" type='medium'>
+    <Content title="Backlog" type="medium">
       <main className="flex flex-col gap-7 p-3">
         <h1 className="font-extrabold text-4xl">Backlog</h1>
         {data.todo?.length > 0 && (
           <>
             <h2 className="font-bold text-3xl">Todo:</h2>
             <ul className="flex flex-col gap-1 list-disc">
-              {keyedMap(data.todo)((x, i) => (
-                <li key={i} className="text-lg font-semibold">
+              {data.todo.map((x) => (
+                <li key={x.id} className="text-lg font-semibold">
                   {x.title}
                 </li>
               ))}
@@ -57,8 +55,8 @@ const Backlog: NextPage = () => {
           <>
             <h2 className="font-bold text-3xl">Done:</h2>
             <ul className="flex flex-col gap-1 list-disc">
-              {keyedMap(data.todo)((x, i) => (
-                <li key={i} className="text-lg font-semibold">
+              {data.done.map((x) => (
+                <li key={x.id} className="text-lg font-semibold">
                   {x.title}
                 </li>
               ))}
@@ -70,8 +68,8 @@ const Backlog: NextPage = () => {
           <>
             <h2 className="font-bold text-3xl">Closed:</h2>
             <ul className="flex flex-col gap-1 list-disc">
-              {keyedMap(data.closed)((x, i) => (
-                <li key={i}>
+              {data.closed.map((x) => (
+                <li key={x.id}>
                   <span className="line-through">{x.title}</span>{' '}
                   <span className="font-thin">({x.reason})</span>
                 </li>

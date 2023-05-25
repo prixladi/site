@@ -1,5 +1,4 @@
 import { Variant } from 'framer-motion';
-import * as R from 'ramda';
 
 type InitialMotion = {
   initial: 'initial';
@@ -40,10 +39,5 @@ const whileHoverMotionBase: {
 
 type Motion = InitialMotion | ChildrenInitialMotion | WhileHoverMotion;
 
-type CombinedMotion = (Partial<InitialMotion> & Partial<WhileHoverMotion>) | {};
-
-const mergeMotions = (...motions: Motion[]): CombinedMotion =>
-  R.reduce(R.mergeDeepRight, {} as CombinedMotion, motions);
-
-export type { Motion, CombinedMotion };
-export { mergeMotions, initialMotionBase, whileHoverMotionBase };
+export type { Motion };
+export { initialMotionBase, whileHoverMotionBase };

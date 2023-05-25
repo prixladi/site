@@ -79,7 +79,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <Content title="Projects | Láďa Prix" type='medium'>
+  <Content title="Projects | Láďa Prix" type="medium">
     <Article>
       <ArticleHeader
         title={<>Here are some selected projects I&apos;ve worked on.</>}

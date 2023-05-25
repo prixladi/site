@@ -4,7 +4,6 @@ specifiers:
   '@fontsource/ubuntu': ^4.5.11
   '@tailwindcss/typography': ^0.5.2
   '@types/node': ^17.0.23
-  '@types/ramda': ^0.28.7
   '@types/react': ^17.0.43
   '@types/react-vertical-timeline-component': ^3.3.2
   '@typescript-eslint/eslint-plugin': ^5.17.0
@@ -29,7 +28,6 @@ specifiers:
   next-themes: ^0.1.1
   postcss: ^8.4.12
   prettier: ^2.6.1
-  ramda: ^0.28.0
   react: ^18.0.0
   react-dom: ^18.0.0
   react-icons: ^4.3.1
@@ -50,7 +48,6 @@ dependencies:
   kbar: 0.1.0-beta.40_biqbaboplfbrettd7655fr4n2y
   next: 12.3.4_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.1.1_bhgafntz2ozm43l35i5qtimxry
-  ramda: 0.28.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-icons: 4.8.0_react@18.2.0
@@ -61,7 +58,6 @@ dependencies:
 
 devDependencies:
   '@types/node': 17.0.45
-  '@types/ramda': 0.28.25
   '@types/react': 17.0.59
   '@types/react-vertical-timeline-component': 3.3.3
   '@typescript-eslint/eslint-plugin': 5.59.7_gnnf3trwikzd6jkxh7av7rnt5e
@@ -618,12 +614,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: true
-
-  /@types/ramda/0.28.25:
-    resolution: {integrity: sha512-HrQNqQAGcITpn9HAJFamDxm7iZeeXiP/95pN5OMbNniDjzCCeOHbBKNGmUy8NRi0fhYS+/cXeo91MFC+06gbow==}
-    dependencies:
-      ts-toolbelt: 6.15.5
     dev: true
 
   /@types/react-vertical-timeline-component/3.3.3:
@@ -3938,10 +3928,6 @@ packages:
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  /ramda/0.28.0:
-    resolution: {integrity: sha512-9QnLuG/kPVgWvMQ4aODhsBUFKOUmnbUnsSXACv+NCQZcHbeb+v8Lodp8OVxtRULN1/xOyYLLaL6npE6dMq5QTA==}
-    dev: false
-
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
     engines: {node: '>= 0.6'}
@@ -4706,10 +4692,6 @@ packages:
       yn: 3.1.1
     dev: true
     optional: true
-
-  /ts-toolbelt/6.15.5:
-    resolution: {integrity: sha512-FZIXf1ksVyLcfr7M317jbB67XFJhOO1YqdTcuGaq9q5jLUoTikukZ+98TPjKiP2jC5CgmYdWWYs0s2nLSU0/1A==}
-    dev: true
 
   /tsconfig-paths/3.14.2:
     resolution: {integrity: sha512-o/9iXgCYc5L/JxCHPe3Hvh8Q/2xm5Z+p18PESBU6Ff33695QnCHBEjcytY2q19ua7Mbl/DavtBOLq+oG0RCL+g==}

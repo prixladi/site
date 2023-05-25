@@ -30,8 +30,9 @@ const tusker: Project = {
   fromYear: 2022,
   text: (
     <>
-      Configurable task queue service with administration. Using{' '}
-      <TechTag tech="Deno" /> and <TechTag tech="MongoDB" /> on the backend, and <TechTag tech="SolidJS" /> for administration UI.
+      Configurable task queue service with administration. Using <TechTag tech="Deno" /> and{' '}
+      <TechTag tech="MongoDB" /> on the backend, and <TechTag tech="SolidJS" /> for administration
+      UI.
     </>
   ),
   imgSrc: '/assets/tusker.png',
@@ -215,7 +216,7 @@ const projects = [
   urlik,
   shamyrRescues,
   treeloc,
-  ladislavPrix
+  ladislavPrix,
 ];
 
 export default projects;

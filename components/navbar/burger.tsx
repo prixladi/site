@@ -6,7 +6,6 @@ import { useTheme } from 'next-themes';
 import { BiMoon } from 'react-icons/bi';
 import { BsSun } from 'react-icons/bs';
 import clsx from 'clsx';
-import * as R from 'ramda';
 import { MdLaptopChromebook } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -77,8 +76,13 @@ const Burger = ({ navRoutes }: BurgerProps) => {
     setClient(true);
   }, []);
 
-  const func = R.map((x: Route) => (
-    <NavBarItem key={x.path} route={x} currentPathname={pathname} close={() => setOpen(false)} />
+  const items = [routes.root, ...navRoutes].map((route) => (
+    <NavBarItem
+      key={route.path}
+      route={route}
+      currentPathname={pathname}
+      close={() => setOpen(false)}
+    />
   ));
 
   return (
@@ -113,7 +117,7 @@ const Burger = ({ navRoutes }: BurgerProps) => {
             </button>
           </div>
           <div className="mb-8">
-            <ul className="gap-8 lg:gap-12 flex flex-col">{func([routes.root, ...navRoutes])}</ul>
+            <ul className="gap-8 lg:gap-12 flex flex-col">{items}</ul>
           </div>
           <div className="mt-auto">
             <button

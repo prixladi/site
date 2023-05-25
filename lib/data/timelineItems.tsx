@@ -1,6 +1,6 @@
 import { FaDatabase, FaReact } from 'react-icons/fa';
 import { IoMdSchool } from 'react-icons/io';
-import { SiDotnet, SiNextdotjs } from 'react-icons/si';
+import { SiDotnet, SiNextdotjs, SiTypescript } from 'react-icons/si';
 
 type TimelineItem = {
   title: string;
@@ -8,6 +8,14 @@ type TimelineItem = {
   date: string;
   icon: React.ReactNode;
   body: React.ReactNode;
+};
+
+const reas: TimelineItem = {
+  title: 'Reas',
+  position: 'Fullstack developer',
+  date: 'Spring 2022 - NOW',
+  icon: <SiNextdotjs />,
+  body: <>In Reas, I work as a full stack software web developer.</>,
 };
 
 const designeo: TimelineItem = {
@@ -43,7 +51,7 @@ const shamyr: TimelineItem = {
   title: 'Shamyr',
   position: 'Software developer, Designer and DevOps',
   date: 'Fall 2016 - present',
-  icon: <SiNextdotjs />,
+  icon: <SiTypescript />,
   body: <>Shamyr is the brand that I use for freelancing and my independent projects.</>,
 };
 
@@ -55,7 +63,7 @@ const gympt: TimelineItem = {
   body: <>Secondary Grammar School Prachatice, Zlatá Stezka 137. Basic education.</>,
 };
 
-const timelineItems = [designeo, qest, fit, shamyr, gympt];
+const timelineItems = [reas, designeo, qest, fit, shamyr, gympt];
 
 export type { TimelineItem };
 export default timelineItems;

@@ -17,7 +17,10 @@ type FWs =
   | 'Ant Design'
   | 'Leaflet'
   | 'Vue'
-  | 'Tailwind CSS';
+  | 'Tailwind CSS'
+  | 'SolidJS'
+  | 'Deno'
+  | 'sass';
 
 type Misc =
   | 'RabbitMQ'
@@ -33,6 +36,7 @@ type Misc =
   | 'Azure Blob Storage'
   | 'OpenID Connect'
   | 'Socket.io'
-  | 'React Query';
+  | 'React Query'
+  | 'tRPC';
 
 export type Technology = DBs | DevOps | Languages | FWs | Misc;

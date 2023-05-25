@@ -11,6 +11,7 @@ import { isActivePath, isExternalRoute } from '~/lib/utils';
 import ThemeSwitcher from '../themeSwitcher';
 
 import BurgerNavbar from './burger';
+import { useMemo } from 'react';
 
 const { root, ...restRoutes } = routes;
 const navRoutes = Object.values(restRoutes).filter((x) => x.showInNavigation);
@@ -21,42 +22,45 @@ const Dots = () => (
   </div>
 );
 
-const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => (
-  <div className="w-full flex">
-    <li
-      className={clsx(
-        'navbar-hover-underline text-xl text-gray-500 font-bold items-center flex dark:text-gray-400',
-        {
-          'dark:text-white text-black navbar-selected-bg-size': isActivePath(
-            route.path,
-            currentPathname,
-          ),
-        },
-      )}
-    >
-      <Link passHref href={route.path}>
-        {/* eslint-disable */}
-        <a
-          rel={isExternalRoute(route) ? 'noopener' : undefined}
-          target={isExternalRoute(route) ? '_blank' : undefined}
-        >
-          {route.name}
-        </a>
-        {/* eslint-enable */}
-      </Link>
-    </li>
-  </div>
-);
+const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname: string }) => {
+  const isActive = isActivePath(route.path, currentPathname);
+
+  return (
+    <div className="w-full flex">
+      <li
+        className={clsx('navbar-hover-underline text-xl font-bold items-center flex', {
+          'text-gray-500 dark:text-gray-400': !isActive,
+          'dark:text-white text-black navbar-selected-bg-size': isActive,
+        })}
+      >
+        <Link passHref href={route.path}>
+          {/* eslint-disable */}
+          <a
+            rel={isExternalRoute(route) ? 'noopener' : undefined}
+            target={isExternalRoute(route) ? '_blank' : undefined}
+          >
+            {route.name}
+          </a>
+          {/* eslint-enable */}
+        </Link>
+      </li>
+    </div>
+  );
+};
 
 const Navbar = () => {
   const { pathname } = useRouter();
 
-  const func = R.pipe(
-    R.map((x: Route) => <NavBarItem key={x.path} route={x} currentPathname={pathname} />),
-    R.reduce(
-      (acc, curr) => (acc.length > 0 ? [...acc, <Dots key={`dot.${acc.length}`} />, curr] : [curr]),
-      [] as JSX.Element[],
-    ),
+  const routes = useMemo(
+    () =>
+      navRoutes
+        .map((route) => <NavBarItem key={route.path} route={route} currentPathname={pathname} />)
+        .reduce<JSX.Element[]>(
+          (acc, curr) =>
+            acc.length > 0 ? [...acc, <Dots key={`dot.${acc.length}`} />, curr] : [curr],
+          [],
+        ),
+    [navRoutes, pathname],
   );
 
   return (
@@ -73,7 +77,7 @@ const Navbar = () => {
           <Link href={root.path}>Láďa Prix</Link>
         </div>
         <nav className="gap-8 hidden lg:flex">
-          <ul className="gap-8 hidden lg:flex">{func(navRoutes)}</ul>
+          <ul className="gap-8 hidden lg:flex">{routes}</ul>
         </nav>
         <div className="hidden lg:flex">
           <ThemeSwitcher />

@@ -18,14 +18,14 @@ type ProjectProps = {
 
 const getYearCount = (project: Project): number => {
   if (project.toYear) {
-    return project.toYear - project.fromYear;
+    return project.toYear - project.fromYear + 1;
   }
 
-  return new Date().getFullYear() - project.fromYear;
+  return new Date().getFullYear() - project.fromYear + 1;
 };
 
 const ProjectYears = ({ project }: ProjectProps) => {
-  const yearCount = useMemo(() => Math.max(1, getYearCount(project)), [project]);
+  const yearCount = useMemo(() => getYearCount(project), [project]);
 
   return (
     <span className="inline text-sm font-bold text-gray-700 dark:text-gray-500">
@@ -33,6 +33,11 @@ const ProjectYears = ({ project }: ProjectProps) => {
       <Tag className="bg-emerald-300 text-black dark:bg-slate-700 dark:text-emerald-300 text-xs font-bold">
         {yearCount > 1 ? `${yearCount} YEARS` : `${yearCount} YEAR`}
       </Tag>
+      {!project.toYear && (
+        <Tag className="ml-1 bg-orange-400 text-black dark:bg-slate-700 dark:text-orange-400 text-xs font-bold">
+          WIP
+        </Tag>
+      )}
     </span>
   );
 };
@@ -74,15 +79,14 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <Content title="Projects | Láďa Prix" className="max-w-4xl">
+  <Content title="Projects | Láďa Prix" type='medium'>
     <Article>
       <ArticleHeader
         title={<>Here are some selected projects I&apos;ve worked on.</>}
         subTitle={
           <>
             You can find them on my <InlineLink href="https://github.com/prixladi" text="Github" />.
-            Those are just my personal projects, my professional
-            experiences are listed on the{' '}
+            Those are just my personal projects, my professional experiences are listed on the{' '}
             <InlineLink href={routes.timeline.path} text="timeline page" />.
           </>
         }

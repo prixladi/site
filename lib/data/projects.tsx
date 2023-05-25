@@ -24,6 +24,19 @@ const TechTag = ({ tech }: TechTagProps) => (
   </Tag>
 );
 
+const tusker: Project = {
+  title: 'Tusker',
+  link: 'https://github.com/prixladi/tusker',
+  fromYear: 2022,
+  text: (
+    <>
+      Configurable task queue service with administration. Using{' '}
+      <TechTag tech="Deno" /> and <TechTag tech="MongoDB" /> on the backend, and <TechTag tech="SolidJS" /> for administration UI.
+    </>
+  ),
+  imgSrc: '/assets/tusker.png',
+};
+
 const expendity: Project = {
   title: 'Expendity',
   link: 'https://github.com/prixladi/expendity',
@@ -44,7 +57,7 @@ const siteCapture: Project = {
   title: 'Site Capture',
   link: 'https://github.com/prixladi/site-capture',
   fromYear: 2020,
-  toYear: 2020,
+  toYear: 2021,
   text: (
     <>
       Web application for automatically creating screenshots of defined sites. Using{' '}
@@ -91,7 +104,6 @@ const ladislavPrix: Project = {
   title: 'ladislavprix.cz',
   link: 'https://github.com/prixladi/site',
   fromYear: 2020,
-  toYear: 2020,
   text: (
     <>
       Personal website running on{' '}
@@ -138,6 +150,7 @@ const opendentity: Project = {
   title: 'Opendentity',
   link: 'https://github.com/prixladi/opendentity',
   fromYear: 2021,
+  toYear: 2021,
   text: (
     <>
       Identity provider and Access Control service. Developed using <TechTag tech="ASP.NET Core" />{' '}
@@ -151,6 +164,7 @@ const contentium: Project = {
   title: 'Contentium',
   link: 'https://github.com/prixladi/contentium',
   fromYear: 2021,
+  toYear: 2022,
   text: (
     <>
       Project you can use for creating sites with search engine optimized content from markdown
@@ -164,6 +178,7 @@ const ezchat: Project = {
   title: 'Ezchat',
   link: 'https://github.com/prixladi/ezchat',
   fromYear: 2022,
+  toYear: 2022,
   text: (
     <>
       Dead simple chat aplication. Using <TechTag tech="Node.js" /> <TechTag tech="Socket.io" />{' '}
@@ -189,6 +204,7 @@ const survefy: Project = {
 };
 
 const projects = [
+  tusker,
   ezchat,
   contentium,
   expendity,

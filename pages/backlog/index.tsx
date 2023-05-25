@@ -37,7 +37,7 @@ const Backlog: NextPage = () => {
   if (!data) return null;
 
   return (
-    <Content title="Backlog" className="max-w-4xl">
+    <Content title="Backlog" type='medium'>
       <main className="flex flex-col gap-7 p-3">
         <h1 className="font-extrabold text-4xl">Backlog</h1>
         {data.todo?.length > 0 && (

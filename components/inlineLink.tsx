@@ -1,7 +1,5 @@
 import Link from 'next/link';
 
-import * as R from 'ramda';
-
 type Props = {
   text: string;
   href: string;
@@ -14,7 +12,7 @@ const InlineLink = ({ text, href, download }: Props) => (
     <a
       rel="noopener"
       target={
-        href.startsWith('https://') || href.startsWith('http://') || !R.isNil(download)
+        href.startsWith('https://') || href.startsWith('http://') || Boolean(download)
           ? '_blank'
           : undefined
       }

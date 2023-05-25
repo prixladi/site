@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
-import InlineLink from '~/components/inlineLink';
+import InlineLink from '~/components/inline-link';
 import Content from '~/components/content';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import projects, { Project } from '~/lib/data/projects';

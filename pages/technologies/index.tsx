@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
 
 import Content from '~/components/content';
-import InlineLink from '~/components/inlineLink';
+import InlineLink from '~/components/inline-link';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { routes } from '~/lib/constants';
 import technologies from '~/lib/data/technologies';

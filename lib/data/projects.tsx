@@ -1,6 +1,6 @@
 import React from 'react';
 
-import InlineLink from '~/components/inlineLink';
+import InlineLink from '~/components/inline-link';
 import Tag from '~/components/tag';
 
 import { Technology } from './types';

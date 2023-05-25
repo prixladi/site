@@ -2,8 +2,8 @@ import { PropsWithChildren } from 'react';
 
 import clsx from 'clsx';
 
-import ArticleHeader from './articleHeader';
-import ArticleMain from './articleMain';
+import ArticleHeader from './article-header';
+import ArticleMain from './article-main';
 
 type Props = PropsWithChildren<{
   className?: string;

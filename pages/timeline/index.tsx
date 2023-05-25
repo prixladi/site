@@ -3,11 +3,11 @@ import type { NextPage } from 'next';
 import { motion } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-import InlineLink from '~/components/inlineLink';
+import InlineLink from '~/components/inline-link';
 import Content from '~/components/content';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { appearingTextInit } from '~/lib/utils/motions';
-import timelineItems from '~/lib/data/timelineItems';
+import timelineItems from '~/lib/data/timeline-items';
 
 const Timeline: NextPage = () => (
   <Content title="Timeline | Láďa Prix" type="medium">

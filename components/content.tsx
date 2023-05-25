@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-import PageSEO from './pageSEO';
+import PageSEO from './page-seo';
 
 type Props = {
   children: React.ReactNode;

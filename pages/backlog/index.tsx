@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import Content from '~/components/content';
-import InlineLink from '~/components/inlineLink';
+import InlineLink from '~/components/inline-link';
 
 type BLIs = {
   todo: {

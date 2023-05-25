@@ -13,7 +13,7 @@ import {
 } from 'kbar';
 import clsx from 'clsx';
 
-import useKActions from '~/lib/hooks/useKActions';
+import useKActions from '~/lib/hooks/use-k-actions';
 
 type ResultItemProps = {
   action: ActionImpl;

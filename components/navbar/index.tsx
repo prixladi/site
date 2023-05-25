@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { Route, routes } from '~/lib/constants';
 import { isActivePath, isExternalRoute } from '~/lib/utils';
 
-import ThemeSwitcher from '../themeSwitcher';
+import ThemeSwitcher from '../theme-switcher';
 
 import BurgerNavbar from './burger';
 

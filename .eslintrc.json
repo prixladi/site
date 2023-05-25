@@ -5,6 +5,7 @@
     "next/core-web-vitals",
     "eslint-config-prettier"
   ],
+  "plugins": ["filenames"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
@@ -67,6 +68,7 @@
         "pathGroupsExcludedImportTypes": ["react", "next", "next/**"],
         "newlines-between": "always"
       }
-    ]
+    ],
+    "filenames/match-regex": ["error", "^.?_?[a-z0-9][a-z0-9.-]*$"]
   }
 }

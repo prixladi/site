@@ -1,7 +1,7 @@
-import appearingTextInit from './appearingTextInit';
-import scaleUpHover from './scaleUpHover';
-import scaleUpInit from './scaleUpInit';
-import scaleDownInit from './scaleDownInit';
+import appearingTextInit from './appearing-text-init';
+import scaleUpHover from './scale-up-hover';
+import scaleUpInit from './scale-up-init';
+import scaleDownInit from './scale-down-init';
 
 const scaleUpVariants = {
   initial: { scale: 0.4, opacity: 0 },

@@ -4,8 +4,8 @@ import { BiMoon } from 'react-icons/bi';
 
 import { toggleTheme } from '~/lib/utils';
 
-import SwapButton from './swapButton';
-import SwapItem from './swapItem';
+import SwapButton from './swap-button';
+import SwapItem from './swap-item';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();

@@ -1,10 +1,9 @@
-import { MouseEventHandler } from 'react';
+import { MouseEventHandler, PropsWithChildren } from 'react';
 
-type Props = {
-  children?: React.ReactNode;
+type Props = PropsWithChildren<{
   ariaLabel: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
-};
+}>;
 
 const SwapButton: React.FC<Props> = ({ children, ariaLabel, onClick }) => (
   <button

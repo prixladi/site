@@ -50,7 +50,7 @@ const Timeline: NextPage = () => {
           }
         />
 
-        <ArticleMain m={appearingTextInit().parent}>
+        <ArticleMain motion={appearingTextInit().parent}>
           <motion.div {...appearingTextInit().children}>
             {renderCloud && <ReactWordcloud options={options} words={technologies} />}
           </motion.div>

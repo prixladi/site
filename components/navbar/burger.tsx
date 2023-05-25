@@ -35,17 +35,15 @@ const NavBarItem = ({
       },
     )}
   >
-    <Link passHref href={route.path}>
-      {/* eslint-disable */}
-      <a
-        rel="noopener"
-        target={isExternalRoute(route) ? '_blank' : undefined}
-        onClick={() => close()}
-        className="w-full text-left"
-      >
-        {/* eslint-enable */}
-        {route.name}
-      </a>
+    <Link
+      passHref
+      href={route.path}
+      rel="noopener"
+      target={isExternalRoute(route) ? '_blank' : undefined}
+      onClick={() => close()}
+      className="w-full text-left"
+    >
+      {route.name}
     </Link>
   </li>
 );

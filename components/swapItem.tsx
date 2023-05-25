@@ -1,10 +1,11 @@
+import { PropsWithChildren } from 'react';
+
 import clsx from 'clsx';
 
-type Props = {
-  children?: React.ReactNode;
+type Props = PropsWithChildren<{
   className?: string;
   isIn: boolean;
-};
+}>;
 
 const style = { transformOrigin: '50% 100px' };
 const SwapItem: React.FC<Props> = ({ children, className, isIn }) => (

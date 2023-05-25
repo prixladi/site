@@ -32,15 +32,13 @@ const NavBarItem = ({ route, currentPathname }: { route: Route; currentPathname:
           'dark:text-white text-black navbar-selected-bg-size': isActive,
         })}
       >
-        <Link passHref href={route.path}>
-          {/* eslint-disable */}
-          <a
-            rel={isExternalRoute(route) ? 'noopener' : undefined}
-            target={isExternalRoute(route) ? '_blank' : undefined}
-          >
-            {route.name}
-          </a>
-          {/* eslint-enable */}
+        <Link
+          passHref
+          href={route.path}
+          rel={isExternalRoute(route) ? 'noopener' : undefined}
+          target={isExternalRoute(route) ? '_blank' : undefined}
+        >
+          {route.name}
         </Link>
       </li>
     </div>

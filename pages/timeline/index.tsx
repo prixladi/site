@@ -23,7 +23,7 @@ const Timeline: NextPage = () => (
         }
       />
 
-      <ArticleMain m={appearingTextInit({ delayChildren: 0.5 }).parent}>
+      <ArticleMain motion={appearingTextInit({ delayChildren: 0.5 }).parent}>
         <motion.div {...appearingTextInit().children}>
           <VerticalTimeline>
             {timelineItems.map(({ date, title, icon, position, body }) => (

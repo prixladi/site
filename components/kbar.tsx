@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, PropsWithChildren } from 'react';
 
 import {
   ActionId,
@@ -77,8 +77,9 @@ ResultItem.displayName = 'ResultItem';
 const Results = () => {
   const { results, rootActionId } = useMatches();
 
-  const ResultsRender = useCallback(
-    ({ item, active }) =>
+  const resultsRender = useCallback(
+    // eslint-disable-next-line react/no-unused-prop-types
+    ({ item, active }: { item: string | ActionImpl; active: boolean }) =>
       typeof item === 'string' ? (
         <div className="pb-2 pt-1 text-xs scale-90 font-semibold opacity-40 uppercase">{item}</div>
       ) : (
@@ -87,10 +88,10 @@ const Results = () => {
     [rootActionId],
   );
 
-  return <KBarResults items={results} onRender={ResultsRender} />;
+  return <KBarResults items={results} onRender={resultsRender} />;
 };
 
-const KBar: React.FC = ({ children }) => {
+const KBar: React.FC<PropsWithChildren> = ({ children }) => {
   const actions = useKActions();
 
   return (

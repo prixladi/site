@@ -93,7 +93,7 @@ const Projects: NextPage = () => (
       />
 
       <ArticleMain
-        m={appearingTextInit({ delayChildren: 0.5 }).parent}
+        motion={appearingTextInit({ delayChildren: 0.5 }).parent}
         className="flex flex-col gap-10 md:gap-16 md:mt-8"
       >
         {projects.map((project) => (

@@ -1,18 +1,19 @@
+import { PropsWithChildren } from 'react';
+
 import clsx from 'clsx';
-import { motion } from 'framer-motion';
+import { motion as framerMotion } from 'framer-motion';
 
 import { Motion } from '~/lib/utils/motions/shared';
 
-type Props = {
-  children: React.ReactNode;
-  m?: Motion;
+type Props = PropsWithChildren<{
+  motion?: Motion;
   className?: string;
-};
+}>;
 
-const ArticleMain: React.FC<Props> = ({ children, m, className }) => (
-  <motion.main className={clsx('w-full', className)} {...m}>
+const ArticleMain: React.FC<Props> = ({ children, motion, className }) => (
+  <framerMotion.main className={clsx('w-full', className)} {...motion}>
     {children}
-  </motion.main>
+  </framerMotion.main>
 );
 
 export default ArticleMain;

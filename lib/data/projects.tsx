@@ -33,7 +33,7 @@ const tusker: Project = {
       UI.
     </>
   ),
-  imgSrc: '/assets/tusker.png',
+  imgSrc: '/assets/tusker.webp',
 };
 
 const expendity: Project = {
@@ -49,7 +49,7 @@ const expendity: Project = {
       <TechTag tech="Apollo Client" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/expendity.png',
+  imgSrc: '/assets/expendity.webp',
 };
 
 const siteCapture: Project = {
@@ -66,7 +66,7 @@ const siteCapture: Project = {
       on the frontend.
     </>
   ),
-  imgSrc: '/assets/siteCapture.png',
+  imgSrc: '/assets/siteCapture.webp',
 };
 
 const urlik: Project = {
@@ -81,7 +81,7 @@ const urlik: Project = {
       backend, and <TechTag tech="React" /> with <TechTag tech="Next.js" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/urlik.png',
+  imgSrc: '/assets/urlik.webp',
 };
 
 const imaginess: Project = {
@@ -96,7 +96,7 @@ const imaginess: Project = {
       <TechTag tech="Vue" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/imaginess.png',
+  imgSrc: '/assets/imaginess.webp',
 };
 
 const ladislavPrix: Project = {
@@ -110,7 +110,7 @@ const ladislavPrix: Project = {
       <TechTag tech="React" /> <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />
     </>
   ),
-  imgSrc: '/assets/ladislavprix.png',
+  imgSrc: '/assets/ladislavprix.webp',
 };
 
 const shamyrRescues: Project = {
@@ -125,7 +125,7 @@ const shamyrRescues: Project = {
       <TechTag tech="React" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/shamyrRescues.png',
+  imgSrc: '/assets/shamyrRescues.webp',
 };
 
 const treeloc: Project = {
@@ -142,7 +142,7 @@ const treeloc: Project = {
       and <TechTag tech="React" /> with <TechTag tech="Leaflet" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/treeloc.png',
+  imgSrc: '/assets/treeloc.webp',
 };
 
 const opendentity: Project = {
@@ -156,7 +156,7 @@ const opendentity: Project = {
       and <TechTag tech="OpenID Connect" />
     </>
   ),
-  imgSrc: '/assets/opendentityOIDC.png',
+  imgSrc: '/assets/opendentityOIDC.webp',
 };
 
 const contentium: Project = {
@@ -170,7 +170,7 @@ const contentium: Project = {
       source. It is written using <TechTag tech="Next.js" /> and <TechTag tech="Tailwind CSS" />
     </>
   ),
-  imgSrc: '/assets/contentium.png',
+  imgSrc: '/assets/contentium.webp',
 };
 
 const ezchat: Project = {
@@ -186,7 +186,7 @@ const ezchat: Project = {
       the frontend.
     </>
   ),
-  imgSrc: '/assets/ezchat.png',
+  imgSrc: '/assets/ezchat.webp',
 };
 
 const survefy: Project = {
@@ -199,7 +199,7 @@ const survefy: Project = {
       <TechTag tech="MongoDB" />.
     </>
   ),
-  imgSrc: '/assets/survefy.png',
+  imgSrc: '/assets/survefy.webp',
 };
 
 const projects = [

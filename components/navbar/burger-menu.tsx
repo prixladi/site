@@ -102,7 +102,7 @@ const Burger = ({ navRoutes }: BurgerProps) => {
           className="fixed inset-0 bg-gray-800 opacity-25"
           onClick={() => setOpen(false)}
         />
-        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto dark:bg-[url('/assets/bg-dark.png')] bg-[url('/assets/bg-light.png')]">
+        <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 border-r overflow-y-auto dark:bg-[url('/assets/bg-dark.webp')] bg-[url('/assets/bg-light.webp')]">
           <div className="flex items-center mb-8">
             <div className="mr-auto text-5xl font-bold leading-none flex gap-2">
               <MdLaptopChromebook />

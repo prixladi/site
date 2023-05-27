@@ -23,7 +23,7 @@ const Home: NextPage = () => (
 
       <div className="w-full flex justify-center">
         <motion.img
-          src="/assets/profile.jpg"
+          src="/assets/profile.webp"
           alt="profile picture"
           className="rounded-full object-cover scale-95"
           {...scaleDownInit()}

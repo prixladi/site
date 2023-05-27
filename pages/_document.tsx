@@ -17,7 +17,7 @@ class Document extends NextDocument {
             property="og:description"
             content="Láďa Prix is a software developer focused on web backend and cloud development and this is his personal website."
           />
-          <meta property="og:image" content="https://www.ladislavprix.cz/site.png" />
+          <meta property="og:image" content="https://www.ladislavprix.cz/site.webp" />
 
           <link rel="icon" href="/favicon.ico" />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

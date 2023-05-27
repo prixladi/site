@@ -5,8 +5,8 @@
 @layer base {
     body {
         @apply transition-all ease-in duration-300;
-        @apply dark:bg-[url('/assets/bg-dark.png')];
-        @apply bg-[url('/assets/bg-light.png')];
+        @apply dark:bg-[url('/assets/bg-dark.webp')];
+        @apply bg-[url('/assets/bg-light.webp')];
         @apply bg-no-repeat;
         @apply bg-cover;
         @apply bg-center;

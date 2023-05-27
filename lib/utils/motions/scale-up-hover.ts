@@ -1,4 +1,6 @@
-import { whileHoverMotionBase, Motion } from './shared';
+import { whileHoverMotionBase } from './shared';
+
+import type { Motion } from './shared';
 
 type ScaleUpHoverOptions = {
   scale: number;

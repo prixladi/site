@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import clsx from 'clsx';
 
@@ -8,7 +8,7 @@ type Props = PropsWithChildren<{
 }>;
 
 const style = { transformOrigin: '50% 100px' };
-const SwapItem: React.FC<Props> = ({ children, className, isIn }) => (
+const SwapableItem: React.FC<Props> = ({ children, className, isIn }) => (
   <span
     className={clsx(
       'absolute inset-0 text-black dark:text-white transform transition-transform duration-700',
@@ -24,4 +24,4 @@ const SwapItem: React.FC<Props> = ({ children, className, isIn }) => (
   </span>
 );
 
-export default SwapItem;
+export default SwapableItem;

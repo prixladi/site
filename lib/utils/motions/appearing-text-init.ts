@@ -1,4 +1,6 @@
-import { initialMotionBase, Motion } from './shared';
+import { initialMotionBase } from './shared';
+
+import type { Motion } from './shared';
 
 type MotionType = {
   standalone: Motion;

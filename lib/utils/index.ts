@@ -1,4 +1,4 @@
-import { Route } from '../constants';
+import type { Route } from '../constants';
 
 export const isExternalRoute = (route: Route) =>
   route.path.startsWith('http://') || route.path.startsWith('https://');

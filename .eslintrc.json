@@ -5,12 +5,11 @@
     "next/core-web-vitals",
     "eslint-config-prettier"
   ],
-  "plugins": ["filenames"],
+  "plugins": ["filenames", "@next/eslint-plugin-next"],
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "settings": {
-    "import/core-modules": ["@api-models"],
     "import/resolver": {
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
@@ -22,6 +21,8 @@
     "no-console": 0,
     "react/require-default-props": 0,
     "react/jsx-props-no-spreading": 0,
+
+    "@typescript-eslint/consistent-type-imports": 2,
     "react/function-component-definition": [
       2,
       {

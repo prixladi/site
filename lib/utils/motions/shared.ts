@@ -1,4 +1,4 @@
-import { Variant } from 'framer-motion';
+import type { Variant } from 'framer-motion';
 
 type InitialMotion = {
   initial: 'initial';

@@ -3,12 +3,12 @@ import type { NextPage } from 'next';
 import { motion } from 'framer-motion';
 
 import InlineLink from '~/components/inline-link';
-import Content from '~/components/content';
+import PageContent from '~/components/page-content';
 import Article, { ArticleHeader } from '~/components/article';
 import { scaleDownInit } from '~/lib/utils/motions';
 
 const Home: NextPage = () => (
-  <Content title="Láďa Prix" type="wide">
+  <PageContent title="Láďa Prix" type="wide">
     <Article className="lg:flex-row flex-1">
       <ArticleHeader
         title={<> Hi, I&apos;m Láďa, a software developer from the Czech Republic.</>}
@@ -30,7 +30,7 @@ const Home: NextPage = () => (
         />
       </div>
     </Article>
-  </Content>
+  </PageContent>
 );
 
 export default Home;

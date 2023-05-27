@@ -1,9 +1,10 @@
 import { AiOutlineHome, AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import { BiTimeFive } from 'react-icons/bi';
-import { IconType } from 'react-icons/lib';
 import { IoLogoReact } from 'react-icons/io5';
 import { BsFillPencilFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedin, FaRegNewspaper } from 'react-icons/fa';
+
+import type { IconType } from 'react-icons/lib';
 
 type Route = {
   path: string;

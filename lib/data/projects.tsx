@@ -1,9 +1,7 @@
-import React from 'react';
-
 import InlineLink from '~/components/inline-link';
 import Tag from '~/components/tag';
 
-import { Technology } from './types';
+import type { Technology } from './types';
 
 export type Project = {
   title: string;

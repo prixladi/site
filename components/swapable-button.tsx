@@ -1,11 +1,11 @@
-import { MouseEventHandler, PropsWithChildren } from 'react';
+import type { MouseEventHandler, PropsWithChildren } from 'react';
 
 type Props = PropsWithChildren<{
   ariaLabel: string;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }>;
 
-const SwapButton: React.FC<Props> = ({ children, ariaLabel, onClick }) => (
+const SwapableButton: React.FC<Props> = ({ children, ariaLabel, onClick }) => (
   <button
     aria-label={ariaLabel}
     type="button"
@@ -16,4 +16,4 @@ const SwapButton: React.FC<Props> = ({ children, ariaLabel, onClick }) => (
   </button>
 );
 
-export default SwapButton;
+export default SwapableButton;

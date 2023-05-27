@@ -5,12 +5,14 @@ import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
 
 import InlineLink from '~/components/inline-link';
-import Content from '~/components/content';
+import PageContent from '~/components/page-content';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
-import projects, { Project } from '~/lib/data/projects';
+import projects from '~/lib/data/projects';
 import { appearingTextInit } from '~/lib/utils/motions';
 import Tag from '~/components/tag';
 import { routes } from '~/lib/constants';
+
+import type { Project } from '~/lib/data/projects';
 
 type ProjectProps = {
   project: Project;
@@ -79,7 +81,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <Content title="Projects | Láďa Prix" type="medium">
+  <PageContent title="Projects | Láďa Prix" type="medium">
     <Article>
       <ArticleHeader
         title={<>Here are some selected projects I&apos;ve worked on.</>}
@@ -101,7 +103,7 @@ const Projects: NextPage = () => (
         ))}
       </ArticleMain>
     </Article>
-  </Content>
+  </PageContent>
 );
 
 export default Projects;

@@ -1,8 +1,7 @@
-import React, { useCallback, PropsWithChildren } from 'react';
+import React, { useCallback } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import {
-  ActionId,
-  ActionImpl,
   KBarAnimator,
   KBarPortal,
   KBarPositioner,
@@ -14,6 +13,10 @@ import {
 import clsx from 'clsx';
 
 import useKActions from '~/lib/hooks/use-k-actions';
+
+import type {
+  ActionId,
+  ActionImpl} from 'kbar';
 
 type ResultItemProps = {
   action: ActionImpl;

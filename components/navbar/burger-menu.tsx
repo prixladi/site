@@ -9,11 +9,13 @@ import clsx from 'clsx';
 import { MdLaptopChromebook } from 'react-icons/md';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-import { Route, routes } from '~/lib/constants';
+import { routes } from '~/lib/constants';
 import { isActivePath, isExternalRoute, toggleTheme } from '~/lib/utils';
 
-import SwapButton from '../swap-button';
-import SwapItem from '../swap-item';
+import SwapableButton from '../swapable-button';
+import SwapableItem from '../swapable-item';
+
+import type { Route} from '~/lib/constants';
 
 const NavBarItem = ({
   route,
@@ -85,14 +87,14 @@ const Burger = ({ navRoutes }: BurgerProps) => {
 
   return (
     <div className="lg:hidden">
-      <SwapButton ariaLabel="toggle menu" onClick={() => setOpen(true)}>
-        <SwapItem isIn={!open}>
+      <SwapableButton ariaLabel="toggle menu" onClick={() => setOpen(true)}>
+        <SwapableItem isIn={!open}>
           <Cross />
-        </SwapItem>
-        <SwapItem isIn={open}>
+        </SwapableItem>
+        <SwapableItem isIn={open}>
           <GiHamburgerMenu className="w-6 h-6" />
-        </SwapItem>
-      </SwapButton>
+        </SwapableItem>
+      </SwapableButton>
       <div className={clsx('relative z-50', { hidden: !open })}>
         {/* eslint-disable-next-line */}
         <div

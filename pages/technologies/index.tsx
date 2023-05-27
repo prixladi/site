@@ -2,14 +2,16 @@ import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
-import ReactWordcloud, { OptionsProp } from 'react-wordcloud';
+import ReactWordcloud from 'react-wordcloud';
 
-import Content from '~/components/content';
+import PageContent from '~/components/page-content';
 import InlineLink from '~/components/inline-link';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { routes } from '~/lib/constants';
 import technologies from '~/lib/data/technologies';
 import { appearingTextInit } from '~/lib/utils/motions';
+
+import type { OptionsProp } from 'react-wordcloud';
 
 const options: OptionsProp = {
   colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
@@ -38,7 +40,7 @@ const Timeline: NextPage = () => {
   });
 
   return (
-    <Content title="Technologies | Láďa Prix" type="medium">
+    <PageContent title="Technologies | Láďa Prix" type="medium">
       <Article>
         <ArticleHeader
           title={<>Here are some of the technologies I use.</>}
@@ -56,7 +58,7 @@ const Timeline: NextPage = () => {
           </motion.div>
         </ArticleMain>
       </Article>
-    </Content>
+    </PageContent>
   );
 };
 

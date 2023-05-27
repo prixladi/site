@@ -4,13 +4,13 @@ import { motion } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 import InlineLink from '~/components/inline-link';
-import Content from '~/components/content';
+import PageContent from '~/components/page-content';
 import Article, { ArticleHeader, ArticleMain } from '~/components/article';
 import { appearingTextInit } from '~/lib/utils/motions';
 import timelineItems from '~/lib/data/timeline-items';
 
 const Timeline: NextPage = () => (
-  <Content title="Timeline | Láďa Prix" type="medium">
+  <PageContent title="Timeline | Láďa Prix" type="medium">
     <Article>
       <ArticleHeader
         title={<>This is a timeline of my education and career.</>}
@@ -46,7 +46,7 @@ const Timeline: NextPage = () => (
         </motion.div>
       </ArticleMain>
     </Article>
-  </Content>
+  </PageContent>
 );
 
 export default Timeline;

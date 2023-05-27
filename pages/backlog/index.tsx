@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { useEffect, useState } from 'react';
 
-import Content from '~/components/content';
+import PageContent from '~/components/page-content';
 import InlineLink from '~/components/inline-link';
 
 type BLIs = {
@@ -35,7 +35,7 @@ const Backlog: NextPage = () => {
   if (!data) return null;
 
   return (
-    <Content title="Backlog" type="medium">
+    <PageContent title="Backlog" type="medium">
       <main className="flex flex-col gap-7 p-3">
         <h1 className="font-extrabold text-4xl">Backlog</h1>
         {data.todo?.length > 0 && (
@@ -89,7 +89,7 @@ const Backlog: NextPage = () => {
           />
         </span>
       </main>
-    </Content>
+    </PageContent>
   );
 };
 

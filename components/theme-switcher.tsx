@@ -4,21 +4,21 @@ import { BiMoon } from 'react-icons/bi';
 
 import { toggleTheme } from '~/lib/utils';
 
-import SwapButton from './swap-button';
-import SwapItem from './swap-item';
+import SwapableButton from './swapable-button';
+import SwapableItem from './swapable-item';
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <SwapButton ariaLabel="change theme" onClick={() => setTheme(toggleTheme(theme))}>
-      <SwapItem isIn className="dark:rotate-0">
+    <SwapableButton ariaLabel="change theme" onClick={() => setTheme(toggleTheme(theme))}>
+      <SwapableItem isIn className="dark:rotate-0">
         <BiMoon className="w-6 h-6" />
-      </SwapItem>
-      <SwapItem isIn={false} className="dark:-rotate-90">
+      </SwapableItem>
+      <SwapableItem isIn={false} className="dark:-rotate-90">
         <BsSun className="w-6 h-6" />
-      </SwapItem>
-    </SwapButton>
+      </SwapableItem>
+    </SwapableButton>
   );
 };
 

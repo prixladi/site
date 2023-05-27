@@ -1,9 +1,9 @@
-import { PropsWithChildren } from 'react';
+import type { PropsWithChildren } from 'react';
 
 import clsx from 'clsx';
 import { motion as framerMotion } from 'framer-motion';
 
-import { Motion } from '~/lib/utils/motions/shared';
+import type { Motion } from '~/lib/utils/motions/shared';
 
 type Props = PropsWithChildren<{
   motion?: Motion;

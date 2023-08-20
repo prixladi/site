@@ -13,16 +13,21 @@ jobs:
       with:
         fetch-depth: 2
 
-    - name: Use Node.js 12.x	
+    - name: Use Node.js 16.x	
       uses: actions/setup-node@v1	
       with:	
-        node-version: '12.x'	
+        node-version: '16.x'	
+    
+    - name: Setup pnpm 
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8
 
     - name: Build Project	
       run: |	
-        yarn	
-        yarn build 
-        yarn export    
+        pnpm install 	
+        pnpm build 
+        pnpm export    
         
     - name: List output files
       run: ls build
@@ -31,9 +36,9 @@ jobs:
       run: git status
 
     - name: Deploy via FTP
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        ftp-server: ftp.ladislavprix.cz
-        ftp-username: root.ladislavprix.cz
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: build
+        server: ftp.ladislavprix.cz
+        username: root.ladislavprix.cz
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./build/

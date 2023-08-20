@@ -113,9 +113,9 @@ const site: Project = {
   imgSrc: '/assets/ladislavprix.webp',
 };
 
-const shamyrRescues: Project = {
-  title: 'Shamyr Rescues',
-  link: 'https://github.com/prixladi/shamyr-rescues',
+const rescues: Project = {
+  title: 'Rescues',
+  link: 'https://github.com/prixladi/rescues',
   fromYear: 2019,
   toYear: 2020,
   text: (
@@ -125,7 +125,7 @@ const shamyrRescues: Project = {
       <TechTag tech="React" /> on the frontend.
     </>
   ),
-  imgSrc: '/assets/shamyrRescues.webp',
+  imgSrc: '/assets/rescues.webp',
 };
 
 const treeloc: Project = {
@@ -212,7 +212,7 @@ const projects = [
   siteCapture,
   imaginess,
   urlik,
-  shamyrRescues,
+  rescues,
   treeloc,
   site,
 ];

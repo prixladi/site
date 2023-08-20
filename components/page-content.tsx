@@ -28,7 +28,7 @@ const Content = ({ children, title, type }: Props) => (
         )}
       >
         <p className="w-full md:w-fit text-center md:text-left my-4 text-xl text-gray-500 dark:text-gray-400 pb-4">
-          Ladislav Prix &copy; 2021, <br className="md:hidden block" /> elix78963@gmail.com
+          prixladi &copy; 2021, <br className="md:hidden block" /> elix78963@gmail.com
         </p>
       </div>
     </div>

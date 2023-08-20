@@ -99,7 +99,7 @@ const imaginess: Project = {
   imgSrc: '/assets/imaginess.webp',
 };
 
-const ladislavPrix: Project = {
+const site: Project = {
   title: 'ladislavprix.cz',
   link: 'https://github.com/prixladi/site',
   fromYear: 2020,
@@ -180,7 +180,7 @@ const ezchat: Project = {
   toYear: 2022,
   text: (
     <>
-      Dead simple chat aplication. Using <TechTag tech="Node.js" /> <TechTag tech="Socket.io" />{' '}
+      Dead simple chat application. Using <TechTag tech="Node.js" /> <TechTag tech="Socket.io" />{' '}
       <TechTag tech="Redis" /> and <TechTag tech="PostgreSQL" /> on the backend, and{' '}
       <TechTag tech="Next.js" /> <TechTag tech="Socket.io" /> and <TechTag tech="React Query" /> on
       the frontend.
@@ -214,7 +214,7 @@ const projects = [
   urlik,
   shamyrRescues,
   treeloc,
-  ladislavPrix,
+  site,
 ];
 
 export default projects;

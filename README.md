@@ -1,6 +1,6 @@
-# Láďa Prix
+# Site
 
-Láďa Prix's personal site / web resume.
+My personal site / web resume.
 
 [![CI](https://github.com/prixladi/site/actions/workflows/main.yml/badge.svg)](https://github.com/prixladi/site/actions/workflows/main.yml)
 

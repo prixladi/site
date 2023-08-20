@@ -25,7 +25,7 @@ const Navbar = () => {
             },
           )}
         >
-          <Link href={root.path}>Láďa Prix</Link>
+          <Link href={root.path}>About</Link>
         </div>
         <FullMenu />
         <BurgerMenu navRoutes={navRoutes} />

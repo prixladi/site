@@ -8,7 +8,7 @@ import Article, { ArticleHeader } from '~/components/article';
 import { scaleDownInit } from '~/lib/utils/motions';
 
 const Home: NextPage = () => (
-  <PageContent title="Láďa Prix" type="wide">
+  <PageContent title="Láďa" type="wide">
     <Article className="lg:flex-row flex-1">
       <ArticleHeader
         title={<> Hi, I&apos;m Láďa, a software developer from the Czech Republic.</>}

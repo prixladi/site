@@ -73,7 +73,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
     <div className="w-full">
       <motion.img
         src={project.imgSrc}
-        alt="profile pricture"
+        alt="profile picture"
         className="rounded-3xl object-cover border-tiny-black dark:border-tiny-white"
       />
     </div>
@@ -81,7 +81,7 @@ const ProjectCard = ({ project }: ProjectProps) => (
 );
 
 const Projects: NextPage = () => (
-  <PageContent title="Projects | Láďa Prix" type="medium">
+  <PageContent title="Projects" type="medium">
     <Article>
       <ArticleHeader
         title={<>Here are some selected projects I&apos;ve worked on.</>}

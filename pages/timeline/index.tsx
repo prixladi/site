@@ -10,7 +10,7 @@ import { appearingTextInit } from '~/lib/utils/motions';
 import timelineItems from '~/lib/data/timeline-items';
 
 const Timeline: NextPage = () => (
-  <PageContent title="Timeline | Láďa Prix" type="medium">
+  <PageContent title="Timeline" type="medium">
     <Article>
       <ArticleHeader
         title={<>This is a timeline of my education and career.</>}
